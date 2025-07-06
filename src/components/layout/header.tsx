@@ -1,7 +1,6 @@
-import { ChevronDown, ChevronUp, FacebookIcon, Instagram, InstagramIcon, Mail, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, ChevronUp, Mail, Menu, Phone, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import { FacebookFilled, FacebookOutlined, InstagramOutlined, TikTokOutlined } from "@ant-design/icons";
 
 export function Header() {
   const navigate = useNavigate();

@@ -1,4 +1,4 @@
-import { Building, Facebook, Instagram, Loader, Mail, Phone } from "lucide-react";
+import { Building, Loader, Mail, Phone } from "lucide-react";
 import { useCallback, useEffect, useRef, useState } from "react"
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
