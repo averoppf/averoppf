@@ -30,7 +30,7 @@ export function BenefitsSection(): React.ReactElement {
           Why Choose Our Paint Protection Film?
         </h2>
         <p className="mt-4 text-lg text-gray-500 text-center mb-[7%]">
-          Engineered to safeguard, enhance, and preserve your vehicle's finish.
+          Engineered to safeguardi, enhance, and preserve your vehicle's finish.
         </p>
         
         <div className="mt-10 flex flex-wrap justify-center gap-8">
