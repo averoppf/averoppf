@@ -5,7 +5,6 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../App.css'
 import { motion, useAnimation, useInView } from 'framer-motion';
 import ValuesSection from '../../components/misc/ValuesComponent';
-import TiltedCard from '../../components/misc/TiltedCardComponent';
 
 const AboutPage: React.FC = () => {
     const mapRef = useRef<any>(null)
