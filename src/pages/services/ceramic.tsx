@@ -165,7 +165,7 @@ export function CeramicPage() {
                         variants={textVariants}
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
-                        className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
+                        className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
                         <p className="block text-white font-michroma mb-[5%] text-4xl sm:text-5xl">Ceramic Coating in Sydney</p>
                         <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment — allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
