@@ -154,9 +154,9 @@ export function CeramicPage() {
     }, [titleInView, titleAnimationControls]);
 
     return (
-        <section id="packages" className="bg-black border-gray-900 border-t-1 relative">
+        <section id="packages" className="bg-black border-gray-900 border-t-1">
             {/* Hero Section */}
-            <section className="lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')]">
+            <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')] py-[5%]">
                 <div className="absolute inset-0 bg-black/80 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
@@ -167,10 +167,10 @@ export function CeramicPage() {
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
-                        <p className="block text-white font-michroma mb-[5%]">Ceramic Coating in Sydney</p>
-                        <p className="mb-[3%] text-neutral-300 text-lg font-light tracking-normal">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment — allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
+                        <p className="block text-white font-michroma mb-[5%] text-3xl sm:text-4xl">Ceramic Coating in Sydney</p>
+                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal  text-sm sm:text-lg">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment — allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
                         <a
-                            className="block text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
+                            className="block text-black bg-white font-michroma text-[0.5rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
                         >ENQUIRE NOW</a>
                     </motion.h1>
