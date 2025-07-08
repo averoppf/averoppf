@@ -14,7 +14,7 @@ function App() {
   return (
     <BrowserRouter>
       <Helmet>
-        {/* <title>Avero | Quality PPF & Ceramic Coating in Sydney</title> */}
+        <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
         <link rel='canonical' href={ "https://www.averoppf.com.au" } />
         <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
       </Helmet>
