@@ -1,4 +1,5 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 import './App.css'
 import HomePage from './pages/home'
 import AboutPage from './pages/about'
@@ -12,6 +13,11 @@ function App() {
 
   return (
     <BrowserRouter>
+      <Helmet>
+        <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
+        <link rel='canonical' href={ "https://www.averoppf.com.au" } />
+        <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+      </Helmet>
       <Routes>
         <Route path="/" element={<PageLayout><HomePage /></PageLayout>} />
         <Route path="/about" element={<PageLayout><AboutPage /></PageLayout>} />
