@@ -29,6 +29,7 @@ export default function ContactComponent() {
 
   const [input, setInput] = useState<Form>(empty)
   const [loading, setLoading] = useState(false)
+  const [submitFormSuccess, setSubmitFormSuccess] = useState(false)
 
   const handleChange = useCallback((value: string, field: string) => {
       setInput((prevState) => ({ ...prevState, [field]: value }))
@@ -85,8 +86,9 @@ export default function ContactComponent() {
       })
       setLoading(false)
       if (res.ok) {
-          alert("Successful submission")
-          setInput(empty)
+        //   alert("Successful submission")
+        setSubmitFormSuccess(true)
+        setInput(empty)
       } else {
           alert("An error occured")
       }
@@ -142,56 +144,65 @@ export default function ContactComponent() {
         </div>
         <div className=' flex flex-col '>
         <h3 className="text-4xl md:text-6xl font-bold mb-6 text-white font-michroma">Get A Quote</h3>
-        <div className="space-y-4 text-gray-300">
-            <div className='flex flex-col md:flex-row gap-4'>
-                <input required value={input.firstName} onChange={(e) => handleChange(e.target.value, "firstName")} placeholder="First Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                <input required value={input.lastName} onChange={(e) => handleChange(e.target.value, "lastName")} placeholder="Last Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-            </div>
-            <div className='flex flex-col md:flex-row gap-4'>
-                <input type='email' required value={input.email} onChange={(e) => handleChange(e.target.value, "email")} placeholder="Email *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                <input type="number" required value={input.phone} onChange={(e) => handleChange(e.target.value, "phone")} placeholder="Phone No. *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-            </div>
-            <div className='flex flex-col md:flex-row gap-4'>
-                <input required value={input.make} onChange={(e) => handleChange(e.target.value, "make")} placeholder="Vehicle Make *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                <input required value={input.model} onChange={(e) => handleChange(e.target.value, "model")} placeholder="Vehicle Model *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-            </div>
-            <textarea required value={input.enquiryDetails} onChange={(e) => handleChange(e.target.value, "enquiryDetails")} placeholder="Enquiry Details *" className="min-h-[150px] bg-gray-900 text-white w-full p-3 rounded-lg" />
+        {
+            !submitFormSuccess ? (
+            <div className="space-y-4 text-gray-300">
+                <div className='flex flex-col md:flex-row gap-4'>
+                    <input required value={input.firstName} onChange={(e) => handleChange(e.target.value, "firstName")} placeholder="First Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                    <input required value={input.lastName} onChange={(e) => handleChange(e.target.value, "lastName")} placeholder="Last Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                </div>
+                <div className='flex flex-col md:flex-row gap-4'>
+                    <input type='email' required value={input.email} onChange={(e) => handleChange(e.target.value, "email")} placeholder="Email *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                    <input type="number" required value={input.phone} onChange={(e) => handleChange(e.target.value, "phone")} placeholder="Phone No. *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                </div>
+                <div className='flex flex-col md:flex-row gap-4'>
+                    <input required value={input.make} onChange={(e) => handleChange(e.target.value, "make")} placeholder="Vehicle Make *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                    <input required value={input.model} onChange={(e) => handleChange(e.target.value, "model")} placeholder="Vehicle Model *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                </div>
+                <textarea required value={input.enquiryDetails} onChange={(e) => handleChange(e.target.value, "enquiryDetails")} placeholder="Enquiry Details *" className="min-h-[150px] bg-gray-900 text-white w-full p-3 rounded-lg" />
 
-            <select
-                required
-                value={input.service}
-                onChange={e => handleChange(e.target.value, "service")}
-                className="bg-gray-900 text-white w-full p-3 rounded-lg"
-                >
-                <option value="" disabled hidden>
-                    Select A Service *
-                </option>
-                <option value="ppf">Paint Protection Film (PPF)</option>
-                <option value="ceramic">Ceramic Coating</option>
-            </select>
+                <select
+                    required
+                    value={input.service}
+                    onChange={e => handleChange(e.target.value, "service")}
+                    className="bg-gray-900 text-white w-full p-3 rounded-lg"
+                    >
+                    <option value="" disabled hidden>
+                        Select A Service *
+                    </option>
+                    <option value="ppf">Paint Protection Film (PPF)</option>
+                    <option value="ceramic">Ceramic Coating</option>
+                </select>
 
-            <select
-                required
-                value={input.filmType}
-                onChange={e => handleChange(e.target.value, "filmType")}
-                className="bg-gray-900 text-white w-full p-3 rounded-lg"
-                >
-                <option value="" disabled hidden>
-                    Select Film Type *
-                </option>
-                <option value="smooth-matte">Smooth Matte</option>
-                <option value="high-gloss">Clear High Gloss</option>
-            </select>
+                <select
+                    required
+                    value={input.filmType}
+                    onChange={e => handleChange(e.target.value, "filmType")}
+                    className="bg-gray-900 text-white w-full p-3 rounded-lg"
+                    >
+                    <option value="" disabled hidden>
+                        Select Film Type *
+                    </option>
+                    <option value="smooth-matte">Smooth Matte</option>
+                    <option value="high-gloss">Clear High Gloss</option>
+                </select>
 
-            <div className={` bg-black p-3 rounded-lg text-center border-2 border-gray-900 ${isValidForm() ? "cursor-pointer" : "cursor-not-allowed"}`} onClick={() => {
-                if (isValidForm()) {
-                    handleSubmit()
-                }
-            }}>
-                <p className="font-bold text-white">Submit</p>
-                {loading && <Loader className='spin' />}
+                <div className={` bg-black p-3 rounded-lg text-center border-2 border-gray-900 ${isValidForm() ? "cursor-pointer" : "cursor-not-allowed"}`} onClick={() => {
+                    if (isValidForm()) {
+                        handleSubmit()
+                    }
+                }}>
+                    <p className="font-bold text-white">Submit</p>
+                    {loading && <Loader className='spin' />}
+                </div>
             </div>
-        </div>
+            ): (
+                <div className="w-full  flex flex-col mt-8">
+                    <h3 className="text-3xl font-bold mb-4 font-michroma text-white text-left">Thank you for your enquiry!</h3>
+                    <p className="text-neutral-300">We will get back to you as soon as possible.</p>
+                </div>
+            )
+        }
         </div>
     </div>
   );
