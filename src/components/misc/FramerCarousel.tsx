@@ -167,7 +167,7 @@ export default function Carousel({
               }}
             >
               <div className={round ? 'p-0 m-0' : ' p-5'}>
-                <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full">
+                <span className="flex h-[28px] w-[28px] items-center justify-center rounded-full text-white">
                   {item.icon}
                 </span>
               </div>

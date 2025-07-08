@@ -24,26 +24,31 @@ export function Footer() {
                         <h4 className="text-lg font-semibold mb-2 text-white">Contact</h4>
                         <div className="space-y-2 text-gray-300">
                             <div className="flex items-center gap-5">
-                                <FacebookIcon color="white" fill="white" />
-                                <InstagramIcon color="white" />
-                                <div>
-
+                                <a href="https://www.facebook.com/61577135378565" target="_blank" rel="noopener noreferrer">
+                                    <FacebookIcon color="white" fill="white" />
+                                </a>
+                                <a href="https://www.instagram.com/averoppf" target="_blank" rel="noopener noreferrer">
+                                    <InstagramIcon color="white" />
+                                </a>
+                                <a href="https://www.tiktok.com/@averoppf" target="_blank" rel="noopener noreferrer">
                                     <img src="/tiktok.png" className='h-9' />
-                                </div>
+                                </a>
                                 <a
                                     href="tel:+61415081546"
                                 >
-                                    <Phone color="white" />
+                                    <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
                                 </a>
-                                <a href="mailto:info@averoppf.com">
-                                    <Mail color="white" className="cursor-pointer" />
+                                <a href="mailto:info@averoppf.com.au">
+                                    <Mail style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
                                 </a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div className="mt-8 pt-8 text-center text-gray-400">
+                <div className="mt-8 pt-8 text-center text-gray-400 flex flex-row gap-2 items-center justify-center">
                     <p>&copy; 2025 Avero Solutions Pty Ltd. All rights reserved.</p>
+                    <p>|</p>
+                    <a href="/privacy-policy">Privacy Policy</a>
                 </div>
             </div>
         </footer >

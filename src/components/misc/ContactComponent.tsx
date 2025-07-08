@@ -107,7 +107,7 @@ export default function ContactComponent() {
                     <div className="flex items-center gap-3">
                         <Mail className="w-6 h-6 text-white" />
                         <div>
-                            <p className="font-semibold">info@averoppf.com</p>
+                            <p className="font-semibold">info@averoppf.com.au</p>
                         </div>
                     </div>
                     <div className="flex items-center gap-3">
@@ -119,14 +119,22 @@ export default function ContactComponent() {
 
                     <p className='text-2xl font-bold mt-10'>Follow Us</p>
                     <div className="flex items-center gap-5">
-                        <FacebookIcon color="white" fill="white" />
-                        <InstagramIcon color="white" />
-                        <div>
+                        <a href="https://www.facebook.com/61577135378565" target="_blank" rel="noopener noreferrer">
+                            <FacebookIcon color="white" fill="white" />
+                        </a>
+                        <a href="https://www.instagram.com/averoppf" target="_blank" rel="noopener noreferrer">
+                            <InstagramIcon color="white" />
+                        </a>
+                        <a href="https://www.tiktok.com/@averoppf" target="_blank" rel="noopener noreferrer">
                             <img src="/tiktok.png" className='h-9' />
-                        </div>
-                        <Phone color="white" />
-                        <a href="mailto:info@averoppf.com">
-                            <Mail color="white" className="cursor-pointer" />
+                        </a>
+                        <a
+                            href="tel:+61415081546"
+                        >
+                            <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                        </a>
+                        <a href="mailto:info@averoppf.com.au">
+                            <Mail style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
                         </a>
                     </div>
                 </div>

@@ -138,7 +138,7 @@ export function ContactPage() {
                                 <div>
                                     <a href="mailto:info@averoppf.com" className="flex items-center gap-3">
                                         <Mail />
-                                        <p>info@averoppf.com</p>
+                                        <p>info@averoppf.com.au</p>
                                     </a>
                                 </div>
                             </div>

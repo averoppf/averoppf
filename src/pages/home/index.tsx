@@ -213,7 +213,7 @@ const HomePage: React.FC = () => {
 
     return (
         <div>
-            <section className="h-[calc(100dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/detailing-wash-img.jpg')]">
+            <section className="h-[calc(100dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/hero-home.avif')]">
                 <div className="absolute inset-0 bg-black/80"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6">
                     <motion.h1
@@ -273,7 +273,7 @@ const HomePage: React.FC = () => {
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/home-ppf.webp" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full ' />
+                        <img src="/apply-ppf.avif" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
                     </div>
                 </div>
             </section>
@@ -283,7 +283,7 @@ const HomePage: React.FC = () => {
                 ref={container2Ref} className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/home-ceramic.jpeg" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full ' />
+                        <img src="/ceramic.jpg" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-300 italic'>Long-term shine. Effortless maintenance. Serious protection.</p>

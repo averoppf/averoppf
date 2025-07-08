@@ -41,16 +41,12 @@ export function VisitMapComponent(): React.ReactElement {
                         <p>8:30 am - 5:00 pm</p>
                     </div>
                     <div className="gap-3">
-                        <p className="font-semibold">MONDAY - FRIDAY</p>
-                        <p>After hours by appointment only</p>
-                    </div>
-                    <div className="gap-3">
                         <p className="font-semibold">SATURDAY</p>
-                        <p>By appointment only</p>
+                        <p>12:00 pm - 4:00 pm</p>
                     </div>
                     <div className="gap-3">
                         <p className="font-semibold">SUNDAY</p>
-                        <p>Closed</p>
+                        <p>By Appointment Only</p>
                     </div>
                 </div>
             </div>

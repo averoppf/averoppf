@@ -129,11 +129,11 @@ export function Header() {
 
             <div className="ml-6 gap-2 flex items-center">
               <a
-                    href="tel:+61415081546"
-                >
-                    <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
-                </a>
-              <a href="mailto:info@averoppf.com">
+                  href="tel:+61415081546"
+              >
+                  <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+              </a>
+              <a href="mailto:info@averoppf.com.au">
                   <Mail style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
               </a>
             </div>

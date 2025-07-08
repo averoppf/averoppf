@@ -156,7 +156,7 @@ export function CeramicPage() {
     return (
         <section id="packages" className="bg-black border-gray-900 border-t-1">
             {/* Hero Section */}
-            <section className="h-[calc(80dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/contact-back.png')]">
+            <section className="h-[calc(80dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')]">
                 <div className="absolute inset-0 bg-black/80 h-[calc(81dvh)]"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6">
                     <motion.h1
@@ -165,7 +165,7 @@ export function CeramicPage() {
                         variants={textVariants}
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
-                        className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center">
+                        className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
                         <p className="block text-white font-michroma mb-[5%]">Ceramic Coating in Sydney</p>
                         <p className="mb-[3%] text-neutral-300 text-lg font-light tracking-normal">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment — allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
@@ -183,54 +183,6 @@ export function CeramicPage() {
                 <p className="text-neutral-300 text-lg font-light tracking-normal">At Avero, we use only premium-grade coatings compatible with both painted surfaces and Paint Protection Film. Whether your vehicle has raw paintwork or is already wrapped in PPF, we apply the right formulation to deliver a flawless, slick finish. Our coatings enhance gloss levels, colour richness, and surface slickness — creating a hydrophobic, stain-resistant barrier that beads water and repels dirt with ease.</p>
                 <p className="text-neutral-300 text-lg font-light tracking-normal">Ceramic coating doesn't just keep your car looking cleaner — it locks in the condition of your vehicle's finish, helping prevent oxidation, fading, and dullness over time. By protecting against environmental damage and reducing the frequency of washes or detailing, ceramic coating helps your car retain a well-kept appearance for longer. This makes it easier to maintain resale value — without the need for repeated polishing or repainting down the track.</p>
             </section>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 w-10/12 mx-auto">
-                {/* Large image on the left */}
-                <div className="row-span-2">
-                    <img
-                        src="/hyundai-black.jpg"
-                        alt="Professional car detailing work"
-                        className="w-full h-full object-cover rounded-lg"
-                    />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                    {/* Top right image */}
-                    <div>
-                        <img
-                            src="/man-on-lathe.jpg"
-                            alt="Car detailing process"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
-
-                    {/* Top far right image */}
-                    <div>
-                        <img
-                            src="/black-mustang.jpg"
-                            alt="Luxury sports car in garage"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
-
-                    {/* Bottom middle image */}
-                    <div>
-                        <img
-                            src="/man-applying-ppf.webp"
-                            alt="Car interior detailing"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
-
-                    {/* Bottom right image */}
-                    <div>
-                        <img
-                            src="/nissan-suv.jpg"
-                            alt="Car paint protection application"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
-                </div>
-            </div>
 
             <div className="flex flex-col text-white gap-1 justify-center gap-10 py-16 px-4 items-center">
                 <div
@@ -375,11 +327,18 @@ export function CeramicPage() {
                             </ul>
                         </div>
                     </div>
+                    <div className='flex items-center justify-center my-10'>
+                        <a
+                            className=" text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
+                            href="/contact"
+                        >GET A QUOTE</a>
+                    </div>
                 </div>
+                
 
                 <section className="bg-black text-white py-12 px-4">
                     <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-4 text-center font-michroma">Why Choose Ceramic Coating?</h2>
+                    <h2 className="text-5xl font-bold mb-4 text-center font-michroma">Why Choose Ceramic Coating?</h2>
                     <p className="mt-10 mb-4 text-center text-gray-300 max-w-2xl mx-auto">
                         Whether you’re preserving a collector car or protecting your daily driver,
                         Ceramic Coating is the ultimate combination of performance, style, and peace of mind to protect your pride and joy.

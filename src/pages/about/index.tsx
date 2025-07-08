@@ -54,7 +54,7 @@ const AboutPage: React.FC = () => {
     return (
         <div className="">
             {/* Hero Section */}
-            <section className="relative h-[calc(70vh)] flex items-center justify-center bg-cover bg-center bg-[url('/wash-sponge.jpg')]">
+            <section className="relative h-[calc(70vh)] flex items-center justify-center bg-cover bg-center bg-[url('/cody-anthony.avif')]">
                 <div className="absolute inset-0 bg-black/80"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6">
                     <h1
@@ -102,7 +102,7 @@ const AboutPage: React.FC = () => {
                         </div>
 
                         {/* Team Image */}
-                        <img src="/about-img.webp"className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full ' />
+                        <img src="/logo-2-car-shot.avif"className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover object-left' />
                     </div>
                 </div>
             </section>
@@ -121,7 +121,8 @@ const AboutPage: React.FC = () => {
                         key={member.name}
                         className="flex flex-col items-center justify-center gap-4 w-full md:w-auto"
                     >
-                        <TiltedCard imageSrc="/contact-back.png" />
+                        {/* <TiltedCard imageSrc="/contact-back.png" /> */}
+                        <img src="/contact-back.png" className='w-60 h-60 object-cover rounded-lg' />
                         <h3 className="text-neutral-400 text-2xl font-michroma font-semibold">
                         {member.name}
                         </h3>
@@ -168,8 +169,9 @@ const AboutPage: React.FC = () => {
                                         <div>
                                             <p className="font-semibold text-white">Business Hours</p>
                                             <div className="text-gray-300 space-y-1">
-                                                <p>Monday - Friday: 7:00 AM - 6:00 PM</p>
-                                                <p>Saturday - Sunday: 8:00 AM - 5:00 PM</p>
+                                                <p><span className='font-semibold'>Monday - Friday:</span> 8:30 AM - 5:00 PM</p>
+                                                <p><span className='font-semibold'>Saturday:</span> 12:00 PM - 4:00 PM</p>
+                                                <p><span className='font-semibold'>Sunday:</span> By Appointment Only</p>
                                             </div>
                                         </div>
                                     </div>
@@ -178,7 +180,7 @@ const AboutPage: React.FC = () => {
                                         <div>
                                             <p className="font-semibold text-white">Contact</p>
                                             <p className="text-gray-300">+61 415 081 546</p>
-                                            <p className="text-gray-300">info@averoppf.com</p>
+                                            <p className="text-gray-300">info@averoppf.com.au</p>
                                         </div>
                                     </div>
                                 </div>

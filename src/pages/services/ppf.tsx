@@ -150,7 +150,7 @@ export function PpfPage() {
     return (
         <section id="packages" className="bg-black border-gray-900 border-t-1">
             {/* Hero Section */}
-            <section className="h-[calc(80dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/contact-back.png')]">
+            <section className="h-[calc(80dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/cody-ppf.avif')]">
                 <div className="absolute inset-0 bg-black/80 h-[calc(81dvh)]"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6">
                     <motion.h1
@@ -159,7 +159,7 @@ export function PpfPage() {
                         variants={textVariants}
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
-                        className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center">
+                        className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
                         <p className="block text-white font-michroma mb-[5%]">Paint Protection Film (PPF) in Sydney</p>
                         <p className="mb-[3%] text-neutral-300 text-lg font-light tracking-normal">At Avero, our technicians are professionally trained by some of the most respected names in the industry — including Avery Dennison, 3M, and XPEL. We bring expert-level knowledge and care to every installation, ensuring each film is applied with absolute precision. Our workshop is fitted with top-tier, industrial-grade equipment, allowing us to cut and apply film without the use of blades on the vehicle itself — eliminating the risk of damage to your paintwork.</p>
@@ -176,51 +176,29 @@ export function PpfPage() {
                 <p className="text-neutral-300 text-lg font-light tracking-normal">Paint Protection Film (PPF) is an invisible polyurethane film applied to the surface of your vehicle to shield it from the hazards of everyday driving — including stone chips, scratches, yellowing, swirl marks, and harsh weather conditions. PPF preserves the appearance and integrity of your paintwork without altering your vehicle's design or colour. Whether you're navigating busy streets or open highways, PPF acts as a durable, self-healing barrier between your car and the elements.</p>
             </section>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 p-4 w-10/12 mx-auto">
-                {/* Large image on the left */}
-                <div className="row-span-2">
-                    <img
-                        src="/hyundai-black.jpg"
-                        alt="Professional car detailing work"
-                        className="w-full h-full object-cover rounded-lg"
-                    />
-                </div>
-                <div className="grid grid-cols-2 gap-4">
-                    {/* Top right image */}
-                    <div>
-                        <img
-                            src="/man-on-lathe.jpg"
-                            alt="Car detailing process"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
+            <div className="relative w-full h-screen mb-[5%]">
+                <img 
+                    src="/hero-home.avif" 
+                    className="absolute inset-0 w-full h-full object-cover"
+                />
+                <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-black via-black/75 to-black" />
+
+                <div className="relative z-10 w-full px-4 pt-16 sm:pt-24 md:pt-32 flex flex-col items-center">
+
+                    <div className="w-8/12 mt-[5%]">
+                        <p className="font-bold text-white text-2xl mb-4 font-michroma italic">We offer a range of high-performance PPF finishes to suit your vehicle's aesthetic.</p>
+                        <p className=" text-xl mb-4 w-full items-center justify-center text-center font-michroma text-neutral-300">Choose From:</p>
+                        <div className="w-full flex items-center justify-center mb-[3%]">
+                            <Carousel
+                                items={[
+                                    { title: "Clear Gloss", description: "For a glass-like shine that enhances depth and colour", id: 1, icon: <p className="text-5xl font-bold">1</p> },
+                                    { title: "Matte", description: "For a bold, sleek finish that transforms your paintwork", id: 2, icon: <p className="text-5xl font-bold">2</p> },
+                                ]}
+                            />
+                        </div>
                     </div>
 
-                    {/* Top far right image */}
-                    <div>
-                        <img
-                            src="/black-mustang.jpg"
-                            alt="Luxury sports car in garage"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
 
-                    {/* Bottom middle image */}
-                    <div>
-                        <img
-                            src="/man-applying-ppf.webp"
-                            alt="Car interior detailing"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
-
-                    {/* Bottom right image */}
-                    <div>
-                        <img
-                            src="/nissan-suv.jpg"
-                            alt="Car paint protection application"
-                            className="w-full h-full object-cover rounded-lg"
-                        />
-                    </div>
                 </div>
             </div>
 
@@ -354,18 +332,8 @@ export function PpfPage() {
                     </div>
                 </div>
 
-                <div className="w-11/12 mt-[5%]">
-                    <p className="font-bold text-2xl mb-4 font-michroma italic">We offer a range of high-performance PPF finishes to suit your vehicle's aesthetic.</p>
-                    <p className=" text-xl mb-4 w-full items-center justify-center text-center font-michroma text-neutral-400">Choose From:</p>
-                    <div className="w-full flex items-center justify-center mb-[3%]">
-                        <Carousel
-                            items={[
-                                { title: "Clear Gloss", description: "For a glass-like shine that enhances depth and colour", id: 1, icon: <p className="text-5xl font-bold">1</p> },
-                                { title: "Matte", description: "For a bold, sleek finish that transforms your paintwork", id: 2, icon: <p className="text-5xl font-bold">2</p> },
-                            ]}
-                        />
-                    </div>
-                    <div className="w-full flex flex-col items-center justify-center">
+                <div className="w-9/12 mt-[5%]">
+                    <div className="w-full flex flex-col items-center justify-center gap-4">
                         <p className="mb-6 max-w-[80%] text-center">Every PPF installation at Avero is backed by a limited manufacturer's warranty of 10 years, depending on the film selected. These warranties, offered by Avery Dennison, cover key concerns such as cracking, bubbling, and yellowing, giving you long-term confidence in the protection you're investing in. </p>
                         <p className="mb-6 max-w-[80%] text-center">We exclusively use premium-grade films which are rigorously tested for durability and optical clarity. Whether you choose a satin, gloss, matte, or high gloss black finish, your vehicle is protected with a product designed to last.</p>
                         <p className="mb-6 max-w-[80%] text-center">We exclusively use premium-grade films which are rigorously tested for durability and optical clarity. Whether you choose a satin, gloss, matte, or high gloss black finish, your vehicle is protected with a product designed to last.</p>
@@ -375,7 +343,7 @@ export function PpfPage() {
                             
                 <section className="bg-black text-white py-12 px-4">
                     <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-bold mb-4 text-center font-michroma">Why Choose Paint Protection Film?</h2>
+                    <h2 className="text-5xl font-bold mb-4 text-center font-michroma">Why Choose Paint Protection Film?</h2>
                     <p className="mt-10 mb-4 text-center text-gray-300 max-w-2xl mx-auto">
                         Whether you’re preserving a collector car or protecting your daily driver,
                         Paint Protection Film is the ultimate combination of performance, style, and peace of mind.
@@ -393,7 +361,7 @@ export function PpfPage() {
                             className="w-full sm:w-1/2 lg:w-1/3 bg-neutral-800 rounded-2xl shadow-lg p-6 flex flex-col hover:shadow-2xl transition-shadow duration-300"
                         >
                             <h3 className="text-xl font-semibold mb-2 font-michroma tracking-wider">{feature.title}</h3>
-                            <p className="text-gray-200 flex-grow">{feature.description}</p>
+                            <p className="text-neutral-400 flex-grow">{feature.description}</p>
                         </div>
                         ))}
                     </div>
