@@ -156,8 +156,8 @@ export function CeramicPage() {
     return (
         <section id="packages" className="bg-black border-gray-900 border-t-1 relative">
             {/* Hero Section */}
-            <section className="h-[calc(90vh)] flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')]">
-                <div className="absolute inset-0 bg-black/80 h-[calc(90vh)]"></div>
+            <section className="lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')]">
+                <div className="absolute inset-0 bg-black/80 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
