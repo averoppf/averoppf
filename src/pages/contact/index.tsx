@@ -50,6 +50,7 @@ export function ContactPage() {
 
     const [input, setInput] = useState<Form>(empty)
     const [loading, setLoading] = useState(false)
+    const [submitFormSuccess, setSubmitFormSuccess] = useState(false)
 
     const handleChange = useCallback((value: string, field: string) => {
         setInput((prevState) => ({ ...prevState, [field]: value }))
@@ -107,7 +108,8 @@ export function ContactPage() {
         })
         setLoading(false)
         if (res.ok) {
-            alert("Successful submission")
+            // alert("Successful submission")
+            setSubmitFormSuccess(true);
             setInput(empty)
         } else {
             alert("An error occured")
@@ -157,7 +159,9 @@ export function ContactPage() {
                     {/* Location Details */}
                     <div className=' flex flex-col '>
                         <h3 className="text-4xl md:text-6xl font-bold mb-6 text-white font-michroma">Get A Quote</h3>
-                        <div className="space-y-4 text-gray-300">
+                        {
+                            !submitFormSuccess ? (
+                            <div className="space-y-4 text-gray-300">
                             <div className='flex flex-col md:flex-row gap-4'>
                                 <input required value={input.firstName} onChange={(e) => handleChange(e.target.value, "firstName")} placeholder="First Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
                                 <input required value={input.lastName} onChange={(e) => handleChange(e.target.value, "lastName")} placeholder="Last Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
@@ -192,7 +196,14 @@ export function ContactPage() {
                                 <p className="font-bold text-white">Submit</p>
                                 {loading && <Loader className='spin' />}
                             </div>
-                        </div>
+                            </div>
+                            ): (
+                            <div className="w-full  flex flex-col mt-8">
+                                <h3 className="text-3xl font-bold mb-4 font-michroma text-white text-left">Thank you for your enquiry!</h3>
+                                <p className="text-neutral-300">We will get back to you as soon as possible.</p>
+                            </div>
+                            )
+                        }
                     </div>
 
                     {/* Map Placeholder */}
