@@ -108,8 +108,8 @@ export function CeramicPage() {
                 {
                     question: "How long does ceramic coating last?",
                     answer: [
-                        "Ceramic coatings form a strong, long-term chemical bond with your vehicle's paintwork, offering years of protection — not weeks or months. However, the actual lifespan of the coating depends on environmental exposure and how well the vehicle is maintained.",
-                        "Our coatings offer excellent chemical resistance and are not easily broken down by standard cleaning products, unlike many waxes or sealants on the market. With proper care, such as regular hand washing and avoiding abrasive brushes or automatic car washes, your coating can maintain its performance and appearance for the full duration of its rated warranty.",
+                        "Ceramic coatings form a strong, long-term chemical bond with your vehicle's paintwork, offering years of protection — not weeks or months. However, the actual lifespan of the coating depends on environmental exposure and how well the vehicle is maintained. ",
+                        "Our coatings offer excellent chemical resistance and are not easily broken down by standard cleaning products, unlike many waxes or sealants on the market. With proper care, such as regular hand washing and avoiding abrasive brushes or automatic car washes, your coating can maintain its performance and appearance for the full duration of its rated warranty. ",
                         "Neglect — including infrequent washing, use of abrasive tools, or harsh cleaning methods — can reduce the coating's effectiveness and shorten its lifespan. We recommend following our care guidelines to ensure you get the most out of your investment."
                     ]
                 },
@@ -167,10 +167,10 @@ export function CeramicPage() {
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
-                        <p className="block text-white font-michroma mb-[5%] text-3xl sm:text-4xl">Ceramic Coating in Sydney</p>
-                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal  text-sm sm:text-lg">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment — allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
+                        <p className="block text-white font-michroma mb-[5%] text-4xl sm:text-5xl">Ceramic Coating in Sydney</p>
+                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment — allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
                         <a
-                            className="block text-black bg-white font-michroma text-[0.5rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
+                            className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
                         >ENQUIRE NOW</a>
                     </motion.h1>
@@ -179,16 +179,16 @@ export function CeramicPage() {
 
             <section className="w-full px-[10%] text-center py-[5%] flex flex-col items-center justify-center gap-8">
                 <PaintBucket className="text-white" style={{ width: '7%', height: '7%', objectFit: 'contain'}} />
-                <p className="text-neutral-300 text-lg font-light tracking-normal">Ceramic coating is a liquid polymer that chemically bonds with your vehicle's paint, forming a transparent, long-lasting layer of protection. Once cured, it acts as a barrier against water, UV rays, oxidation, chemical contaminants, and light surface abrasions. Unlike wax, which wears off quickly, a professional ceramic coating can last for years with proper care — making your vehicle easier to clean and harder to damage.</p>
-                <p className="text-neutral-300 text-lg font-light tracking-normal">At Avero, we use only premium-grade coatings compatible with both painted surfaces and Paint Protection Film. Whether your vehicle has raw paintwork or is already wrapped in PPF, we apply the right formulation to deliver a flawless, slick finish. Our coatings enhance gloss levels, colour richness, and surface slickness — creating a hydrophobic, stain-resistant barrier that beads water and repels dirt with ease.</p>
-                <p className="text-neutral-300 text-lg font-light tracking-normal">Ceramic coating doesn't just keep your car looking cleaner — it locks in the condition of your vehicle's finish, helping prevent oxidation, fading, and dullness over time. By protecting against environmental damage and reducing the frequency of washes or detailing, ceramic coating helps your car retain a well-kept appearance for longer. This makes it easier to maintain resale value — without the need for repeated polishing or repainting down the track.</p>
+                <p className="text-neutral-300 text-base font-light tracking-normal">Ceramic coating is a liquid polymer that chemically bonds with your vehicle's paint, forming a transparent, long-lasting layer of protection. Once cured, it acts as a barrier against water, UV rays, oxidation, chemical contaminants, and light surface abrasions. Unlike wax, which wears off quickly, a professional ceramic coating can last for years with proper care — making your vehicle easier to clean and harder to damage.</p>
+                <p className="text-neutral-300 text-base font-light tracking-normal">At Avero, we use only premium-grade coatings compatible with both painted surfaces and Paint Protection Film. Whether your vehicle has raw paintwork or is already wrapped in PPF, we apply the right formulation to deliver a flawless, slick finish. Our coatings enhance gloss levels, colour richness, and surface slickness — creating a hydrophobic, stain-resistant barrier that beads water and repels dirt with ease.</p>
+                <p className="text-neutral-300 text-base font-light tracking-normal">Ceramic coating doesn't just keep your car looking cleaner — it locks in the condition of your vehicle's finish, helping prevent oxidation, fading, and dullness over time. By protecting against environmental damage and reducing the frequency of washes or detailing, ceramic coating helps your car retain a well-kept appearance for longer. This makes it easier to maintain resale value — without the need for repeated polishing or repainting down the track.</p>
             </section>
 
             <div className="flex flex-col text-white gap-1 justify-center gap-10 py-16 px-4 items-center">
                 <div
                     className="container mx-auto px-6 ">
                     <h2 className="text-center text-5xl font-bold  mb-4 text-white font-michroma">Ceramic Coating Packages</h2>
-                    <p className=" text-center text-gray-300 mb-12 text-lg">Choose the perfect package for your vehicle</p>
+                    <p className=" text-center text-gray-300 mb-12 text-base">Choose the perfect package for your vehicle</p>
                     <div className="grid md:grid-cols-3 gap-8">
                         <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300  flex flex-col justify-between">
                             <div>
@@ -338,8 +338,8 @@ export function CeramicPage() {
 
                 <section className="bg-black text-white py-12 px-4">
                     <div className="max-w-7xl mx-auto">
-                    <h2 className="text-5xl font-bold mb-4 text-center font-michroma">Why Choose Ceramic Coating?</h2>
-                    <p className="mt-10 mb-4 text-center text-gray-300 max-w-2xl mx-auto">
+                    <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-center font-michroma">Why Choose Ceramic Coating?</h2>
+                    <p className="mt-10 mb-4 text-center text-gray-300 max-w-2xl mx-auto text-base">
                         Whether you’re preserving a collector car or protecting your daily driver,
                         Ceramic Coating is the ultimate combination of performance, style, and peace of mind to protect your pride and joy.
                     </p>
@@ -369,11 +369,11 @@ export function CeramicPage() {
                     <h2 className="text-4xl font-bold text-center mb-8 font-michroma tracking-wider">
                         The Avero Paint Protection Film (PPF) Process
                     </h2>
-                    <p className="mb-4 mt-12 text-center text-gray-300 max-w-2xl mx-auto">
+                    <p className="mb-4 mt-12 text-center text-gray-300 max-w-2xl mx-auto text-base">
                         Ready to protect your vehicle with Avero’s professional Paint Protection Film
                         service? Book your appointment today and drive away with confidence.
                     </p>
-                    <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
+                    <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto text-base">
                         At Avero, we ensure flawless PPF application with careful preparation,
                         precise installation, and a finish you'll be proud of. Each step is
                         crafted with the same care we'd expect for our own vehicle.
@@ -440,7 +440,7 @@ export function CeramicPage() {
                                             </button>
 
                                             <div
-                                                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+                                                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'opacity-100' : 'max-h-0 opacity-0'
                                                     }`}
                                             >
                                                 <div className="px-6 py-4 bg-white border-t border-gray-100">

@@ -48,14 +48,14 @@ export function Header() {
          text-white p-2
       `}
     >
-      <div className="container mx-auto px-6 py-4">
+      <div className="px-4 py-4 gap-4">
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div
             className="cursor-pointer"
             onClick={() => navigate("/")}
           >
-            <img src="/avero.png" className="h-10" />
+            <img src="/avero.png" className="min-h-10 min-w-30 object-contain max-h-10 max-w-30" />
           </div>
 
           {/* Mobile menu toggle */}
@@ -99,7 +99,7 @@ export function Header() {
           )}
 
           {/* Desktop menu */}
-          <div className="hidden sm:flex space-x-8 items-center justify-between">
+          <div className="hidden sm:flex gap-6 items-center justify-between">
             <a href="/" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Home</a>
             <a href="/about" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">About Us</a>
 
@@ -127,7 +127,7 @@ export function Header() {
               Contact
             </a>
 
-            <div className="ml-6 gap-2 flex items-center">
+            <div className="ml-3 gap-2 flex items-center">
               <a
                   href="tel:+61415081546"
               >
