@@ -154,11 +154,11 @@ export function CeramicPage() {
     }, [titleInView, titleAnimationControls]);
 
     return (
-        <section id="packages" className="bg-black border-gray-900 border-t-1">
+        <section id="packages" className="bg-black border-gray-900 border-t-1 relative">
             {/* Hero Section */}
-            <section className="h-[calc(80dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')]">
-                <div className="absolute inset-0 bg-black/80 h-[calc(81dvh)]"></div>
-                <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6">
+            <section className="h-[calc(90vh)] flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')]">
+                <div className="absolute inset-0 bg-black/80 h-[calc(90vh)]"></div>
+                <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
                         animate={titleAnimationControls}
