@@ -38,25 +38,25 @@ export function VideoHero(): React.ReactElement {
           <div className="space-y-3 text-white text-lg w-full text-wrap">
             <div className="flex items-center gap-4">
               <CheckCircle className="min-w-6 min-h-6 max-h-6 max-w-6 text-white" />
-              <p className="text-xl">
+              <p className="text-base">
                 Scratch & chip resistance keeps paint flawless
               </p>
             </div>
             <div className="flex items-center gap-4">
               <CheckCircle className="min-w-6 min-h-6 max-h-6 max-w-6 text-white" />
-              <p className="text-xl">
+              <p className="text-base">
                 Self-healing topcoat for easy minor-scratch removal
               </p>
             </div>
             <div className="flex items-center gap-4">
               <CheckCircle className="min-w-6 min-h-6 max-h-6 max-w-6 text-white" />
-              <p className="text-xl">
+              <p className="text-base">
                 UV protection prevents fading & maintains gloss
               </p>
             </div>
             <div className="flex items-center gap-4">
               <CheckCircle className="min-w-6 min-h-6 max-h-6 max-w-6 text-white" />
-              <p className="text-xl">
+              <p className="text-base">
                 Backed by 10 year warranty
               </p>
             </div>

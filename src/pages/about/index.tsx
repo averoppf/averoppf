@@ -51,25 +51,25 @@ const AboutPage: React.FC = () => {
     }, [valuesInView, valuesAnimationControls]);
 
     return (
-        <div className="">
+        <div className="bg-black border-gray-900 border-t-1">
             {/* Hero Section */}
-            <section className="relative h-[calc(70vh)] flex items-center justify-center bg-cover bg-center bg-[url('/cody-anthony.avif')]">
-                <div className="absolute inset-0 bg-black/80"></div>
-                <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6">
+            <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/cody-anthony.avif')] py-[5%]">
+                <div className="absolute inset-0 bg-black/80 h-full"></div>
+                <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <h1
-                        className="text-4xl md:text-7xl font-bold tracking-wider flex flex-col items-center text-white font-michroma mb-[5%]">
+                        className="text-5xl sm:text-6xl font-bold tracking-wider flex flex-col items-center text-white font-michroma mb-[5%]">
                         About Us
                     </h1>
-                    <p className='text-neutral-200 max-w-[60%] mb-[3%]'>
+                    <p className='text-neutral-200 max-w-[80%] mb-[8%] text-base'>
                         At Avero PPF, our passion for cars goes beyond shine and gloss—we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
                     </p>
-                    <div className='flex flex-row gap-10'>
+                    <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 max-w-[40%]'>
                         <a
-                            className="block text-black bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
+                            className="text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer flex items-center justify-center"
                             href="/services/ppf"
                         >PPF</a>
                         <a
-                            className="block text-black bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
+                            className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/ceramic"
                         >CERAMIC COATING</a>
                     </div>
@@ -85,18 +85,18 @@ const AboutPage: React.FC = () => {
                         <div>
                             <h2 className="text-4xl font-bold mb-8 text-white font-michroma text-center">Seasoned Professionals in the Industry</h2>
                             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
-                                <p>
+                                <p className='text-base text-neutral-300'>
                                     Located in Caringbah, Sydney, Avero is dedicated to raising the standard of paint protection and car care.
                                 </p>
-                                <p>
+                                <p className='text-base text-neutral-300'>
                                     As passionate car enthusiasts, our team has undergone specialised training from industry leaders including 3M, Avery Dennison, and XPEL, bringing a detail-focused, precision-first approach to every vehicle we work on.
 
                                 </p>
-                                <p>
+                                <p className='text-base text-neutral-300'>
                                     Whether it's a daily driver or a collector's piece, we treat each car with the same level of care and pride we would our own.
                                 </p>
-                                <p>If you're looking for trusted professionals to protect and enhance your vehicle, we'd love to work with you.</p>
-                                <p>- Avero</p>
+                                <p className='text-base text-neutral-300'>If you're looking for trusted professionals to protect and enhance your vehicle, we'd love to work with you.</p>
+                                <p className='text-base text-neutral-300'>- Avero</p>
                             </div>
                         </div>
 

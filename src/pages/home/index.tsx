@@ -213,16 +213,16 @@ const HomePage: React.FC = () => {
 
     return (
         <div>
-            <section className="h-[calc(100dvh)] flex items-center justify-center bg-cover bg-center bg-[url('/hero-home.avif')]">
-                <div className="absolute inset-0 bg-black/80"></div>
-                <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6">
+            <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center bg-[url('/hero-home.avif')] py-[5%]">
+                <div className="absolute inset-0 bg-black/80 h-full"></div>
+                <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
                         animate={titleAnimationControls}
                         variants={textVariants}
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
-                        className="text-4xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center">
+                        className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <span className="block mb-2 text-white font-michroma">Equipped to Protect.</span>
                         <span className="block text-white font-michroma mb-24">Driven by Detail.</span>
                         <a
@@ -231,11 +231,8 @@ const HomePage: React.FC = () => {
                         >GET A QUOTE</a>
                     </motion.h1>
 
-                    {/* <a href="/contact" className='cursor-pointer font-extrabold text-xl bg-white text-black w-fit p-5'>
-                        CONTACT US
-                    </a> */}
                 </div>
-                <div onClick={() => navigate("/#about")} className="absolute bottom-20 left-1/2 transform -translate-x-1/2 animate-bounce">
+                <div onClick={() => navigate("/#about")} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
                     <ChevronRight className="w-10 h-10 rotate-90 text-white" />
                 </div>
             </section>
