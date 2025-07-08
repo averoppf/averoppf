@@ -9,6 +9,7 @@ import { VideoHero } from '../../components/misc/VideoOverlay';
 import ContactComponent from '../../components/misc/ContactComponent';
 import { ContactButton } from '../services/ceramic';
 import { VisitMapComponent } from '../../components/misc/VisitMapComponent';
+import { Helmet } from 'react-helmet';
 const CARS = [
     {
         label: "Land Rover",
@@ -213,6 +214,11 @@ const HomePage: React.FC = () => {
 
     return (
         <div>
+            <Helmet>
+                <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
+                <link rel='canonical' href={ "https://www.averoppf.com.au" } />
+                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+            </Helmet>
             <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center bg-[url('/hero-home.avif')] py-[5%]">
                 <div className="absolute inset-0 bg-black/80 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">

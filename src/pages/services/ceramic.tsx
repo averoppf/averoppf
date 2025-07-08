@@ -5,6 +5,7 @@ import ContactComponent from "../../components/misc/ContactComponent";
 import { VisitMapComponent } from "../../components/misc/VisitMapComponent";
 import { motion, useAnimation, useInView, type Variants } from 'framer-motion';
 import CountUp from "react-countup";
+import { Helmet } from "react-helmet";
 
 export const ContactButton = ({ text }: { text: any }) => (
         <a href="/contact" className="inline-flex items-center px-4 py-2 bg-neutral-500 text-white text-sm font-medium rounded-md hover:opacity-80 transition-opacity duration-200 focus:outline-none hover:cursor-pointer">
@@ -155,6 +156,11 @@ export function CeramicPage() {
 
     return (
         <section id="packages" className="bg-black border-gray-900 border-t-1">
+            <Helmet>
+                <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
+                <link rel='canonical' href={ "https://www.averoppf.com.au" } />
+                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+            </Helmet>
             {/* Hero Section */}
             <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')] py-[5%]">
                 <div className="absolute inset-0 bg-black/80 h-full"></div>

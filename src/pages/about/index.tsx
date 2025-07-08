@@ -5,6 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../App.css'
 import { motion, useAnimation, useInView } from 'framer-motion';
 import ValuesSection from '../../components/misc/ValuesComponent';
+import { Helmet } from 'react-helmet';
 
 const AboutPage: React.FC = () => {
     const mapRef = useRef<any>(null)
@@ -52,6 +53,11 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className="bg-black border-gray-900 border-t-1">
+            <Helmet>
+                <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
+                <link rel='canonical' href={ "https://www.averoppf.com.au" } />
+                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+            </Helmet>
             {/* Hero Section */}
             <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/cody-anthony.avif')] py-[5%]">
                 <div className="absolute inset-0 bg-black/80 h-full"></div>

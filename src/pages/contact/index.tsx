@@ -3,6 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../App.css'
+import { Helmet } from "react-helmet";
 
 interface Form {
     firstName: string;
@@ -119,6 +120,11 @@ export function ContactPage() {
 
     return (
         <div>
+            <Helmet>
+                <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
+                <link rel='canonical' href={ "https://www.averoppf.com.au" } />
+                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+            </Helmet>
             <section className="relative pt-26 pb-10 border-b-1 border-gray-900 pb-16 bg-black">
                 <div className="container mx-auto px-6">
                     <div className="text-center">
