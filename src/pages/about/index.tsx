@@ -59,8 +59,8 @@ const AboutPage: React.FC = () => {
                 <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
             </Helmet>
             {/* Hero Section */}
-            <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/cody-anthony.avif')] py-[5%]">
-                <div className="absolute inset-0 bg-black/80 h-full"></div>
+            <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/backgroundShot.avif')] py-[5%]">
+                <div className="absolute inset-0 bg-black/60 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <h1
                         className="text-5xl sm:text-6xl font-bold tracking-wider flex flex-col items-center text-white font-michroma mb-[5%]">
@@ -111,32 +111,6 @@ const AboutPage: React.FC = () => {
                     </div>
                 </div>
             </section>
-
-            <section className="flex flex-col items-center justify-center py-20">
-                <h2 className="font-michroma text-4xl text-white mb-8 font-semibold tracking-wider">
-                    Meet The Team
-                </h2>
-
-                <div className="flex flex-col md:flex-row items-center justify-center gap-10 px-4">
-                    {[
-                    { name: 'Anthony', role: 'Co-Founder' },
-                    { name: 'Cody',    role: 'Co-Founder' },
-                    ].map((member) => (
-                    <div
-                        key={member.name}
-                        className="flex flex-col items-center justify-center gap-4 w-full md:w-auto"
-                    >
-                        {/* <TiltedCard imageSrc="/contact-back.png" /> */}
-                        <img src="/contact-back.png" className='w-60 h-60 object-cover rounded-lg' />
-                        <h3 className="text-neutral-400 text-2xl font-michroma font-semibold">
-                        {member.name}
-                        </h3>
-                        <p className="text-neutral-400 text-md">{member.role}</p>
-                    </div>
-                    ))}
-                </div>
-                </section>
-
 
             <section className='bg-[linear-gradient(to_bottom,_#000000,_#050505,_#000000)]'>
                 <motion.div

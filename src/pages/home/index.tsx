@@ -219,8 +219,16 @@ const HomePage: React.FC = () => {
                 <link rel='canonical' href={ "https://www.averoppf.com.au" } />
                 <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
             </Helmet>
-            <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center bg-[url('/hero-home.avif')] py-[5%]">
-                <div className="absolute inset-0 bg-black/80 h-full"></div>
+            <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center py-[5%]">
+                <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src="/hero.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+                <div className="absolute inset-0 bg-black/65 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
@@ -276,7 +284,7 @@ const HomePage: React.FC = () => {
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/apply-ppf.avif" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
+                        <img src="/frontShot.avif" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
                     </div>
                 </div>
             </section>
@@ -286,7 +294,7 @@ const HomePage: React.FC = () => {
                 ref={container2Ref} className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/ceramic.jpg" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
+                        <img src="/frontShot1.avif" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-300 italic'>Long-term shine. Effortless maintenance. Serious protection.</p>
@@ -346,10 +354,6 @@ const HomePage: React.FC = () => {
                                         <div className="w-2 h-2 bg-white rounded-full"></div>
                                         <span className="text-gray-300">Headlights</span>
                                     </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        <span className="text-gray-300">24 Hour Turnaround *</span>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -392,10 +396,6 @@ const HomePage: React.FC = () => {
                                     <div className="w-2 h-2 bg-white rounded-full"></div>
                                     <span className="text-gray-300">Headlights</span>
                                 </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">24 Hour Turnaround *</span>
-                                </li>
                             </ul>
                         </div>
                         <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
@@ -417,10 +417,6 @@ const HomePage: React.FC = () => {
                                     <div className="w-2 h-2 bg-white rounded-full"></div>
                                     <span className="text-gray-300">All exterior painted surfaces</span>
                                 </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">5-day Turnaround *</span>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -430,14 +426,11 @@ const HomePage: React.FC = () => {
                             href="/contact"
                         >GET A QUOTE</a>
                     </div>
-                    <div className='text-white text-xs w-full text-center'>
-                        * The specified turnaround times are tentative and offered on most services. However, completion times may vary depending on vehicle complexity, the extent of work required, and workshop scheduling.
-                    </div>
                 </motion.div>
             </section>
 
             <section>
-                <VideoHero />
+                <VideoHero source={"/carVid.mp4"} isCeramic={false} />
             </section>
 
             <section id="packages" className="py-20 bg-black border-gray-900 border-t-1">

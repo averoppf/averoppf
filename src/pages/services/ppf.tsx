@@ -156,8 +156,8 @@ export function PpfPage() {
                 <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
             </Helmet>
             {/* Hero Section */}
-            <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/cody-ppf.avif')] py-[5%]">
-                <div className="absolute inset-0 bg-black/80 h-full"></div>
+            <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/cody-anthony.avif')] py-[5%]">
+                <div className="absolute inset-0 bg-black/60 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
@@ -184,7 +184,7 @@ export function PpfPage() {
 
             <div className="relative w-full h-screen mb-[5%]">
                 <img 
-                    src="/hero-home.avif" 
+                    src="/cody-ppf.avif" 
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-black via-black/75 to-black" />
@@ -250,10 +250,6 @@ export function PpfPage() {
                                         <div className="w-2 h-2 bg-white rounded-full"></div>
                                         <span className="text-gray-300">Headlights</span>
                                     </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        <span className="text-gray-300">24 Hour Turnaround *</span>
-                                    </li>
                                 </ul>
                             </div>
                         </div>
@@ -295,10 +291,6 @@ export function PpfPage() {
                                     <div className="w-2 h-2 bg-white rounded-full"></div>
                                     <span className="text-gray-300">Headlights</span>
                                 </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">24 Hour Turnaround *</span>
-                                </li>
                             </ul>
                         </div>
                         <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
@@ -320,10 +312,6 @@ export function PpfPage() {
                                     <div className="w-2 h-2 bg-white rounded-full"></div>
                                     <span className="text-gray-300">All exterior painted surfaces</span>
                                 </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">5-day turnaround *</span>
-                                </li>
                             </ul>
                         </div>
                     </div>
@@ -332,9 +320,6 @@ export function PpfPage() {
                             className=" text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
                             href="/contact"
                         >GET A QUOTE</a>
-                    </div>
-                    <div className='text-white text-xs w-full text-center'>
-                        * The specified turnaround times are tentative and offered on most services. However, completion times may vary depending on vehicle complexity, the extent of work required, and workshop scheduling.
                     </div>
                 </div>
 
