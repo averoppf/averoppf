@@ -6,7 +6,6 @@ import { VisitMapComponent } from "../../components/misc/VisitMapComponent";
 import { motion, useAnimation, useInView, type Variants } from 'framer-motion';
 import CountUp from "react-countup";
 import { Helmet } from "react-helmet";
-import { VideoHero } from "../../components/misc/VideoOverlay";
 
 export const ContactButton = ({ text }: { text: any }) => (
         <a href="/contact" className="inline-flex items-center px-4 py-2 bg-neutral-500 text-white text-sm font-medium rounded-md hover:opacity-80 transition-opacity duration-200 focus:outline-none hover:cursor-pointer">
