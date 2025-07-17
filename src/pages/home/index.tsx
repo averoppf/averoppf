@@ -222,7 +222,7 @@ const HomePage: React.FC = () => {
             <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center py-[5%]">
                 <video
                     className="absolute inset-0 w-full h-full object-cover"
-                    src="/hero.mp4"
+                    src="/banner.mp4"
                     autoPlay
                     loop
                     muted

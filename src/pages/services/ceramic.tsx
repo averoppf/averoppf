@@ -191,10 +191,6 @@ export function CeramicPage() {
                 <p className="text-neutral-300 text-base font-light tracking-normal">Ceramic coating doesn't just keep your car looking cleaner — it locks in the condition of your vehicle's finish, helping prevent oxidation, fading, and dullness over time. By protecting against environmental damage and reducing the frequency of washes or detailing, ceramic coating helps your car retain a well-kept appearance for longer. This makes it easier to maintain resale value — without the need for repeated polishing or repainting down the track.</p>
             </section>
 
-            <section>
-                <VideoHero source={"/application.mp4"} isCeramic={true} />
-            </section>
-
             <div className="flex flex-col text-white gap-1 justify-center gap-10 py-16 px-4 items-center">
                 <div
                     className="container mx-auto px-6 ">
