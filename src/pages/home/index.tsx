@@ -456,7 +456,7 @@ const HomePage: React.FC = () => {
 
             <section className='flex flex-col items-center justify-center'>
                 <div className="w-10/12 space-y-2">
-                    <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero Ceramic Coating FAQs</h1>
+                    <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero FAQs</h1>
 
                     {faqData.map((section, sectionIndex) => (
                         <div key={sectionIndex} className="mb-8">
