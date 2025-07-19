@@ -186,6 +186,7 @@ export function ContactPage() {
                                 <option disabled selected hidden value="" >Select Film Type *</option>
                                 <option value="smooth-matte">Smooth Matte</option>
                                 <option value="high-gloss">Clear High Gloss</option>
+                                <option value="satin">Satin</option>
                             </select>
 
                             <div className={` bg-black p-3 rounded-lg text-center border-2 border-gray-900 ${isValidForm() ? "cursor-pointer" : "cursor-not-allowed"}`} onClick={() => {
