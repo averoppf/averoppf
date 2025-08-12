@@ -7,6 +7,7 @@ import { ContactPage } from './pages/contact'
 import { CeramicPage } from './pages/services/ceramic'
 import { PpfPage } from './pages/services/ppf'
 import { PrivacyPolicyPage } from './pages/privacyPolicy'
+import { AreaServed } from './pages/AreaServed'
 
 function App() {
 
@@ -19,6 +20,8 @@ function App() {
         <Route path="/services/ceramic" element={<PageLayout><CeramicPage /></PageLayout>} />
         <Route path="/services/ppf" element={<PageLayout><PpfPage /></PageLayout>} />
         <Route path="/privacy-policy" element={<PageLayout><PrivacyPolicyPage /></PageLayout>} />
+        <Route path="*" element={<PageLayout><HomePage /></PageLayout>} />
+        <Route path="/services/:area" element={<PageLayout><AreaServed /></PageLayout>} />
       </Routes>
     </BrowserRouter>
   )
