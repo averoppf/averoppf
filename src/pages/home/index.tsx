@@ -237,7 +237,7 @@ const HomePage: React.FC = () => {
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
-                        <span className="block mb-2 text-white font-michroma">Equipped to Protect.</span>
+                        <span className="block mb-2 text-white font-michroma">Equipped to Protect..</span>
                         <span className="block text-white font-michroma mb-24">Driven by Detail.</span>
                         <a
                             className="block text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
