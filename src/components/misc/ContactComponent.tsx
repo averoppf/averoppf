@@ -167,6 +167,7 @@ export default function ContactComponent() {
                 </div>
                 <textarea value={input.enquiryDetails} onChange={(e) => handleChange(e.target.value, "enquiryDetails")} placeholder="Enquiry Details" className="min-h-[150px] bg-gray-900 text-white w-full p-3 rounded-lg" />
 
+                {/* Select */}
                 <select
                     required
                     value={input.service}
