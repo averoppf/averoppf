@@ -8,9 +8,10 @@ interface Form {
     email: string;
     make: string;
     model: string;
-    enquiryDetails: string;
+    enquiryDetails?: string;
     service: string;
-    filmType: string;
+    filmType?: string;
+    year: string;
 }
 
 const empty: Form = {
@@ -23,6 +24,7 @@ const empty: Form = {
     enquiryDetails: '',
     service: '',
     filmType: '',
+    year: "",
 }
 
 export default function ContactComponent() {
@@ -55,8 +57,8 @@ export default function ContactComponent() {
       if (input.model.trim() == "") {
           valid = false
       }
-      if (input.enquiryDetails.trim() == "") {
-          valid = false
+      if (input.year.trim() == "") {
+        valid = false
       }
       if (input.service.trim() == "") {
           valid = false
@@ -74,9 +76,10 @@ export default function ContactComponent() {
       data.append("email", input.email)
       data.append("make", input.make)
       data.append("model", input.model)
-      data.append("enquiryDetails", input.enquiryDetails)
+      data.append("enquiryDetails", input.enquiryDetails ?? "")
       data.append("service", input.service)
-      data.append("filmType", input.filmType)
+      data.append("filmType", input.filmType ?? "")
+      data.append("year", input.year)
       const res = await fetch("https://formspree.io/f/xanjellj", {
           method: "POST",
           headers: {
@@ -159,7 +162,10 @@ export default function ContactComponent() {
                     <input required value={input.make} onChange={(e) => handleChange(e.target.value, "make")} placeholder="Vehicle Make *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
                     <input required value={input.model} onChange={(e) => handleChange(e.target.value, "model")} placeholder="Vehicle Model *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
                 </div>
-                <textarea required value={input.enquiryDetails} onChange={(e) => handleChange(e.target.value, "enquiryDetails")} placeholder="Enquiry Details *" className="min-h-[150px] bg-gray-900 text-white w-full p-3 rounded-lg" />
+                <div className='flex flex-col md:flex-row gap-4'>
+                    <input required value={input.year} onChange={(e) => handleChange(e.target.value, "year")} placeholder="Vehicle Year *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                </div>
+                <textarea value={input.enquiryDetails} onChange={(e) => handleChange(e.target.value, "enquiryDetails")} placeholder="Enquiry Details" className="min-h-[150px] bg-gray-900 text-white w-full p-3 rounded-lg" />
 
                 <select
                     required
@@ -175,13 +181,12 @@ export default function ContactComponent() {
                 </select>
 
                 <select
-                    required
                     value={input.filmType}
                     onChange={e => handleChange(e.target.value, "filmType")}
                     className="bg-gray-900 text-white w-full p-3 rounded-lg"
                     >
                     <option value="" disabled hidden>
-                        Select Film Type *
+                        Select Film Type
                     </option>
                     <option value="smooth-matte">Smooth Matte</option>
                     <option value="high-gloss">Clear High Gloss</option>
