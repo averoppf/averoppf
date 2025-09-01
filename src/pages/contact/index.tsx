@@ -15,6 +15,7 @@ interface Form {
     enquiryDetails: string;
     service: string;
     filmType: string;
+    year: string;
 }
 
 const empty: Form = {
@@ -27,6 +28,7 @@ const empty: Form = {
     enquiryDetails: '',
     service: '',
     filmType: '',
+    year: "",
 }
 export function ContactPage() {
     const mapRef = useRef<any>(null)
@@ -80,6 +82,9 @@ export function ContactPage() {
         if (input.enquiryDetails.trim() == "") {
             valid = false
         }
+        if (input.year.trim() == "") {
+            valid = false
+        }
         if (input.service.trim() == "") {
             valid = false
         }
@@ -99,6 +104,7 @@ export function ContactPage() {
         data.append("enquiryDetails", input.enquiryDetails)
         data.append("service", input.service)
         data.append("filmType", input.filmType)
+        data.append("year", input.year)
         const res = await fetch("https://formspree.io/f/xanjellj", {
             method: "POST",
             headers: {
@@ -162,47 +168,64 @@ export function ContactPage() {
                         {
                             !submitFormSuccess ? (
                             <div className="space-y-4 text-gray-300">
-                            <div className='flex flex-col md:flex-row gap-4'>
-                                <input required value={input.firstName} onChange={(e) => handleChange(e.target.value, "firstName")} placeholder="First Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                                <input required value={input.lastName} onChange={(e) => handleChange(e.target.value, "lastName")} placeholder="Last Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                            </div>
-                            <div className='flex flex-col md:flex-row gap-4'>
-                                <input type='email' required value={input.email} onChange={(e) => handleChange(e.target.value, "email")} placeholder="Email *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                                <input type="number" required value={input.phone} onChange={(e) => handleChange(e.target.value, "phone")} placeholder="Phone No. *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                            </div>
-                            <div className='flex flex-col md:flex-row gap-4'>
-                                <input required value={input.make} onChange={(e) => handleChange(e.target.value, "make")} placeholder="Vehicle Make *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                                <input required value={input.model} onChange={(e) => handleChange(e.target.value, "model")} placeholder="Vehicle Model *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
-                            </div>
-                            <textarea required value={input.enquiryDetails} onChange={(e) => handleChange(e.target.value, "enquiryDetails")} placeholder="Enquiry Details *" className="min-h-[150px] bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                <div className='flex flex-col md:flex-row gap-4'>
+                                    <input required value={input.firstName} onChange={(e) => handleChange(e.target.value, "firstName")} placeholder="First Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                    <input required value={input.lastName} onChange={(e) => handleChange(e.target.value, "lastName")} placeholder="Last Name *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                </div>
+                                <div className='flex flex-col md:flex-row gap-4'>
+                                    <input type='email' required value={input.email} onChange={(e) => handleChange(e.target.value, "email")} placeholder="Email *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                    <input type="number" required value={input.phone} onChange={(e) => handleChange(e.target.value, "phone")} placeholder="Phone No. *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                </div>
+                                <div className='flex flex-col md:flex-row gap-4'>
+                                    <input required value={input.make} onChange={(e) => handleChange(e.target.value, "make")} placeholder="Vehicle Make *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                    <input required value={input.model} onChange={(e) => handleChange(e.target.value, "model")} placeholder="Vehicle Model *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                </div>
+                                <div className='flex flex-col md:flex-row gap-4'>
+                                    <input required value={input.year} onChange={(e) => handleChange(e.target.value, "year")} placeholder="Vehicle Year *" className="bg-gray-900 text-white w-full p-3 rounded-lg" />
+                                </div>
+                                <textarea value={input.enquiryDetails} onChange={(e) => handleChange(e.target.value, "enquiryDetails")} placeholder="Enquiry Details" className="min-h-[150px] bg-gray-900 text-white w-full p-3 rounded-lg" />
 
-                            <select required value={input.service} onChange={(e) => handleChange(e.target.value, "service")} className='bg-gray-900 text-white w-full p-3 rounded-lg'>
-                                <option disabled selected hidden value="" >Select A Service *</option>
-                                <option value="ppf">Paint Protection Film (PPF)</option>
-                                <option value="ceramic">Ceramic Coating</option>
-                            </select>
+                                {/* Select */}
+                                <select
+                                    required
+                                    value={input.service}
+                                    onChange={e => handleChange(e.target.value, "service")}
+                                    className="bg-gray-900 text-white w-full p-3 rounded-lg"
+                                    >
+                                    <option value="" disabled hidden>
+                                        Select A Service *
+                                    </option>
+                                    <option value="ppf">Paint Protection Film (PPF)</option>
+                                    <option value="ceramic">Ceramic Coating</option>
+                                </select>
 
-                            <select required value={input.filmType} onChange={(e) => handleChange(e.target.value, "filmType")} className='bg-gray-900 text-white w-full p-3 rounded-lg'>
-                                <option disabled selected hidden value="" >Select Film Type *</option>
-                                <option value="smooth-matte">Smooth Matte</option>
-                                <option value="high-gloss">Clear High Gloss</option>
-                                <option value="satin">Satin</option>
-                            </select>
+                                <select
+                                    value={input.filmType}
+                                    onChange={e => handleChange(e.target.value, "filmType")}
+                                    className="bg-gray-900 text-white w-full p-3 rounded-lg"
+                                    >
+                                    <option value="" disabled hidden>
+                                        Select Film Type
+                                    </option>
+                                    <option value="smooth-matte">Smooth Matte</option>
+                                    <option value="high-gloss">Clear High Gloss</option>
+                                    <option value="satin">Satin</option>
+                                </select>
 
-                            <div className={` bg-black p-3 rounded-lg text-center border-2 border-gray-900 ${isValidForm() ? "cursor-pointer" : "cursor-not-allowed"}`} onClick={() => {
-                                if (isValidForm()) {
-                                    handleSubmit()
-                                }
-                            }}>
-                                <p className="font-bold text-white">Submit</p>
-                                {loading && <Loader className='spin' />}
-                            </div>
+                                <div className={` bg-black p-3 rounded-lg text-center border-2 border-gray-900 ${isValidForm() ? "cursor-pointer" : "cursor-not-allowed"}`} onClick={() => {
+                                    if (isValidForm()) {
+                                        handleSubmit()
+                                    }
+                                }}>
+                                    <p className="font-bold text-white">Submit</p>
+                                    {loading && <Loader className='spin' />}
+                                </div>
                             </div>
                             ): (
-                            <div className="w-full  flex flex-col mt-8">
-                                <h3 className="text-3xl font-bold mb-4 font-michroma text-white text-left">Thank you for your enquiry!</h3>
-                                <p className="text-neutral-300">We will get back to you as soon as possible.</p>
-                            </div>
+                                <div className="w-full  flex flex-col mt-8">
+                                    <h3 className="text-3xl font-bold mb-4 font-michroma text-white text-left">Thank you for your enquiry!</h3>
+                                    <p className="text-neutral-300">We will get back to you as soon as possible.</p>
+                                </div>
                             )
                         }
                     </div>
