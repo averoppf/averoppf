@@ -108,7 +108,7 @@ export function PpfPage() {
                 },
                 {
                     question: "Will the film become yellow or cloudy over time?",
-                    answer: "We use high-quality, non-yellowing PPF from trusted brands like Avery Dennison, which are designed to remain optically clear for years. When installed and maintained properly, your film will retain its transparency and gloss throughout the life of its warranty."
+                    answer: "We use high-quality, non-yellowing PPF from trusted brands like Avery Dennison and Inozetek, which are designed to remain optically clear for years. When installed and maintained properly, your film will retain its transparency and gloss throughout the life of its warranty."
                 },
                 {
                     question: "Will my car's paint fade at different rates under the film?",
@@ -199,6 +199,7 @@ export function PpfPage() {
                                 items={[
                                     { title: "Clear Gloss", description: "For a glass-like shine that enhances depth and colour", id: 1, icon: <p className="text-5xl font-bold">1</p> },
                                     { title: "Matte", description: "For a bold, sleek finish that transforms your paintwork", id: 2, icon: <p className="text-5xl font-bold">2</p> },
+                                    { title: "Coloured PPF", description: "All the benefits of PPF, with added colour customisation" , id: 3, icon: <p className="text-5xl font-bold">3</p> },
                                 ]}
                             />
                         </div>
@@ -320,18 +321,6 @@ export function PpfPage() {
                             className=" text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
                             href="/contact"
                         >GET A QUOTE</a>
-                    </div>
-                </div>
-
-                <div className="w-11/12 mt-[5%]">
-                    <div className="w-full flex flex-col items-center justify-center gap-4">
-                        <p className="my-4 max-w-[95%] sm:max-w-[70%] text-center text-base text-neutral-300">Every PPF installation at Avero is backed by a limited manufacturer's warranty of 10 years, depending on the film selected. These warranties, offered by Avery Dennison, cover key concerns such as cracking, bubbling, and yellowing, giving you long-term confidence in the protection you're investing in. </p>
-                        <div className="border-b-1 border-neutral-500 w-full sm:w-[75vw]"></div>
-                        <p className="mb-6 max-w-[95%] sm:max-w-[70%] text-center text-base text-neutral-300">We exclusively use premium-grade films which are rigorously tested for durability and optical clarity. Whether you choose a satin, gloss, matte, or high gloss black finish, your vehicle is protected with a product designed to last.</p>
-                        <div className="border-b-1 border-neutral-500 w-full sm:w-[75vw]"></div>
-                        <p className="mb-6 max-w-[95%] sm:max-w-[70%] text-center text-base text-neutral-300">We exclusively use premium-grade films which are rigorously tested for durability and optical clarity. Whether you choose a satin, gloss, matte, or high gloss black finish, your vehicle is protected with a product designed to last.</p>
-                        <div className="border-b-1 border-neutral-500 w-full sm:w-[75vw]"></div>
-                        <p className="mb-2 max-w-[95%] sm:max-w-[70%] text-center text-base text-neutral-300">PPF is one of the most effective ways to maintain the longevity of your vehicle's factory paintwork. By preventing paint damage before it starts, you avoid costly resprays or touch-ups down the line. For many car owners, the investment in PPF is reflected in the long-term preservation of their vehicle's resale value — keeping your paint in top condition and your vehicle looking newer for longer. It's not just protection — it's peace of mind every time you hit the road.</p>
                     </div>
                 </div>
                             

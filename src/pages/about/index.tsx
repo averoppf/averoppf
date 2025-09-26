@@ -69,7 +69,7 @@ const AboutPage: React.FC = () => {
                     <p className='text-neutral-200 max-w-[80%] mb-[8%] text-base'>
                         At Avero PPF, our passion for cars goes beyond shine and gloss—we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
                     </p>
-                    <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 max-w-[40%]'>
+                    <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 max-w-[40%] items-center justify-center w-full'>
                         <a
                             className="text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer flex items-center justify-center"
                             href="/services/ppf"
@@ -78,6 +78,14 @@ const AboutPage: React.FC = () => {
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/ceramic"
                         >CERAMIC COATING</a>
+                        <a
+                            className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
+                            href="/services/colour-wraps"
+                        >COLOURED WRAPS</a>
+                        <a
+                            className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
+                            href="/services/window-tinting"
+                        >WINDOW TINTING</a>
                     </div>
                     
                 </div>

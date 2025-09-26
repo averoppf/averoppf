@@ -10,7 +10,6 @@ interface Form {
     model: string;
     enquiryDetails?: string;
     service: string;
-    filmType?: string;
     year: string;
 }
 
@@ -23,7 +22,6 @@ const empty: Form = {
     model: '',
     enquiryDetails: '',
     service: '',
-    filmType: '',
     year: "",
 }
 
@@ -78,7 +76,6 @@ export default function ContactComponent() {
       data.append("model", input.model)
       data.append("enquiryDetails", input.enquiryDetails ?? "")
       data.append("service", input.service)
-      data.append("filmType", input.filmType ?? "")
       data.append("year", input.year)
       const res = await fetch("https://formspree.io/f/xanjellj", {
           method: "POST",
@@ -180,19 +177,9 @@ export default function ContactComponent() {
                     </option>
                     <option value="ppf">Paint Protection Film (PPF)</option>
                     <option value="ceramic">Ceramic Coating</option>
-                </select>
-
-                <select
-                    value={input.filmType}
-                    onChange={e => handleChange(e.target.value, "filmType")}
-                    className="bg-gray-900 text-white w-full p-3 rounded-lg"
-                    >
-                    <option value="" disabled hidden>
-                        Select Film Type
-                    </option>
-                    <option value="smooth-matte">Smooth Matte</option>
-                    <option value="high-gloss">Clear High Gloss</option>
-                    <option value="satin">Satin</option>
+                    <option value="window-tinting">Window Tinting</option>
+                    <option value="colour-wraps">Colour Wrap</option>
+                    <option value="other">Other</option>
                 </select>
 
                 <div className={` bg-black p-3 rounded-lg text-center border-2 border-gray-900 ${isValidForm() ? "cursor-pointer" : "cursor-not-allowed"}`} onClick={() => {
