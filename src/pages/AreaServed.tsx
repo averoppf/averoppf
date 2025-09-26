@@ -15,7 +15,7 @@ const SERVICE_AREAS = [
 ];
 
 const STANDARD_TEXT = {
-  mainTitle: "Why Choose Avero for Paint Protection Film & Ceramic Coating?",
+  mainTitle: "Why f Choose Avero for Paint Protection Film & Ceramic Coating?",
   paragraph1: "Avero is South Sydney’s trusted specialist in Paint Protection Film (PPF) and Ceramic Coating. We work with car lovers, collectors and everyday drivers who want their vehicle protected and looking its best long term. Every application is done with precision, care and the highest quality materials.",
   subHeading1: "Paint Protection Film (PPF)",
   subParagraph1: "PPF is a transparent film that protects your vehicle’s paint from stone chips, road debris, swirl marks and scratches. It acts as a second skin, keeping your paintwork looking fresh for years. All of our PPF comes with a 10-year manufacturer warranty from Avery Dennison. Our films are available in three stunning finishes: Clear High Gloss, Satin, and Smooth Matte. Each is self-healing and designed to withstand harsh Australian conditions. PPF also helps maintain the resale value of your vehicle. It protects the original factory paint, making your car more appealing to future buyers.",
