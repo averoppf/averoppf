@@ -348,7 +348,7 @@ const HomePage: React.FC = () => {
                             <p className="text-lg leading-relaxed">
                                 Whether you want a subtle tint or maximum privacy, we’ve got options to suit your style and needs.
                             </p>
-                            <div className='text-white border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
+                            <div className='text-white border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/window-tinting")}>LEARN MORE</div>
                         </div>
                     </div>
                 </div>
