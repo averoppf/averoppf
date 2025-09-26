@@ -310,6 +310,50 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
+            <section
+                ref={containerRef}
+                className="py-20 bg-neutral-100">
+                <div
+                    className="container mx-auto px-6 ">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div>
+                            <h2 className="text-4xl font-bold mb-6 text-black font-michroma">Colour Wraps</h2>
+                            <p className='text-2xl font-medium mb-6 text-gray-500 italic'>At Avero, we’re all about helping you express your personality through your vehicle.</p>
+                            <p className="text-lg text-gray-500 leading-relaxed">
+                                Whether you want something bold, subtle, or completely unique, a vinyl wrap or colour PPF is the perfect way to make your car stand out without committing to a permanent respray.
+                            </p>
+                            <p className="text-lg text-gray-500 leading-relaxed mb-6">
+                                Our colour wrap options integrate style, protection, and personalisation all in one.
+                            </p>
+                            <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/colour-wraps")}>LEARN MORE</div>
+                        </div>
+                        <img src="/DSC04018.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' />
+                    </div>
+                </div>
+            </section>
+
+            <section
+                ref={containerRef}
+                className="py-20 bg-black border-black text-white border-t-1">
+                <div
+                    className="container mx-auto px-6 ">
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <img src="/DSC04104.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' />
+                        <div>
+                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Window Tinting</h2>
+                            <p className='text-2xl font-medium mb-6 italic'>At Avero, we use only high-performance tint films that meet Australian standards, ensuring durability, clarity, and long-lasting results.</p>
+                            <p className="text-lg leading-relaxed mb-6">
+                                Our team applies each tint with precision to avoid bubbles or peeling, giving your windows a smooth, factory-quality look.
+                            </p>
+                            <p className="text-lg leading-relaxed">
+                                Whether you want a subtle tint or maximum privacy, we’ve got options to suit your style and needs.
+                            </p>
+                            <div className='text-white border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             <section id="packages" className="py-20 bg-black border-gray-900 border-t-1">
                 <motion.div
                     ref={servicesRef}

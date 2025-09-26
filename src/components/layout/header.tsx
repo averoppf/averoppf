@@ -119,6 +119,12 @@ export function Header() {
                   <a href="/services/ceramic" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
                     Ceramic Coating
                   </a>
+                  <a href="/services/colour-wraps" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
+                    Colour Wraps
+                  </a>
+                  <a href="/services/window-tinting" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
+                    Window Tinting
+                  </a>
                 </div>
               )}
             </div>

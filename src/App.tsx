@@ -8,6 +8,8 @@ import { CeramicPage } from './pages/services/ceramic'
 import { PpfPage } from './pages/services/ppf'
 import { PrivacyPolicyPage } from './pages/privacyPolicy'
 import { AreaServed } from './pages/AreaServed'
+import { ColourWrapsPage } from './pages/services/colourWraps'
+import { WindowTintingPage } from './pages/services/windowTinting'
 
 function App() {
 
@@ -19,6 +21,8 @@ function App() {
         <Route path="/contact" element={<PageLayout><ContactPage /></PageLayout>} />
         <Route path="/services/ceramic" element={<PageLayout><CeramicPage /></PageLayout>} />
         <Route path="/services/ppf" element={<PageLayout><PpfPage /></PageLayout>} />
+        <Route path="/services/colour-wraps" element={<PageLayout><ColourWrapsPage /></PageLayout>} />
+        <Route path="/services/window-tinting" element={<PageLayout><WindowTintingPage /></PageLayout>} />
         <Route path="/privacy-policy" element={<PageLayout><PrivacyPolicyPage /></PageLayout>} />
         <Route path="*" element={<PageLayout><HomePage /></PageLayout>} />
         <Route path="/services/:area" element={<PageLayout><AreaServed /></PageLayout>} />
