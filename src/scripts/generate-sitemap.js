@@ -10,6 +10,8 @@ const urls = [
   { url: '/contact', changefreq: 'weekly', priority: 0.9 },
   { url: '/services/ceramic', changefreq: 'weekly', priority: 0.8 },
   { url: '/services/ppf', changefreq: 'weekly', priority: 0.8 },
+  { url: '/services/window-tinting', changefreq: 'weekly', priority: 0.8 },
+  { url: '/services/colour-wraps', changefreq: 'weekly', priority: 0.8 },
   { url: '/services/taren-point', changefreq: 'weekly', priority: 0.7 },
   { url: '/services/miranda', changefreq: 'weekly', priority: 0.7 },
   { url: '/services/caringbah', changefreq: 'weekly', priority: 0.7 },
