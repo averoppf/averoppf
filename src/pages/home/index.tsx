@@ -214,11 +214,11 @@ const HomePage: React.FC = () => {
 
     return (
         <div>
-            <Helmet>
+            {/* <Helmet>
                 <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
                 <link rel='canonical' href={ "https://www.averoppf.com.au" } />
                 <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
-            </Helmet>
+            </Helmet> */}
             <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center py-[5%]">
                 <video
                     className="absolute inset-0 w-full h-full object-cover"

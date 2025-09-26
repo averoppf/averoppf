@@ -153,11 +153,11 @@ export function AreaServed(): React.ReactElement {
 
   return (
     <div>
-        <Helmet>
+        {/* <Helmet>
             <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
             <link rel='canonical' href={ "https://www.averoppf.com.au" } />
             <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
-        </Helmet>
+        </Helmet> */}
         <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/backgroundShot.avif')] py-[5%]">
             <div className="absolute inset-0 bg-black/60 h-full"></div>
             <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
