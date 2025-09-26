@@ -7,7 +7,7 @@ import { VisitMapComponent } from "../../components/misc/VisitMapComponent";
 import { motion, useAnimation, useInView, type Variants } from 'framer-motion';
 import CountUp from "react-countup";
 import Carousel from "../../components/misc/FramerCarousel";
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 interface Feature {
   title: string;

@@ -3,7 +3,7 @@ import { useCallback, useEffect, useRef, useState } from "react"
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../App.css'
-import { Helmet } from "react-helmet";
+// import { Helmet } from "react-helmet";
 
 interface Form {
     firstName: string;

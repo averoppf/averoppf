@@ -5,7 +5,7 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../App.css'
 import { motion, useAnimation, useInView } from 'framer-motion';
 import ValuesSection from '../../components/misc/ValuesComponent';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 
 const AboutPage: React.FC = () => {
     const mapRef = useRef<any>(null)

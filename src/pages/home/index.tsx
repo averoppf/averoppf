@@ -9,7 +9,7 @@ import { VideoHero } from '../../components/misc/VideoOverlay';
 import ContactComponent from '../../components/misc/ContactComponent';
 import { ContactButton } from '../services/ceramic';
 import { VisitMapComponent } from '../../components/misc/VisitMapComponent';
-import { Helmet } from 'react-helmet';
+// import { Helmet } from 'react-helmet';
 const CARS = [
     {
         label: "Land Rover",
