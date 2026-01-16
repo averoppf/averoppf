@@ -6,7 +6,7 @@ export function PrivacyPolicyPage() {
       <h1 className="text-white text-4xl font-michroma">Privacy Policy</h1>
       <div className="w-full px-[5%] py-6 text-gray-300">
         <p>
-          Avero Solutions Pty Ltd is committed to providing quality services to you and this policy outlines our ongoing obligations to you in respect of how we manage your Personal Information. We have adopted the Australian Privacy Principles (APPs) contained in the Privacy Act 1988 (Cth)(the Privacy Act). The NPPs govern the way in which we collect, use, disclose, store, secure and dispose of your Personal Information. A copy of the Australian Privacy Principles may be obtained from the website of The Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au/" rel="noopener noreferrer" target="_blank">https://www.oaic.gov.au/</a>.
+          Averoo Solutions Pty Ltd is committed to providing quality services to you and this policy outlines our ongoing obligations to you in respect of how we manage your Personal Information. We have adopted the Australian Privacy Principles (APPs) contained in the Privacy Act 1988 (Cth)(the Privacy Act). The NPPs govern the way in which we collect, use, disclose, store, secure and dispose of your Personal Information. A copy of the Australian Privacy Principles may be obtained from the website of The Office of the Australian Information Commissioner at <a href="https://www.oaic.gov.au/" rel="noopener noreferrer" target="_blank">https://www.oaic.gov.au/</a>.
         </p>
       </div>
 

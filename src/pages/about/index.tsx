@@ -67,7 +67,7 @@ const AboutPage: React.FC = () => {
                         About Us
                     </h1>
                     <p className='text-neutral-200 max-w-[80%] mb-[8%] text-base'>
-                        At Averooe PPF, our passion for cars goes beyond shine and gloss—we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
+                        At Avero PPF, our passion for cars goes beyond shine and gloss—we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
                     </p>
                     <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 max-w-[40%] items-center justify-center w-full'>
                         <a
