@@ -8,11 +8,16 @@ export function VideoHero({
   isCeramic: boolean;
 }): React.ReactElement {
   return (
-    /* Added bg-white to ensure no dark background bleeds through */
     <div className="relative w-full h-screen overflow-hidden bg-white">
-      {/* Video background with 125% brightness filter */}
+      {/* Video background with inline style brightness boost.
+        We use z-[1] and a style filter to bypass potential CSS conflicts.
+      */}
       <video
-        className="absolute inset-0 w-full h-full object-cover brightness-125 contrast-110"
+        className="absolute inset-0 w-full h-full object-cover z-[1]"
+        style={{ 
+          filter: 'brightness(1.4) contrast(1.1)', 
+          WebkitFilter: 'brightness(1.4) contrast(1.1)' 
+        }}
         src={source}
         autoPlay
         loop
@@ -20,19 +25,21 @@ export function VideoHero({
         playsInline
       />
 
-      {/* Lightened Gradient: Only at the top to keep text readable */}
-      <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/30 to-transparent" />
+      {/* Dark gradient: Set to z-[2] to sit above video but below text.
+        Reduced height (h-1/3) so it only affects the very top.
+      */}
+      <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/40 to-transparent z-[2]" />
 
-      {/* Heading + features */}
+      {/* Heading + features: Set to z-[10] to stay on top */}
       {
         !isCeramic ? (
-          <div className="relative z-10 w-full px-4 pt-16 sm:pt-24 md:pt-32 flex flex-col items-center">
+          <div className="relative z-[10] w-full px-4 pt-16 sm:pt-24 md:pt-32 flex flex-col items-center">
             <h1
               className="
                 max-w-3xl text-center text-white font-bold
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl
                 font-michroma leading-normal
-                drop-shadow-2xl
+                drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]
               "
             >
               Protect Your Ride with Premium PPF
@@ -40,7 +47,6 @@ export function VideoHero({
 
             {/* Features block */}
             <div className="mt-8 max-w-2xl mx-auto flex flex-col items-center space-y-4">
-              {/* Centered car icon */}
               <div className="w-full flex justify-center mb-10">
                 <Car className="w-20 h-20 text-gray-400" />
               </div>
