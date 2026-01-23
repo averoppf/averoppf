@@ -20,7 +20,7 @@ export function VideoHero({
       />
 
       {/* Dark gradient */}
-      <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-black/40 to-black/10" />
+      <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/30 to-transparent" />
 
       {/* Heading + features */}
       {
