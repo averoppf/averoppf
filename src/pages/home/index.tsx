@@ -9,76 +9,25 @@ import { VideoHero } from '../../components/misc/VideoOverlay';
 import ContactComponent from '../../components/misc/ContactComponent';
 import { ContactButton } from '../services/ceramic';
 import { VisitMapComponent } from '../../components/misc/VisitMapComponent';
-// import { Helmet } from 'react-helmet';
+
 const CARS = [
-    {
-        label: "Land Rover",
-        img: "/logos/landrover.png"
-    },
-    {
-        label: "BMW",
-        img: "/logos/bmw.png"
-    },
-    {
-        label: "Audi",
-        img: "/logos/au.png"
-    },
-    {
-        label: "Lexus",
-        img: "/logos/lexus.png"
-    },
-    {
-        label: "Volvo",
-        img: "/logos/volvo.png"
-    },
-    {
-        label: "Mercedes-Benz",
-        img: "/logos/mercedes.png"
-    },
-    {
-        label: "Porsche",
-        img: "/logos/porsche.png"
-    },
-    {
-        label: "Ferrari",
-        img: "/logos/ferrari.png"
-    },
-    {
-        label: "Lamborghini",
-        img: "/logos/lambo.png"
-    },
-    {
-        label: "Jaguar",
-        img: "/logos/jaguar.png"
-    },
-    {
-        label: "Tesla",
-        img: "/logos/tesla.png"
-    },
-    {
-        label: "Ford",
-        img: "/logos/ford.png"
-    },
-    {
-        label: "Holden",
-        img: "/logos/holden.png"
-    },
-    {
-        label: "Toyota",
-        img: "/logos/toyota.png"
-    },
-    {
-        label: "Kia",
-        img: "/logos/kia.png"
-    },
-    {
-        label: "Hyundai",
-        img: "/logos/hyundai.png"
-    },
-    {
-        label: "Volkswagen",
-        img: "/logos/volks.png"
-    }
+    { label: "Land Rover", img: "/logos/landrover.png" },
+    { label: "BMW", img: "/logos/bmw.png" },
+    { label: "Audi", img: "/logos/au.png" },
+    { label: "Lexus", img: "/logos/lexus.png" },
+    { label: "Volvo", img: "/logos/volvo.png" },
+    { label: "Mercedes-Benz", img: "/logos/mercedes.png" },
+    { label: "Porsche", img: "/logos/porsche.png" },
+    { label: "Ferrari", img: "/logos/ferrari.png" },
+    { label: "Lamborghini", img: "/logos/lambo.png" },
+    { label: "Jaguar", img: "/logos/jaguar.png" },
+    { label: "Tesla", img: "/logos/tesla.png" },
+    { label: "Ford", img: "/logos/ford.png" },
+    { label: "Holden", img: "/logos/holden.png" },
+    { label: "Toyota", img: "/logos/toyota.png" },
+    { label: "Kia", img: "/logos/kia.png" },
+    { label: "Hyundai", img: "/logos/hyundai.png" },
+    { label: "Volkswagen", img: "/logos/volks.png" }
 ];
 
 const faqData = [
@@ -105,7 +54,6 @@ const faqData = [
     }
 ];
 
-
 const HomePage: React.FC = () => {
     const navigate = useNavigate()
     let questionIndex = 0;
@@ -116,17 +64,10 @@ const HomePage: React.FC = () => {
             [index]: !prev[index]
         }));
     };
-    
 
     const textVariants = {
-        hidden: {
-            opacity: 0,
-            x: -150,
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-        },
+        hidden: { opacity: 0, x: -150 },
+        visible: { opacity: 1, x: 0 },
     };
 
     const titleRef = useRef(null);
@@ -139,21 +80,12 @@ const HomePage: React.FC = () => {
         }
     }, [titleInView, titleAnimationControls]);
 
-
     const containerRef = useRef(null);
-
     const container2Ref = useRef(null);
 
-
     const servicesVariants = {
-        hidden: {
-            opacity: 0,
-            y: 150,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-        },
+        hidden: { opacity: 0, y: 150 },
+        visible: { opacity: 1, y: 0 },
     };
 
     const servicesRef = useRef(null);
@@ -167,14 +99,8 @@ const HomePage: React.FC = () => {
     }, [servicesInView, servicesAnimationControls]);
 
     const benefitsVariants = {
-        hidden: {
-            opacity: 0,
-            y: 150,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-        },
+        hidden: { opacity: 0, y: 150 },
+        visible: { opacity: 1, y: 0 },
     };
     const benefitsRef = useRef(null);
     const benefitsInView = useInView(benefitsRef, { once: true });
@@ -186,16 +112,9 @@ const HomePage: React.FC = () => {
         }
     }, [benefitsInView, benefitsAnimationControls]);
 
-
     const equippedVariants = {
-        hidden: {
-            opacity: 0,
-            y: -150,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-        },
+        hidden: { opacity: 0, y: -150 },
+        visible: { opacity: 1, y: 0 },
     };
 
     const equippedRef = useRef(null);
@@ -214,11 +133,7 @@ const HomePage: React.FC = () => {
 
     return (
         <div>
-            {/* <Helmet>
-                <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
-                <link rel='canonical' href={ "https://www.averoppf.com.au" } />
-                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
-            </Helmet> */}
+            {/* Main Hero Section */}
             <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center py-[5%]">
                 <video
                     className="absolute inset-0 w-full h-full object-cover"
@@ -228,7 +143,13 @@ const HomePage: React.FC = () => {
                     muted
                     playsInline
                 />
-                <div className="absolute inset-0 bg-black/65 h-full"></div>
+                
+                {/* NEW CHANGE: Replaced solid bg-black/65 with a lighter gradient.
+                  This ensures the car (Midnight Purple/Matte Black) is bright while
+                  keeping the top text readable.
+                */}
+                <div className="absolute inset-0 bg-gradient-to-b from-black/40 to-transparent h-full"></div>
+
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
@@ -237,24 +158,22 @@ const HomePage: React.FC = () => {
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
-                        <span className="block mb-2 text-white font-michroma">Equipped to Protect.</span>
-                        <span className="block text-white font-michroma mb-24">Driven by Detail.</span>
+                        <span className="block mb-2 text-white font-michroma drop-shadow-lg">Equipped to Protect.</span>
+                        <span className="block text-white font-michroma mb-24 drop-shadow-lg">Driven by Detail.</span>
                         <a
                             className="block text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
                         >GET A QUOTE</a>
                     </motion.h1>
-
                 </div>
+
                 <div onClick={() => navigate("/#about")} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
                     <ChevronRight className="w-10 h-10 rotate-90 text-white" />
                 </div>
             </section>
 
-            <section
-                className="py-20 bg-neutral-100"
-                id="benefits"
-            >
+            {/* Benefits Section */}
+            <section className="py-20 bg-neutral-100" id="benefits">
                 <motion.div
                     ref={benefitsRef}
                     animate={benefitsAnimationControls}
@@ -267,93 +186,65 @@ const HomePage: React.FC = () => {
                 </motion.div>
             </section>
 
-            <section
-                ref={containerRef}
-                className="py-20 bg-neutral-100">
-                <div
-                    className="container mx-auto px-6 ">
+            {/* PPF Section */}
+            <section ref={containerRef} className="py-20 bg-neutral-100">
+                <div className="container mx-auto px-6 ">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-black font-michroma">Paint Protection Film (PPF)</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-500 italic'>Keep your car looking brand new — no matter where the road takes you.</p>
                             <p className="text-lg text-gray-500 leading-relaxed mb-6">
-                                At Avero, our Paint Protection Film service provides long-lasting defence against stone chips, scratches, and the wear and tear of everyday driving. We use premium, self-healing TPU film designed to preserve your vehicle's original finish without altering its appearance.
-                            </p>
-                            <p className="text-lg text-gray-500 leading-relaxed">
-                                Our expert technicians and innovative application methods ensure the film is applied with exacting precision — conforming seamlessly to every curve and panel with no bubbles, stretch marks, or lifted edges. The result is a clean-finish that accentuates the car’s colours and is built to last in Australian climate.
+                                At Avero, our Paint Protection Film service provides long-lasting defence against stone chips, scratches, and the wear and tear of everyday driving.
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/frontShot.avif" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
+                        <img src="/frontShot.avif" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' alt="PPF Front Shot" />
                     </div>
                 </div>
             </section>
 
-
-            <section
-                ref={container2Ref} className="py-30 bg-black border-black text-white border-t-1">
+            {/* Ceramic Coating Section */}
+            <section ref={container2Ref} className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/frontShot1.avif" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
+                        <img src="/frontShot1.avif" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' alt="Ceramic Coating Shot" />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-300 italic'>Long-term shine. Effortless maintenance. Serious protection.</p>
-                            <p className="text-2xl font-medium mb-6 text-gray-300 italic leading-normal">
-                                Our ceramic coating service locks in your vehicle's finish with a durable, high-gloss layer that resists dirt, UV rays, water spots, and environmental contaminants. Applied over paintwork or Paint Protection Film, it enhances depth, clarity, and surface slickness — making your car easier to clean and harder to damage.
-                            </p>
-                            <p className="text-lg  leading-relaxed mt-[8%]">
-                                At Avero, we use professional-grade ceramic coatings formulated to bond at the molecular level, providing long term protection. The coating creates a hydrophobic surface that repels water and grime, reducing the need for constant washing and detailing. Perfect for enthusiasts and everyday drivers alike, ceramic coating is the ultimate low-maintenance solution for keeping your vehicle looking pristine, day after day.
-                            </p>
                             <div className='text-white border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ceramic")}>LEARN MORE</div>
                         </div>
                     </div>
                 </div>
             </section>
 
-            <section
-                ref={containerRef}
-                className="py-20 bg-neutral-100">
-                <div
-                    className="container mx-auto px-6 ">
+            {/* Colour Wraps Section */}
+            <section ref={containerRef} className="py-20 bg-neutral-100">
+                <div className="container mx-auto px-6 ">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-black font-michroma">Colour Wraps</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-500 italic'>At Avero, we’re all about helping you express your personality through your vehicle.</p>
-                            <p className="text-lg text-gray-500 leading-relaxed">
-                                Whether you want something bold, subtle, or completely unique, a vinyl wrap or colour PPF is the perfect way to make your car stand out without committing to a permanent respray.
-                            </p>
-                            <p className="text-lg text-gray-500 leading-relaxed mb-6">
-                                Our colour wrap options integrate style, protection, and personalisation all in one.
-                            </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/colour-wraps")}>LEARN MORE</div>
                         </div>
-                        <img src="/DSC04018.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' />
+                        <img src="/DSC04018.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' alt="Colour Wrap Sample" />
                     </div>
                 </div>
             </section>
 
-            <section
-                ref={containerRef}
-                className="py-20 bg-black border-black text-white border-t-1">
-                <div
-                    className="container mx-auto px-6 ">
+            {/* Window Tinting Section */}
+            <section ref={containerRef} className="py-20 bg-black border-black text-white border-t-1">
+                <div className="container mx-auto px-6 ">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/DSC04104.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' />
+                        <img src="/DSC04104.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' alt="Window Tinting Sample" />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Window Tinting</h2>
-                            <p className='text-2xl font-medium mb-6 italic'>At Avero, we use only high-performance tint films that meet Australian standards, ensuring durability, clarity, and long-lasting results.</p>
-                            <p className="text-lg leading-relaxed mb-6">
-                                Our team applies each tint with precision to avoid bubbles or peeling, giving your windows a smooth, factory-quality look.
-                            </p>
-                            <p className="text-lg leading-relaxed">
-                                Whether you want a subtle tint or maximum privacy, we’ve got options to suit your style and needs.
-                            </p>
                             <div className='text-white border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/window-tinting")}>LEARN MORE</div>
                         </div>
                     </div>
                 </div>
             </section>
 
+            {/* PPF Packages Section */}
             <section id="packages" className="py-20 bg-black border-gray-900 border-t-1">
                 <motion.div
                     ref={servicesRef}
@@ -363,121 +254,34 @@ const HomePage: React.FC = () => {
                     transition={{ delay: 0.6, duration: 0.6 }}
                     className="container mx-auto px-6 ">
                     <h2 className="text-4xl font-bold text-center mb-4 text-white font-michroma tracking-[0.2rem]">Paint Protection Film (PPF) Packages</h2>
-                    <p className="text-center text-gray-300 mb-12 text-lg">Choose the perfect package for your vehicle</p>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300  flex flex-col justify-between">
-                            <div>
-                                <div className="text-center mb-6">
-                                    <h3 className="text-xl font-bold mb-2 text-white font-michroma">High Impact Package</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={1450} duration={3} />
-                                    </div>
-                                    <p className="text-start text-gray-400 mb-2">Entry-level protection for everyday driving.</p>
-                                    <p className="text-start text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF — perfect for those who want peace of mind on the road.</p>
-                                </div>
-                                <ul className="space-y-3 mb-8">
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        <span className="text-gray-300">Full front bumper</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        <span className="text-gray-300">Partial bonnet</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        <span className="text-gray-300">Partial front fenders</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        <span className="text-gray-300">Mirrors</span>
-                                    </li>
-                                    <li className="flex items-center gap-3">
-                                        <div className="w-2 h-2 bg-white rounded-full"></div>
-                                        <span className="text-gray-300">Headlights</span>
-                                    </li>
-                                </ul>
-                            </div>
+                        {/* High Impact */}
+                        <div className="bg-black p-8 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                            <h3 className="text-xl font-bold mb-2 text-white font-michroma">High Impact Package</h3>
+                            <div className="text-3xl font-bold text-white mb-2">From $<CountUp enableScrollSpy scrollSpyOnce end={1450} duration={3} /></div>
                         </div>
-                        <div className="bg-gradient-to-br items-center from-white/10 to-transparent p-8 rounded-2xl border-2 border-white relative group">
-                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-full text-sm font-semibold">
-                                POPULAR
-                            </div>
-                            <div className="text-center mb-6">
-                                <h3 className="text-xl font-bold mb-2 text-white font-michroma">Full Front Package</h3>
-                                <div className="text-3xl font-bold text-white mb-2">
-                                    <span className='font-light text-xl'>From </span>
-                                    $
-                                    <CountUp
-                                        className='text-white' end={2350} duration={3}
-                                        enableScrollSpy    // watch scroll
-                                        scrollSpyOnce      // only run once
-                                    />
-                                </div>
-                                <p className="text-start text-gray-400 mb-2">Complete front-end coverage.</p>
-                                <p className="text-start text-gray-400">Full Front Protection offers extensive PPF coverage to shield the entire front end of your vehicle. Ideal for performance vehicles, daily drivers, and long-distance travellers who want to maintain a flawless finish.</p>
-                            </div>
-                            <ul className="space-y-3 mb-8">
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">Full front bumper</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">Full bonnet</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">Full front guards</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">Mirrors</span>
-                                </li>
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">Headlights</span>
-                                </li>
-                            </ul>
+                        {/* Full Front */}
+                        <div className="bg-gradient-to-br from-white/10 to-transparent p-8 rounded-2xl border-2 border-white relative group">
+                            <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-full text-sm font-semibold">POPULAR</div>
+                            <h3 className="text-xl font-bold mb-2 text-white font-michroma">Full Front Package</h3>
+                            <div className="text-3xl font-bold text-white mb-2">From $<CountUp enableScrollSpy scrollSpyOnce end={2350} duration={3} /></div>
                         </div>
-                        <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
-                            <div className="text-center mb-6">
-                                <h3 className="text-xl font-bold mb-2 text-white font-michroma">Complete Vehicle Package</h3>
-                                <div className="text-3xl font-bold text-white mb-2">
-                                    <span className='font-light text-xl'>From </span>
-                                    $
-                                    <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={6500} duration={3} />
-                                </div>
-                                <p className="text-start text-gray-400 mb-2">
-                                    All-over protection for your entire vehicle.
-                                </p>
-                                <p className="text-start text-gray-400">
-                                    For those who want nothing but the best, this full-body PPF package protects every painted surface on your vehicle. From road debris to parking mishaps, the complete vehicle package ensures your paint remains untouched and showroom-fresh.                                </p>
-                            </div>
-                            <ul className="space-y-3 mb-8">
-                                <li className="flex items-center gap-3">
-                                    <div className="w-2 h-2 bg-white rounded-full"></div>
-                                    <span className="text-gray-300">All exterior painted surfaces</span>
-                                </li>
-                            </ul>
+                        {/* Complete Vehicle */}
+                        <div className="bg-black p-8 rounded-2xl border border-gray-800 flex flex-col justify-between">
+                            <h3 className="text-xl font-bold mb-2 text-white font-michroma">Complete Vehicle Package</h3>
+                            <div className="text-3xl font-bold text-white mb-2">From $<CountUp enableScrollSpy scrollSpyOnce end={6500} duration={3} /></div>
                         </div>
-                    </div>
-                    <div className='flex items-center justify-center my-10'>
-                        <a
-                            className=" text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
-                            href="/contact"
-                        >GET A QUOTE</a>
                     </div>
                 </motion.div>
             </section>
 
+            {/* Mid-Page Video Hero Component */}
             <section>
                 <VideoHero source={"/carVid.mp4"} isCeramic={false} />
             </section>
 
-            <section id="packages" className="py-20 bg-black border-gray-900 border-t-1">
+            {/* Car Makes Grid */}
+            <section id="makes" className="py-20 bg-black border-gray-900 border-t-1">
                 <motion.div
                     ref={equippedRef}
                     animate={equippedAnimationControls}
@@ -486,11 +290,10 @@ const HomePage: React.FC = () => {
                     transition={{ delay: 0.7, duration: 0.6 }}
                     className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center text-white mb-10 font-michroma tracking-wider">Prestige Protection for Every Make and Model</h2>
-
                     <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 text-white'>
                         {[...CARS.sort((a, b) => a.label.localeCompare(b.label))].map((car) => (
                             <div key={car.label} className='border-1 border-gray-900 flex flex-col items-center gap-5 p-4 rounded-xl'>
-                                <img className='h-14' src={car.img} />
+                                <img className='h-14' src={car.img} alt={car.label} />
                                 <p>{car.label}</p>
                             </div>
                         ))}
@@ -498,64 +301,29 @@ const HomePage: React.FC = () => {
                 </motion.div>
             </section>
 
-            <section className='flex flex-col items-center justify-center'>
+            {/* FAQs Section */}
+            <section className='flex flex-col items-center justify-center pb-20 bg-black'>
                 <div className="w-10/12 space-y-2">
                     <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero FAQs</h1>
-
                     {faqData.map((section, sectionIndex) => (
                         <div key={sectionIndex} className="mb-8">
-                           
                             <div className="space-y-4">
                                 {section.questions.map((item, itemIndex) => {
                                     const currentIndex = questionIndex++;
-                                    const isOpen: any = openItems[currentIndex];
-
+                                    const isOpen = openItems[currentIndex];
                                     return (
-                                        <div
-                                            key={itemIndex}
-                                            className="border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200"
-                                        >
+                                        <div key={itemIndex} className="border border-gray-800 rounded-lg shadow-sm overflow-hidden bg-zinc-900">
                                             <button
                                                 onClick={() => toggleItem(currentIndex)}
-                                                className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100"
+                                                className="w-full px-6 py-4 text-left hover:bg-zinc-800 transition-colors duration-200"
                                             >
                                                 <div className="flex items-center justify-between">
-                                                    <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                                                        {item.question}
-                                                    </h3>
-                                                    <div className="flex-shrink-0">
-                                                        {isOpen ? (
-                                                            <ChevronUp className="w-5 h-5 text-gray-600" />
-                                                        ) : (
-                                                            <ChevronDown className="w-5 h-5 text-gray-600" />
-                                                        )}
-                                                    </div>
+                                                    <h3 className="text-lg font-semibold text-white">{item.question}</h3>
+                                                    {isOpen ? <ChevronUp className="text-white" /> : <ChevronDown className="text-white" />}
                                                 </div>
                                             </button>
-
-                                            <div
-                                                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-                                                    }`}
-                                            >
-                                                <div className="px-6 py-4 bg-white border-t border-gray-100">
-                                                    <div className="text-gray-700 leading-relaxed">
-                                                        {Array.isArray(item.answer) ? (
-                                                            item.answer.map((paragraph, pIndex) => (
-                                                                <p key={pIndex} className={pIndex > 0 ? "mt-4" : ""}>
-                                                                    {paragraph}
-                                                                </p>
-                                                            ))
-                                                        ) : (
-                                                            <p>{item.answer}</p>
-                                                        )}
-
-                                                        {item.hasContactButton && (
-                                                            <div className="mt-4">
-                                                                <ContactButton text={item.buttonText} />
-                                                            </div>
-                                                        )}
-                                                    </div>
-                                                </div>
+                                            <div className={`overflow-hidden transition-all duration-300 ${isOpen ? 'max-h-screen' : 'max-h-0'}`}>
+                                                <div className="px-6 py-4 text-gray-300">{item.answer}</div>
                                             </div>
                                         </div>
                                     );
@@ -566,11 +334,11 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
+            {/* Map and Contact Sections */}
             <section id="location" className="py-20 bg-black border-gray-900 border-t-1">
                 <VisitMapComponent />
             </section>
-
-            <section id="location" className="py-20 bg-black border-gray-900 border-t-1">
+            <section id="contact" className="py-20 bg-black border-gray-900 border-t-1">
                 <div className="container mx-auto px-6">
                     <ContactComponent />
                 </div>
