@@ -8,10 +8,11 @@ export function VideoHero({
   isCeramic: boolean;
 }): React.ReactElement {
   return (
-    <div className="relative w-full h-screen overflow-hidden">
-      {/* Video background */}
+    /* Added bg-white to ensure no dark background bleeds through */
+    <div className="relative w-full h-screen overflow-hidden bg-white">
+      {/* Video background with 125% brightness filter */}
       <video
-        className="absolute inset-0 w-full h-full object-cover"
+        className="absolute inset-0 w-full h-full object-cover brightness-125 contrast-110"
         src={source}
         autoPlay
         loop
@@ -19,8 +20,8 @@ export function VideoHero({
         playsInline
       />
 
-      {/* Dark gradient */}
-
+      {/* Lightened Gradient: Only at the top to keep text readable */}
+      <div className="absolute inset-x-0 top-0 h-1/2 bg-gradient-to-b from-black/30 to-transparent" />
 
       {/* Heading + features */}
       {
@@ -31,6 +32,7 @@ export function VideoHero({
                 max-w-3xl text-center text-white font-bold
                 text-3xl sm:text-4xl md:text-5xl lg:text-6xl
                 font-michroma leading-normal
+                drop-shadow-2xl
               "
             >
               Protect Your Ride with Premium PPF
