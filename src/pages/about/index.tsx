@@ -100,7 +100,7 @@ const AboutPage: React.FC = () => {
                             <h2 className="text-4xl font-bold mb-8 text-white font-michroma text-center">Seasoned Professionals in the Industry</h2>
                             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
                                 <p className='text-base text-neutral-300'>
-                                    Located in Caringbah, Sydney, Avero is dedicated to raising the standard of paint protection and car care.
+                                    Located in Wakandah, Sydney, Avero is dedicated to raising the standard of paint protection and car care.
                                 </p>
                                 <p className='text-base text-neutral-300'>
                                     As passionate car enthusiasts, our team has undergone specialised training from industry leaders including 3M, Avery Dennison, and XPEL, bringing a detail-focused, precision-first approach to every vehicle we work on.
