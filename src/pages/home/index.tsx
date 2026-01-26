@@ -223,7 +223,7 @@ const HomePage: React.FC = () => {
                     muted
                     playsInline
                 />
-                <div className="absolute inset-0 bg-black/65 h-full"></div>
+                <div className="absolute inset-0 bg-black/20 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
