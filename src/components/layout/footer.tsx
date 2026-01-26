@@ -12,7 +12,7 @@ export function Footer() {
                             Premium vehicle protection specialists delivering high-quality paint protection and ceramic coating services in South Sydney.
                         </p>
                         <p className="text-gray-400">
-                            Equipped to Protect. Driven by Detail.
+                            Powerful Protection. Expert Execution.
                         </p>
                     </div>
                     <div>
