@@ -288,7 +288,7 @@ const HomePage: React.FC = () => {
                 className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/frontShot1.avif" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
+                        <img src="/frontShot1.jpg" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-300 italic'>Long-term shine. Effortless maintenance. Serious protection.</p>
