@@ -140,11 +140,6 @@ const HomePage: React.FC = () => {
     }, [titleInView, titleAnimationControls]);
 
 
-    const containerRef = useRef(null);
-
-    const container2Ref = useRef(null);
-
-
     const servicesVariants = {
         hidden: {
             opacity: 0,
@@ -217,7 +212,7 @@ const HomePage: React.FC = () => {
             {/* <Helmet>
                 <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
                 <link rel='canonical' href={ "https://www.averoppf.com.au" } />
-                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+                <meta name="description" content={"Protect your car with Sydney's car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
             </Helmet> */}
             <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center py-[5%]">
                 <video
@@ -239,7 +234,7 @@ const HomePage: React.FC = () => {
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <span className="block mb-2 text-white font-michroma">Equipped to Protect.</span>
                         <span className="block text-white font-michroma mb-24">Driven by Detail.</span>
-                        <a
+                        
                             className="block text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
                         >GET A QUOTE</a>
@@ -279,7 +274,7 @@ const HomePage: React.FC = () => {
                                 At Avero, our Paint Protection Film service provides long-lasting defence against stone chips, scratches, and the wear and tear of everyday driving. We use premium, self-healing TPU film designed to preserve your vehicle's original finish without altering its appearance.
                             </p>
                             <p className="text-lg text-gray-500 leading-relaxed">
-                                Our expert technicians and innovative application methods ensure the film is applied with exacting precision — conforming seamlessly to every curve and panel with no bubbles, stretch marks, or lifted edges. The result is a clean-finish that accentuates the car’s colours and is built to last in Australian climate.
+                                Our expert technicians and innovative application methods ensure the film is applied with exacting precision — conforming seamlessly to every curve and panel with no bubbles, stretch marks, or lifted edges. The result is a clean-finish that accentuates the car's colours and is built to last in Australian climate.
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
@@ -316,7 +311,7 @@ const HomePage: React.FC = () => {
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-black font-michroma">Colour Wraps</h2>
-                            <p className='text-2xl font-medium mb-6 text-gray-500 italic'>At Avero, we’re all about helping you express your personality through your vehicle.</p>
+                            <p className='text-2xl font-medium mb-6 text-gray-500 italic'>At Avero, we're all about helping you express your personality through your vehicle.</p>
                             <p className="text-lg text-gray-500 leading-relaxed">
                                 Whether you want something bold, subtle, or completely unique, a vinyl wrap or colour PPF is the perfect way to make your car stand out without committing to a permanent respray.
                             </p>
@@ -343,7 +338,7 @@ const HomePage: React.FC = () => {
                                 Our team applies each tint with precision to avoid bubbles or peeling, giving your windows a smooth, factory-quality look.
                             </p>
                             <p className="text-lg leading-relaxed">
-                                Whether you want a subtle tint or maximum privacy, we’ve got options to suit your style and needs.
+                                Whether you want a subtle tint or maximum privacy, we've got options to suit your style and needs.
                             </p>
                             <div className='text-white border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/window-tinting")}>LEARN MORE</div>
                         </div>
@@ -462,7 +457,7 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
                     <div className='flex items-center justify-center my-10'>
-                        <a
+                        
                             className=" text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
                             href="/contact"
                         >GET A QUOTE</a>
