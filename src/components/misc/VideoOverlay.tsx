@@ -28,7 +28,7 @@ export function VideoHero({
       {/* Dark gradient: Set to z-[2] to sit above video but below text.
         Reduced height (h-1/3) so it only affects the very top.
       */}
-      <div className="absolute inset-x-0 top-0 h-1/3 bg-gradient-to-b from-black/40 to-transparent z-[2]" />
+    
 
       {/* Heading + features: Set to z-[10] to stay on top */}
       {
