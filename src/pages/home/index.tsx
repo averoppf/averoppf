@@ -403,7 +403,7 @@ const HomePage: React.FC = () => {
                                     <span className='font-light text-xl'>From </span>
                                     $
                                     <CountUp
-                                        className='text-white' end={2350} duration={3}
+                                        className='text-white' end={2000} duration={3}
                                         enableScrollSpy    // watch scroll
                                         scrollSpyOnce      // only run once
                                     />
@@ -440,7 +440,7 @@ const HomePage: React.FC = () => {
                                 <div className="text-3xl font-bold text-white mb-2">
                                     <span className='font-light text-xl'>From </span>
                                     $
-                                    <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={6500} duration={3} />
+                                    <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={5000} duration={3} />
                                 </div>
                                 <p className="text-start text-gray-400 mb-2">
                                     All-over protection for your entire vehicle.
