@@ -278,7 +278,7 @@ const HomePage: React.FC = () => {
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/frontShot.avif" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
+                        <img src="/frontShot.jpg" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
                     </div>
                 </div>
             </section>
