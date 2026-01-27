@@ -5,13 +5,11 @@ import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../App.css'
 import { motion, useAnimation, useInView } from 'framer-motion';
 import ValuesSection from '../../components/misc/ValuesComponent';
-// import { Helmet } from 'react-helmet';
 
 const AboutPage: React.FC = () => {
     const mapRef = useRef<any>(null)
     const mapContainerRef = useRef<any>(null)
     
-    // Slideshow state
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
     const images = [
         '/professional1.jpg',
@@ -20,30 +18,6 @@ const AboutPage: React.FC = () => {
         '/professional4.jpg',
         '/professional5.jpg'
     ];
-
-    // Auto-advance slideshow every 3 seconds
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCurrentImageIndex((prevIndex) => 
-                prevIndex === images.length - 1 ? 0 : prevIndex + 1
-            );
-        }, 3000);
-
-        return () => clearInterval(interval);
-    }, [images.length]);
-
-    // Manual navigation
-    const goToNextImage = () => {
-        setCurrentImageIndex((prevIndex) => 
-            prevIndex === images.length - 1 ? 0 : prevIndex + 1
-        );
-    };
-
-    const goToPreviousImage = () => {
-        setCurrentImageIndex((prevIndex) => 
-            prevIndex === 0 ? images.length - 1 : prevIndex - 1
-        );
-    };
 
     useEffect(() => {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYXZlcm9zb2x1dGlvbnMiLCJhIjoiY21icHhqaWVvMDl1cTJyb2x5dGE4bDVndyJ9.TS6OtL8zGEQbKvUuPFr80w'
@@ -61,6 +35,28 @@ const AboutPage: React.FC = () => {
             mapRef.current.remove()
         }
     }, [])
+
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => 
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [images.length]);
+
+    const goToNextImage = () => {
+        setCurrentImageIndex((prevIndex) => 
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const goToPreviousImage = () => {
+        setCurrentImageIndex((prevIndex) => 
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
 
     useEffect(() => {
         window.scrollTo(0, 0)
@@ -88,12 +84,6 @@ const AboutPage: React.FC = () => {
 
     return (
         <div className="bg-black border-gray-900 border-t-1">
-            {/* <Helmet>
-                <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
-                <link rel='canonical' href={ "https://www.averoppf.com.au" } />
-                <meta name="description" content={"Protect your car with Sydney's car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
-            </Helmet> */}
-            {/* Hero Section */}
             <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/backgroundShot.jpg')] py-[5%]">
                 <div className="absolute inset-0 bg-black/60 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
@@ -105,19 +95,19 @@ const AboutPage: React.FC = () => {
                         At Avero PPF, our passion for cars goes beyond shine and gloss—we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
                     </p>
                     <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 max-w-[40%] items-center justify-center w-full'>
-                        
+                        <a
                             className="text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer flex items-center justify-center"
                             href="/services/ppf"
                         >PPF</a>
-                        
+                        <a
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/ceramic"
                         >CERAMIC COATING</a>
-                        
+                        <a
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/colour-wraps"
                         >COLOURED WRAPS</a>
-                        
+                        <a
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/window-tinting"
                         >WINDOW TINTING</a>
@@ -126,11 +116,9 @@ const AboutPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* About Us Section */}
             <section id="about" className="py-20 bg-black border-b-1 border-gray-900">
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        {/* Text Content */}
                         <div>
                             <h2 className="text-4xl font-bold mb-8 text-white font-michroma text-center">Seasoned Professionals in the Industry</h2>
                             <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
@@ -149,9 +137,7 @@ const AboutPage: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Slideshow */}
                         <div className="relative shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full overflow-hidden">
-                            {/* Images */}
                             {images.map((image, index) => (
                                 <img
                                     key={index}
@@ -163,7 +149,6 @@ const AboutPage: React.FC = () => {
                                 />
                             ))}
 
-                            {/* Navigation Arrows */}
                             <button
                                 onClick={goToPreviousImage}
                                 className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
@@ -179,7 +164,6 @@ const AboutPage: React.FC = () => {
                                 <ChevronRight className="w-6 h-6" />
                             </button>
 
-                            {/* Dots indicator */}
                             <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
                                 {images.map((_, index) => (
                                     <button
@@ -212,13 +196,10 @@ const AboutPage: React.FC = () => {
                 </motion.div>
             </section>
 
-
-            {/* Location Section */}
             <section id="location" className="py-20 bg-black">
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-12 text-white font-michroma">Our Location</h2>
                     <div className="grid lg:grid-cols-2 gap-12">
-                        {/* Location Details */}
                         <div className="space-y-8">
                             <div className="bg-black p-8 rounded-2xl border border-gray-800">
                                 <h3 className="text-2xl font-bold mb-6 text-white font-michroma">Visit Our Facility</h3>
@@ -252,8 +233,6 @@ const AboutPage: React.FC = () => {
                                 </div>
                             </div>
                         </div>
-
-                        {/* Map Placeholder */}
 
                         <div style={{ minHeight: 400, width: "100%", borderRadius: 10 }} ref={mapContainerRef} />
                     </div>
