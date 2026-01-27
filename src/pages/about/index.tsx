@@ -1,5 +1,5 @@
-import { Clock, MapPin, Phone } from 'lucide-react';
-import React, { useRef, useEffect } from 'react';
+import { Clock, MapPin, Phone, ChevronLeft, ChevronRight } from 'lucide-react';
+import React, { useRef, useEffect, useState } from 'react';
 import mapboxgl from 'mapbox-gl'
 import 'mapbox-gl/dist/mapbox-gl.css';
 import '../../App.css'
@@ -10,6 +10,41 @@ import ValuesSection from '../../components/misc/ValuesComponent';
 const AboutPage: React.FC = () => {
     const mapRef = useRef<any>(null)
     const mapContainerRef = useRef<any>(null)
+    
+    // Slideshow state
+    const [currentImageIndex, setCurrentImageIndex] = useState(0);
+    const images = [
+        '/professional1.jpg',
+        '/professional2.jpg',
+        '/professional3.jpg',
+        '/professional4.jpg',
+        '/professional5.jpg'
+    ];
+
+    // Auto-advance slideshow every 3 seconds
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setCurrentImageIndex((prevIndex) => 
+                prevIndex === images.length - 1 ? 0 : prevIndex + 1
+            );
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [images.length]);
+
+    // Manual navigation
+    const goToNextImage = () => {
+        setCurrentImageIndex((prevIndex) => 
+            prevIndex === images.length - 1 ? 0 : prevIndex + 1
+        );
+    };
+
+    const goToPreviousImage = () => {
+        setCurrentImageIndex((prevIndex) => 
+            prevIndex === 0 ? images.length - 1 : prevIndex - 1
+        );
+    };
+
     useEffect(() => {
         mapboxgl.accessToken = 'pk.eyJ1IjoiYXZlcm9zb2x1dGlvbnMiLCJhIjoiY21icHhqaWVvMDl1cTJyb2x5dGE4bDVndyJ9.TS6OtL8zGEQbKvUuPFr80w'
         mapRef.current = new mapboxgl.Map({
@@ -56,7 +91,7 @@ const AboutPage: React.FC = () => {
             {/* <Helmet>
                 <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
                 <link rel='canonical' href={ "https://www.averoppf.com.au" } />
-                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+                <meta name="description" content={"Protect your car with Sydney's car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
             </Helmet> */}
             {/* Hero Section */}
             <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/backgroundShot.jpg')] py-[5%]">
@@ -70,19 +105,19 @@ const AboutPage: React.FC = () => {
                         At Avero PPF, our passion for cars goes beyond shine and gloss—we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
                     </p>
                     <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 max-w-[40%] items-center justify-center w-full'>
-                        <a
+                        
                             className="text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer flex items-center justify-center"
                             href="/services/ppf"
                         >PPF</a>
-                        <a
+                        
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/ceramic"
                         >CERAMIC COATING</a>
-                        <a
+                        
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/colour-wraps"
                         >COLOURED WRAPS</a>
-                        <a
+                        
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/window-tinting"
                         >WINDOW TINTING</a>
@@ -114,8 +149,52 @@ const AboutPage: React.FC = () => {
                             </div>
                         </div>
 
-                        {/* Team Image */}
-                        <img src="/logo-2-car-shot.avif"className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover object-left' />
+                        {/* Slideshow */}
+                        <div className="relative shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full overflow-hidden">
+                            {/* Images */}
+                            {images.map((image, index) => (
+                                <img
+                                    key={index}
+                                    src={image}
+                                    className={`absolute inset-0 w-full h-full object-cover object-left transition-opacity duration-1000 ${
+                                        index === currentImageIndex ? 'opacity-100' : 'opacity-0'
+                                    }`}
+                                    alt={`Professional ${index + 1}`}
+                                />
+                            ))}
+
+                            {/* Navigation Arrows */}
+                            <button
+                                onClick={goToPreviousImage}
+                                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
+                                aria-label="Previous image"
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </button>
+                            <button
+                                onClick={goToNextImage}
+                                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all"
+                                aria-label="Next image"
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </button>
+
+                            {/* Dots indicator */}
+                            <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                                {images.map((_, index) => (
+                                    <button
+                                        key={index}
+                                        onClick={() => setCurrentImageIndex(index)}
+                                        className={`w-2 h-2 rounded-full transition-all ${
+                                            index === currentImageIndex
+                                                ? 'bg-white w-8'
+                                                : 'bg-white/50 hover:bg-white/75'
+                                        }`}
+                                        aria-label={`Go to image ${index + 1}`}
+                                    />
+                                ))}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
@@ -172,29 +251,6 @@ const AboutPage: React.FC = () => {
                                     </div>
                                 </div>
                             </div>
-
-                            {/* Facility Features */}
-                            {/* <div className="bg-black p-8 rounded-2xl border border-gray-800">
-                                <h3 className="text-xl font-bold mb-4 text-white">Facility Features</h3>
-                                <div className="grid grid-cols-2 gap-4">
-                                    <div className="flex items-center gap-3">
-                                        <Shield className="w-5 h-5 text-white" />
-                                        <span className="text-gray-300 text-sm">24/7 Security</span>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <Building className="w-5 h-5 text-white" />
-                                        <span className="text-gray-300 text-sm">Climate Controlled</span>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <Car className="w-5 h-5 text-white" />
-                                        <span className="text-gray-300 text-sm">10+ Service Bays</span>
-                                    </div>
-                                    <div className="flex items-center gap-3">
-                                        <Eye className="w-5 h-5 text-white" />
-                                        <span className="text-gray-300 text-sm">CCTV Monitoring</span>
-                                    </div>
-                                </div>
-                            </div> */}
                         </div>
 
                         {/* Map Placeholder */}
