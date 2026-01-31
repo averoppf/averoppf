@@ -11,21 +11,21 @@ interface Project {
 
 const projects: Project[] = [
     // PPF Projects
-    { id: 1, title: 'BMW X4 M Competition Matte Black PPF', type: 'PPF', images: ['/car1-1.jpg', '/car1-2.jpg', '/car1-3.jpg'] },
-    { id: 2, title: 'Tesla Model Y Clear Gloss PPF', type: 'PPF', images: ['/car2-1.jpg', '/car2-2.jpg', '/car2-3.jpg'] },
-    { id: 3, title: 'BMW Z4 M40i Clear Gloss PPF', type: 'PPF', images: ['/car3-1.jpg', '/car3-2.jpg', '/car3-3.jpg'] },
-    { id: 4, title: 'Lexus IS300 Clear Gloss PPF', type: 'PPF', images: ['/car4-1.jpg', '/car4-2.jpg', '/car4-3.jpg'] },
-    { id: 5, title: 'Mercedes Benz G63 Clear Gloss PPF', type: 'PPF', images: ['/car5-1.jpg', '/car5-2.jpg', '/car5-3.jpg'] },
-    { id: 6, title: 'BMW IX M60 Clear Gloss PPF', type: 'PPF', images: ['/car6-1.jpg', '/car6-2.jpg', '/car6-3.jpg'] },
-    { id: 7, title: 'Mitsubishi Outlander Clear Gloss PPF', type: 'PPF', images: ['/car7-1.jpg', '/car7-2.jpg', '/car7-3.jpg'] },
-    { id: 8, title: 'Mercedes Benz CLA45S AMG Clear Gloss PPF', type: 'PPF', images: ['/car8-1.jpg', '/car8-2.jpg', '/car8-3.jpg'] },
+    { id: 1, title: 'BMW X4 M Competition Matte Black PPF', type: 'PPF', images: ['/car1-1.png', '/car1-2.png', '/car1-3.png'] },
+    { id: 2, title: 'Tesla Model Y Clear Gloss PPF', type: 'PPF', images: ['/car2-1.png', '/car2-2.png', '/car2-3.png'] },
+    { id: 3, title: 'BMW Z4 M40i Clear Gloss PPF', type: 'PPF', images: ['/car3-1.png', '/car3-2.png', '/car3-3.png'] },
+    { id: 4, title: 'Lexus IS300 Clear Gloss PPF', type: 'PPF', images: ['/car4-1.png', '/car4-2.png', '/car4-3.png'] },
+    { id: 5, title: 'Mercedes Benz G63 Clear Gloss PPF', type: 'PPF', images: ['/car5-1.png', '/car5-2.png', '/car5-3.png'] },
+    { id: 6, title: 'BMW IX M60 Clear Gloss PPF', type: 'PPF', images: ['/car6-1.png', '/car6-2.png', '/car6-3.png'] },
+    { id: 7, title: 'Mitsubishi Outlander Clear Gloss PPF', type: 'PPF', images: ['/car7-1.png', '/car7-2.png', '/car7-3.png'] },
+    { id: 8, title: 'Mercedes Benz CLA45S AMG Clear Gloss PPF', type: 'PPF', images: ['/car8-1.png', '/car8-2.png', '/car8-3.png'] },
     
     // Colour Wrap Projects
-    { id: 9, title: 'BMX X6 M Competition Matte Black Vinyl Wrap', type: 'Colour Wrap', images: ['/car9-1.jpg', '/car9-2.jpg', '/car9-3.jpg'] },
-    { id: 10, title: 'Hyundai i30N Midnight Purple Coloured PPF', type: 'Colour Wrap', images: ['/car10-1.jpg', '/car10-2.jpg', '/car10-3.jpg'] },
-    { id: 11, title: 'Porsche 911 GT3 Java Green Coloured PPF', type: 'Colour Wrap', images: ['/car11-1.jpg', '/car11-2.jpg', '/car11-3.jpg'] },
-    { id: 12, title: 'Mercedes Benz GLA 45 Cherry Blossom Coloured PPF', type: 'Colour Wrap', images: ['/car12-1.jpg', '/car12-2.jpg', '/car12-3.jpg'] },
-    { id: 13, title: 'BMW M4 Competition Matte Black Vinyl Wrap', type: 'Colour Wrap', images: ['/car13-1.jpg', '/car13-2.jpg', '/car13-3.jpg'] },
+    { id: 9, title: 'BMX X6 M Competition Matte Black Vinyl Wrap', type: 'Colour Wrap', images: ['/car9-1.png', '/car9-2.png', '/car9-3.png'] },
+    { id: 10, title: 'Hyundai i30N Midnight Purple Coloured PPF', type: 'Colour Wrap', images: ['/car10-1.png', '/car10-2.png', '/car10-3.png'] },
+    { id: 11, title: 'Porsche 911 GT3 Java Green Coloured PPF', type: 'Colour Wrap', images: ['/car11-1.png', '/car11-2.png', '/car11-3.png'] },
+    { id: 12, title: 'Mercedes Benz GLC43 Cherry Blossom Coloured PPF', type: 'Colour Wrap', images: ['/car12-1.png', '/car12-2.png', '/car12-3.png'] },
+    { id: 13, title: 'BMW M4 Competition Matte Black Vinyl Wrap', type: 'Colour Wrap', images: ['/car13-1.png', '/car13-2.png', '/car13-3.png'] },
 ];
 
 const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
