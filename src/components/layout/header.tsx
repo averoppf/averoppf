@@ -80,6 +80,7 @@ export function Header() {
               <div className="flex flex-col gap-5 px-6">
                 <a href="/" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Home</a>
                 <a href="/about" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">About Us</a>
+                <a href="/projects" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Projects</a>
                 <a href="/services/ppf" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">PPF</a>
                 <a href="/services/ceramic" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Ceramic Coating</a>
                 <a href="/contact" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Contact</a>
@@ -102,6 +103,7 @@ export function Header() {
           <div className="hidden sm:flex gap-6 items-center justify-between">
             <a href="/" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Home</a>
             <a href="/about" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">About Us</a>
+            <a href="/projects" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Projects</a>
 
             <div className="relative" ref={dropdownRef}>
               <button
