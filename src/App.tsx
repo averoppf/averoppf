@@ -10,14 +10,15 @@ import { PrivacyPolicyPage } from './pages/privacyPolicy'
 import { AreaServed } from './pages/AreaServed'
 import { ColourWrapsPage } from './pages/services/colourWraps'
 import { WindowTintingPage } from './pages/services/windowTinting'
+import ProjectsPage from './pages/projects'
 
 function App() {
-
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<PageLayout><HomePage /></PageLayout>} />
         <Route path="/about" element={<PageLayout><AboutPage /></PageLayout>} />
+        <Route path="/projects" element={<PageLayout><ProjectsPage /></PageLayout>} />
         <Route path="/contact" element={<PageLayout><ContactPage /></PageLayout>} />
         <Route path="/services/ceramic" element={<PageLayout><CeramicPage /></PageLayout>} />
         <Route path="/services/ppf" element={<PageLayout><PpfPage /></PageLayout>} />
@@ -30,5 +31,4 @@ function App() {
     </BrowserRouter>
   )
 }
-
 export default App
