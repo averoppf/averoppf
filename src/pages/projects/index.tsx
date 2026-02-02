@@ -115,7 +115,7 @@ const ProjectsPage: React.FC = () => {
             <section className="pt-32 pb-16 px-6">
                 <div className="container mx-auto text-center">
                     <h1 className="text-5xl sm:text-6xl font-bold tracking-wider text-white font-michroma mb-6">
-                        PROJECTS
+                        Projects
                     </h1>
                     <p className="text-neutral-300 text-lg mb-12">
                         Take a look at some of our recent work.
