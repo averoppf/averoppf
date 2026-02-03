@@ -14,7 +14,7 @@ const projects: Project[] = [
     { id: 1, title: 'BMW X4 M Competition Matte Black PPF', type: 'PPF', images: ['/car1-1.jpg', '/car1-2.jpg', '/car1-3.jpg'] },
     { id: 2, title: 'Tesla Model Y Clear Gloss PPF', type: 'PPF', images: ['/car2-1.jpg', '/car2-2.jpg', '/car2-3.jpg'] },
     { id: 3, title: 'BMW Z4 M40i Clear Gloss PPF', type: 'PPF', images: ['/car3-1.jpg', '/car3-2.jpg', '/car3-3.jpg'] },
-    { id: 4, title: 'Lexus IS300 Clear Gloss PPF', type: 'PPF', images: ['/car4-1.jpg', '/car4-2.jpg', '/car4-3.jpg'] },
+    { id: 4, title: 'Lexus IS500 Clear Gloss PPF', type: 'PPF', images: ['/car4-1.jpg', '/car4-2.jpg', '/car4-3.jpg'] },
     { id: 5, title: 'Mercedes Benz G63 Clear Gloss PPF', type: 'PPF', images: ['/car5-1.jpg', '/car5-2.jpg', '/car5-3.jpg'] },
     { id: 6, title: 'BMW IX M60 Clear Gloss PPF', type: 'PPF', images: ['/car6-1.jpg', '/car6-2.jpg', '/car6-3.jpg'] },
     { id: 7, title: 'Mitsubishi Outlander Clear Gloss PPF', type: 'PPF', images: ['/car7-1.jpg', '/car7-2.jpg', '/car7-3.jpg'] },
