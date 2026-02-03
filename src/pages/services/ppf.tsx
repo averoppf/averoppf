@@ -168,7 +168,7 @@ export function PpfPage() {
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
                         <p className="block text-white font-michroma mb-[5%]">Paint Protection Film (PPF) in Sydney</p>
-                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, our technicians hold extension experience in the industry. We bring expert-level knowledge and care to every installation, ensuring each film is applied with absolute precision. Our workshop is fitted with top-tier, industrial-grade equipment, allowing us to cut and apply film without the use of blades on the vehicle itself — eliminating the risk of damage to your paintwork.</p>
+                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, our technicians hold extensive experience in the industry. We bring expert-level knowledge and care to every installation, ensuring each film is applied with absolute precision. Our workshop is fitted with top-tier, industrial-grade equipment, allowing us to cut and apply film without the use of blades on the vehicle itself — eliminating the risk of damage to your paintwork.</p>
                         <a
                             className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
