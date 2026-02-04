@@ -5,7 +5,6 @@ import ContactComponent from "../../components/misc/ContactComponent";
 import { ContactButton } from "./ceramic";
 import { VisitMapComponent } from "../../components/misc/VisitMapComponent";
 import { motion, useAnimation, useInView, type Variants } from 'framer-motion';
-import CountUp from "react-countup";
 import Carousel from "../../components/misc/FramerCarousel";
 // import { Helmet } from "react-helmet";
 
@@ -33,7 +32,7 @@ const features: Feature[] = [
   {
     title: 'Enhances Visual Appeal',
     description:
-      'Choose from a range of finishes to elevate your car’s look — from deep gloss to stealth matte — all while preserving clarity and colour depth.',
+      'Choose from a range of finishes to elevate your car's look — from deep gloss to stealth matte — all while preserving clarity and colour depth.',
   },
   {
     title: 'Supports Long-Term Value',
@@ -153,7 +152,7 @@ export function PpfPage() {
             {/* <Helmet>
                 <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
                 <link rel='canonical' href={ "https://www.averoppf.com.au" } />
-                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+                <meta name="description" content={"Protect your car with Sydney's car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
             </Helmet> */}
             {/* Hero Section */}
             <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/ppfHeader.jpg')] py-[5%]">
@@ -219,12 +218,6 @@ export function PpfPage() {
                             <div>
                                 <div className=" mb-2 flex flex-col items-center">
                                     <h3 className="text-2xl font-bold mb-2 text-white text-center font-michroma">High Impact Package</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={1450} duration={3} />
-                                    </div>
-                                    
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-gray-400 mb-2">Entry-level protection for everyday driving.</p>
@@ -260,12 +253,6 @@ export function PpfPage() {
                             </div>
                             <div className=" mb-2 flex flex-col items-center">
                                     <h3 className="text-2xl font-bold mb-2 text-white text-center font-michroma">Full Front Package</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={2350} duration={3} />
-                                    </div>
-                                    
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-gray-400 mb-2">Our most popular package — complete front-end coverage.</p>
@@ -297,12 +284,6 @@ export function PpfPage() {
                         <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
                             <div className=" mb-2 flex flex-col items-center">
                                     <h3 className="text-2xl font-bold mb-2 text-white text-center font-michroma">Complete Vehicle Package</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={6500} duration={3} />
-                                    </div>
-                                    
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-gray-400 mb-2">All-over protection for your entire vehicle.</p>
@@ -328,12 +309,12 @@ export function PpfPage() {
                     <div className="max-w-7xl mx-auto">
                     <h2 className="text-5xl font-bold mb-4 text-center font-michroma">Why Choose Paint Protection Film?</h2>
                     <p className="mt-10 mb-4 text-center text-gray-300 max-w-2xl mx-auto text-base">
-                        Whether you’re preserving a collector car or protecting your daily driver,
+                        Whether you're preserving a collector car or protecting your daily driver,
                         Paint Protection Film is the ultimate combination of performance, style, and peace of mind.
                     </p>
                     <p className="text-gray-300 mb-8 text-center max-w-2xl mx-auto text-base">
-                        Paint Protection Film offers more than just surface-level shine — it’s a smart,
-                        long-term investment in your vehicle’s condition and value. Here’s why more
+                        Paint Protection Film offers more than just surface-level shine — it's a smart,
+                        long-term investment in your vehicle's condition and value. Here's why more
                         drivers are turning to PPF:
                     </p>
                     {/* Flex container to wrap and center cards */}
@@ -358,7 +339,7 @@ export function PpfPage() {
                         The Avero Paint Protection Film (PPF) Process
                     </h2>
                     <p className="mb-4 mt-12 text-center text-gray-300 max-w-2xl mx-auto">
-                        Ready to protect your vehicle with Avero’s professional Paint Protection Film
+                        Ready to protect your vehicle with Avero's professional Paint Protection Film
                         service? Book your appointment today and drive away with confidence.
                     </p>
                     <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto">
