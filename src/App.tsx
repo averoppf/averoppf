@@ -11,7 +11,7 @@ import { AreaServed } from './pages/AreaServed'
 import { ColourWrapsPage } from './pages/services/colourWraps'
 import { WindowTintingPage } from './pages/services/windowTinting'
 import ProjectsPage from './pages/projects'
-import TeslaPPFPage from './pages/tesla-ppf'
+import TeslaPPFPage from './pages/tesla/tesla-ppf'
 
 function App() {
   return (
