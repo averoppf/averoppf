@@ -4,7 +4,6 @@ import { ChevronDown, ChevronUp, PaintBucket } from "lucide-react";
 import ContactComponent from "../../components/misc/ContactComponent";
 import { VisitMapComponent } from "../../components/misc/VisitMapComponent";
 import { motion, useAnimation, useInView, type Variants } from 'framer-motion';
-import CountUp from "react-countup";
 // import { Helmet } from "react-helmet";
 
 export const ContactButton = ({ text }: { text: any }) => (
@@ -22,7 +21,7 @@ const features: Feature[] = [
   {
     title: 'Long-Lasting Protection',
     description:
-      'Forms a semi-permanent bond with your paint or PPF, protecting it for years — not weeks or months.',
+      'Forms a semi-permanent bond with your paint or PPF, protecting it for years - not weeks or months.',
   },
   {
     title: 'Hydrophobic Effect',
@@ -42,12 +41,12 @@ const features: Feature[] = [
   {
     title: 'Improved Appearance',
     description:
-      'Enhances colour depth, clarity, and overall gloss — keeping your vehicle looking like new.',
+      'Enhances colour depth, clarity, and overall gloss - keeping your vehicle looking like new.',
   },
   {
     title: 'Synergy with PPF',
     description:
-      'When applied over Paint Protection Film, ceramic coating adds an extra layer of slickness, stain resistance, and visual enhancement — making the protected surface even easier to clean and maintain.',
+      'When applied over Paint Protection Film, ceramic coating adds an extra layer of slickness, stain resistance, and visual enhancement - making the protected surface even easier to clean and maintain.',
   },
 ];
 
@@ -109,9 +108,9 @@ export function CeramicPage() {
                 {
                     question: "How long does ceramic coating last?",
                     answer: [
-                        "Ceramic coatings form a strong, long-term chemical bond with your vehicle's paintwork, offering years of protection — not weeks or months. However, the actual lifespan of the coating depends on environmental exposure and how well the vehicle is maintained. ",
+                        "Ceramic coatings form a strong, long-term chemical bond with your vehicle's paintwork, offering years of protection - not weeks or months. However, the actual lifespan of the coating depends on environmental exposure and how well the vehicle is maintained. ",
                         "Our coatings offer excellent chemical resistance and are not easily broken down by standard cleaning products, unlike many waxes or sealants on the market. With proper care, such as regular hand washing and avoiding abrasive brushes or automatic car washes, your coating can maintain its performance and appearance for the full duration of its rated warranty. ",
-                        "Neglect — including infrequent washing, use of abrasive tools, or harsh cleaning methods — can reduce the coating's effectiveness and shorten its lifespan. We recommend following our care guidelines to ensure you get the most out of your investment."
+                        "Neglect - including infrequent washing, use of abrasive tools, or harsh cleaning methods - can reduce the coating's effectiveness and shorten its lifespan. We recommend following our care guidelines to ensure you get the most out of your investment."
                     ]
                 },
                 {
@@ -126,7 +125,7 @@ export function CeramicPage() {
                 },
                 {
                     question: "Do I still need to wash my car?",
-                    answer: "Yes — but less often. Dirt and grime don't stick easily to coated surfaces, and a gentle hand wash is usually enough to restore shine. However, we still recommend hand washing the car frequently to ensure coat effectiveness."
+                    answer: "Yes - but less often. Dirt and grime don't stick easily to coated surfaces, and a gentle hand wash is usually enough to restore shine. However, we still recommend hand washing the car frequently to ensure coat effectiveness."
                 }
             ]
         },
@@ -159,7 +158,7 @@ export function CeramicPage() {
             {/* <Helmet>
                 <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
                 <link rel='canonical' href={ "https://www.averoppf.com.au" } />
-                <meta name="description" content={"Protect your car with Sydney’s car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
+                <meta name="description" content={"Protect your car with Sydney's car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
             </Helmet> */}
             {/* Hero Section */}
             <section className="relative lg:h-[calc(90vh)] sm:h-full flex items-center justify-center bg-cover bg-center bg-[url('/squidgie.avif')] py-[5%]">
@@ -174,7 +173,7 @@ export function CeramicPage() {
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
                         <p className="block text-white font-michroma mb-[5%] text-4xl sm:text-5xl">Ceramic Coating in Sydney</p>
-                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment — allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
+                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment - allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
                         <a
                             className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
@@ -185,9 +184,9 @@ export function CeramicPage() {
 
             <section className="w-full px-[10%] text-center py-[5%] flex flex-col items-center justify-center gap-8">
                 <PaintBucket className="text-white" style={{ width: '7%', height: '7%', objectFit: 'contain'}} />
-                <p className="text-neutral-300 text-base font-light tracking-normal">Ceramic coating is a liquid polymer that chemically bonds with your vehicle's paint, forming a transparent, long-lasting layer of protection. Once cured, it acts as a barrier against water, UV rays, oxidation, chemical contaminants, and light surface abrasions. Unlike wax, which wears off quickly, a professional ceramic coating can last for years with proper care — making your vehicle easier to clean and harder to damage.</p>
-                <p className="text-neutral-300 text-base font-light tracking-normal">At Avero, we use only premium-grade coatings compatible with both painted surfaces and Paint Protection Film. Whether your vehicle has raw paintwork or is already wrapped in PPF, we apply the right formulation to deliver a flawless, slick finish. Our coatings enhance gloss levels, colour richness, and surface slickness — creating a hydrophobic, stain-resistant barrier that beads water and repels dirt with ease.</p>
-                <p className="text-neutral-300 text-base font-light tracking-normal">Ceramic coating doesn't just keep your car looking cleaner — it locks in the condition of your vehicle's finish, helping prevent oxidation, fading, and dullness over time. By protecting against environmental damage and reducing the frequency of washes or detailing, ceramic coating helps your car retain a well-kept appearance for longer. This makes it easier to maintain resale value — without the need for repeated polishing or repainting down the track.</p>
+                <p className="text-neutral-300 text-base font-light tracking-normal">Ceramic coating is a liquid polymer that chemically bonds with your vehicle's paint, forming a transparent, long-lasting layer of protection. Once cured, it acts as a barrier against water, UV rays, oxidation, chemical contaminants, and light surface abrasions. Unlike wax, which wears off quickly, a professional ceramic coating can last for years with proper care - making your vehicle easier to clean and harder to damage.</p>
+                <p className="text-neutral-300 text-base font-light tracking-normal">At Avero, we use only premium-grade coatings compatible with both painted surfaces and Paint Protection Film. Whether your vehicle has raw paintwork or is already wrapped in PPF, we apply the right formulation to deliver a flawless, slick finish. Our coatings enhance gloss levels, colour richness, and surface slickness - creating a hydrophobic, stain-resistant barrier that beads water and repels dirt with ease.</p>
+                <p className="text-neutral-300 text-base font-light tracking-normal">Ceramic coating doesn't just keep your car looking cleaner - it locks in the condition of your vehicle's finish, helping prevent oxidation, fading, and dullness over time. By protecting against environmental damage and reducing the frequency of washes or detailing, ceramic coating helps your car retain a well-kept appearance for longer. This makes it easier to maintain resale value - without the need for repeated polishing or repainting down the track.</p>
             </section>
 
             <div className="flex flex-col text-white gap-1 justify-center gap-10 py-16 px-4 items-center">
@@ -200,16 +199,9 @@ export function CeramicPage() {
                             <div>
                                 <div className=" mb-2 flex flex-col items-center">
                                     <h3 className="text-2xl font-bold mb-2 text-white text-center font-michroma">Exterior Ceramic Protection</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={850} duration={3} />
-                                    </div>
-                                    
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-gray-400 mb-2">Perfect for newly purchased vehicles or paintwork in excellent condition, this package includes a high-quality ceramic coating applied to all painted surfaces for long-lasting shine and protection.</p>
-                                    {/* <p className="text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF — perfect for those who want peace of mind on the road.</p> */}
                                 </div>
                                 <ul className="space-y-3 mb-8">
                                     <li className="flex items-center gap-3">
@@ -245,16 +237,9 @@ export function CeramicPage() {
                             </div>
                             <div className=" mb-2 flex flex-col items-center">
                                     <h3 className="text-2xl font-bold mb-2 text-white text-center font-michroma">Endurance Package</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={1000} duration={3} />
-                                    </div>
-                                    
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-gray-400 mb-2">Ideal for those wanting increased longevity and surface resilience for their new car, this package includes a more advanced ceramic formula for enhanced durability and environmental resistance.</p>
-                                    {/* <p className="text-gray-400">Full Front Protection offers extensive PPF coverage to shield the entire front end of your vehicle. Ideal for performance vehicles, daily drivers, and long-distance travellers who want to maintain a flawless finish.</p> */}
                                 </div>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-3">
@@ -286,16 +271,9 @@ export function CeramicPage() {
                         <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
                             <div className=" mb-2 flex flex-col items-center">
                                     <h3 className="text-2xl font-bold mb-2 text-white text-center font-michroma">Elite Package</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={1200} duration={3} />
-                                    </div>
-                                    
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-gray-400 mb-2">Our most comprehensive ceramic protection package, covering both the exterior and high-contact interior surfaces for all-around peace of mind.</p>
-                                    {/* <p className="text-gray-400">For those who want nothing but the best, this full-body PPF package protects every painted surface on your vehicle. From road debris to parking mishaps, the complete vehicle package ensures your paint remains untouched and showroom-fresh.</p> */}
                                 </div>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-3">
@@ -345,15 +323,9 @@ export function CeramicPage() {
                     <div className="max-w-7xl mx-auto">
                     <h2 className="text-4xl sm:text-5xl font-bold mb-4 text-center font-michroma">Why Choose Ceramic Coating?</h2>
                     <p className="mt-10 mb-4 text-center text-gray-300 max-w-2xl mx-auto text-base">
-                        Whether you’re preserving a collector car or protecting your daily driver,
+                        Whether you're preserving a collector car or protecting your daily driver,
                         Ceramic Coating is the ultimate combination of performance, style, and peace of mind to protect your pride and joy.
                     </p>
-                    {/* <p className="text-gray-300 mb-8 text-center max-w-2xl mx-auto">
-                        Paint Protection Film offers more than just surface-level shine — it’s a smart,
-                        long-term investment in your vehicle’s condition and value. Here’s why more
-                        drivers are turning to PPF:
-                    </p> */}
-                    {/* Flex container to wrap and center cards */}
                     <div className="flex flex-wrap justify-center gap-6">
                         {features.map((feature, idx) => (
                         <div
@@ -375,7 +347,7 @@ export function CeramicPage() {
                         The Avero Paint Protection Film (PPF) Process
                     </h2>
                     <p className="mb-4 mt-12 text-center text-gray-300 max-w-2xl mx-auto text-base">
-                        Ready to protect your vehicle with Avero’s professional Paint Protection Film
+                        Ready to protect your vehicle with Avero's professional Paint Protection Film
                         service? Book your appointment today and drive away with confidence.
                     </p>
                     <p className="text-gray-300 text-center mb-12 max-w-2xl mx-auto text-base">
