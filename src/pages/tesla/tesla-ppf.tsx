@@ -11,7 +11,7 @@ const TeslaPPFPage: React.FC = () => {
     return (
         <div className="bg-black min-h-screen border-gray-900 border-t-1">
             {/* Section 1 */}
-            <section className="py-20 bg-black">
+            <section className="pt-40 pb-20 bg-black">
                 <div className="container mx-auto px-6">
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         {/* Large Image on Left */}
