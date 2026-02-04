@@ -3,6 +3,24 @@ import { CheckCircle } from 'lucide-react';
 import '../../App.css'
 import ContactComponent from '../../components/misc/ContactComponent';
 
+useEffect(() => {
+    // Set page title
+    document.title = "Tesla PPF Specialist | Caringbah | South Sydney | Avero PPF";
+    
+    // Set meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+        metaDescription.setAttribute('content', 'Premium Tesla Paint Protection Film (PPF) in Caringbah, South Sydney. Protect your Model 3, Model Y, Model S, Model X with expert PPF installation. Advanced self-healing technology.');
+    } else {
+        const meta = document.createElement('meta');
+        meta.name = 'description';
+        meta.content = 'Premium Tesla Paint Protection Film (PPF) in Caringbah, South Sydney. Protect your Model 3, Model Y, Model S, Model X with expert PPF installation. Advanced self-healing technology.';
+        document.head.appendChild(meta);
+    }
+    
+    window.scrollTo(0, 0);
+}, [])
+
 const TeslaPPFPage: React.FC = () => {
     useEffect(() => {
         window.scrollTo(0, 0)
