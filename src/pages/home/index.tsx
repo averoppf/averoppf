@@ -3,7 +3,6 @@ import { ChevronRight, ChevronUp, ChevronDown } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import '../../App.css'
 import { motion, useAnimation, useInView } from 'framer-motion';
-import CountUp from 'react-countup';
 import { BenefitsSection } from '../../components/misc/BenefitsComponent';
 import { VideoHero } from '../../components/misc/VideoOverlay';
 import ContactComponent from '../../components/misc/ContactComponent';
@@ -87,19 +86,19 @@ const faqData = [
         questions: [
             {
                 question: "Is there warranty?",
-                answer: "Yes. We offer ceramic coatings with warranty attached. Each warranty covers durability, performance, and hydrophobic function. Warranty information is provided upon vehicle pickup.",
+                answer: "All PPF film that we use comes with 10 Years warranty that covers durability, performance, and hydrophobic function. Warranty information is provided upon vehicle pickup.",
                 hasContactButton: true,
                 buttonText: "Contact us for warranty information"
             },
             {
-                question: "Why do I need to bring the car to your workshop?",
-                answer: "We apply all coatings in a controlled, dust-free environment to ensure proper curing and optimal results. Mobile applications often compromise longevity."
+                question: "How long is installation?",
+                answer: "Installation time depends on the job. Generally speaking, a full car PPF can take anywhere from 4-7 days depending on the difficulty and size of the vehicle. Ceramic coating jobs generally take 1 day max. All work is performed in our controlled, dust-free environment to ensure proper curing and optimal results."
             },
             {
-                question: "Why are your prices listed as 'From'?",
-                answer: "Each car is different in size, shape, paint and complexity. The listed starting price reflects the base rate for a standard installation. After inspecting your vehicle and confirming any specific needs, we'll provide a personalized quote with no surprises.",
+                question: "How much are your services?",
+                answer: "Each car is different in size, shape, paint and complexity. Upon vehicle inspection and confirmation on specific needs, we can provide a personalized quote with no surprises.",
                 hasContactButton: true,
-                buttonText: "Contact us for accurate quote"
+                buttonText: "Contact us for a quote"
             }
         ]
     }
@@ -362,11 +361,6 @@ const HomePage: React.FC = () => {
                             <div>
                                 <div className="text-center mb-6">
                                     <h3 className="text-xl font-bold mb-2 text-white font-michroma">High Impact Package</h3>
-                                    <div className="text-3xl font-bold text-white mb-2">
-                                        <span className='font-light text-xl'>From </span>
-                                        $
-                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={1450} duration={3} />
-                                    </div>
                                     <p className="text-start text-gray-400 mb-2">Entry-level protection for everyday driving.</p>
                                     <p className="text-start text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF — perfect for those who want peace of mind on the road.</p>
                                 </div>
@@ -400,15 +394,6 @@ const HomePage: React.FC = () => {
                             </div>
                             <div className="text-center mb-6">
                                 <h3 className="text-xl font-bold mb-2 text-white font-michroma">Full Front Package</h3>
-                                <div className="text-3xl font-bold text-white mb-2">
-                                    <span className='font-light text-xl'>From </span>
-                                    $
-                                    <CountUp
-                                        className='text-white' end={2000} duration={3}
-                                        enableScrollSpy    // watch scroll
-                                        scrollSpyOnce      // only run once
-                                    />
-                                </div>
                                 <p className="text-start text-gray-400 mb-2">Complete front-end coverage.</p>
                                 <p className="text-start text-gray-400">Full Front Protection offers extensive PPF coverage to shield the entire front end of your vehicle. Ideal for performance vehicles, daily drivers, and long-distance travellers who want to maintain a flawless finish.</p>
                             </div>
@@ -438,11 +423,6 @@ const HomePage: React.FC = () => {
                         <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
                             <div className="text-center mb-6">
                                 <h3 className="text-xl font-bold mb-2 text-white font-michroma">Complete Vehicle Package</h3>
-                                <div className="text-3xl font-bold text-white mb-2">
-                                    <span className='font-light text-xl'>From </span>
-                                    $
-                                    <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={5000} duration={3} />
-                                </div>
                                 <p className="text-start text-gray-400 mb-2">
                                     All-over protection for your entire vehicle.
                                 </p>
