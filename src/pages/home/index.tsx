@@ -204,8 +204,9 @@ const HomePage: React.FC = () => {
     }, [equippedInView, equippedAnimationControls]);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    document.title = "Avero PPF | Paint Protection Film South Sydney";
+    window.scrollTo(0, 0)
+}, [])
 
     return (
         <div>
@@ -223,7 +224,7 @@ const HomePage: React.FC = () => {
                     muted
                     playsInline
                 />
-                <div className="absolute inset-0 bg-black/65 h-full"></div>
+                <div className="absolute inset-0 bg-black/20 h-full"></div>
                 <div className="relative z-10 text-center max-w-6xl flex flex-col items-center mx-auto px-6 pt-[15vh]">
                     <motion.h1
                         ref={titleRef}
@@ -232,9 +233,9 @@ const HomePage: React.FC = () => {
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
-                        <span className="block mb-2 text-white font-michroma">Equipped to Protect.</span>
-                        <span className="block text-white font-michroma mb-24">Driven by Detail.</span>
-                        
+                        <span className="block mb-2 text-white font-michroma">Powerful Protection.</span>
+                        <span className="block text-white font-michroma mb-24">Expert Execution.</span>
+                        <a
                             className="block text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
                         >GET A QUOTE</a>
@@ -278,7 +279,7 @@ const HomePage: React.FC = () => {
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/frontShot.avif" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
+                        <img src="/frontShot.jpg" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
                     </div>
                 </div>
             </section>
@@ -288,7 +289,7 @@ const HomePage: React.FC = () => {
                 className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/frontShot1.avif" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
+                        <img src="/frontShot1.jpg" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-300 italic'>Long-term shine. Effortless maintenance. Serious protection.</p>
@@ -361,6 +362,11 @@ const HomePage: React.FC = () => {
                             <div>
                                 <div className="text-center mb-6">
                                     <h3 className="text-xl font-bold mb-2 text-white font-michroma">High Impact Package</h3>
+                                    <div className="text-3xl font-bold text-white mb-2">
+                                        <span className='font-light text-xl'>From </span>
+                                        $
+                                        <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={1450} duration={3} />
+                                    </div>
                                     <p className="text-start text-gray-400 mb-2">Entry-level protection for everyday driving.</p>
                                     <p className="text-start text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF — perfect for those who want peace of mind on the road.</p>
                                 </div>
@@ -394,6 +400,15 @@ const HomePage: React.FC = () => {
                             </div>
                             <div className="text-center mb-6">
                                 <h3 className="text-xl font-bold mb-2 text-white font-michroma">Full Front Package</h3>
+                                <div className="text-3xl font-bold text-white mb-2">
+                                    <span className='font-light text-xl'>From </span>
+                                    $
+                                    <CountUp
+                                        className='text-white' end={2000} duration={3}
+                                        enableScrollSpy    // watch scroll
+                                        scrollSpyOnce      // only run once
+                                    />
+                                </div>
                                 <p className="text-start text-gray-400 mb-2">Complete front-end coverage.</p>
                                 <p className="text-start text-gray-400">Full Front Protection offers extensive PPF coverage to shield the entire front end of your vehicle. Ideal for performance vehicles, daily drivers, and long-distance travellers who want to maintain a flawless finish.</p>
                             </div>
@@ -423,6 +438,11 @@ const HomePage: React.FC = () => {
                         <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
                             <div className="text-center mb-6">
                                 <h3 className="text-xl font-bold mb-2 text-white font-michroma">Complete Vehicle Package</h3>
+                                <div className="text-3xl font-bold text-white mb-2">
+                                    <span className='font-light text-xl'>From </span>
+                                    $
+                                    <CountUp enableScrollSpy scrollSpyOnce className='text-white' end={5000} duration={3} />
+                                </div>
                                 <p className="text-start text-gray-400 mb-2">
                                     All-over protection for your entire vehicle.
                                 </p>
