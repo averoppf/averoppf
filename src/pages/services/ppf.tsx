@@ -22,7 +22,7 @@ const features: Feature[] = [
   {
     title: 'UV & Weather Resistance',
     description:
-      "Avery Dennison's advanced film technology helps block harmful UV rays while offering protection from acidic elements and environmental fallout — keeping your paintwork from fading or staining.",
+      "Avery Dennison's advanced film technology helps block harmful UV rays while offering protection from acidic elements and environmental fallout - keeping your paintwork from fading or staining.",
   },
   {
     title: 'Reduces Everyday Wear',
@@ -32,7 +32,7 @@ const features: Feature[] = [
   {
     title: 'Enhances Visual Appeal',
     description:
-      'Choose from a range of finishes to elevate your car's look — from deep gloss to stealth matte — all while preserving clarity and colour depth.',
+      'Choose from a range of finishes to elevate your car\'s look - from deep gloss to stealth matte - all while preserving clarity and colour depth.',
   },
   {
     title: 'Supports Long-Term Value',
@@ -60,7 +60,7 @@ const steps: Step[] = [
   {
     title: 'Precision PPF Installation',
     description:
-      'Using software-cut patterns and industry-grade equipment, we install your chosen film seamlessly—no stretch marks, bubbles, or lifted edges.',
+      'Using software-cut patterns and industry-grade equipment, we install your chosen film seamlessly - no stretch marks, bubbles, or lifted edges.',
   },
   {
     title: 'Final Inspection & Delivery',
@@ -103,7 +103,7 @@ export function PpfPage() {
             questions: [
                 {
                     question: "How does the self-healing property actually work?",
-                    answer: "The film we use is engineered with a heat-activated top layer that can \"heal\" minor swirl marks and fine scratches over time. When exposed to warm temperatures — either from the sun or warm water — the surface relevels itself, restoring a smooth, clear finish."
+                    answer: "The film we use is engineered with a heat-activated top layer that can \"heal\" minor swirl marks and fine scratches over time. When exposed to warm temperatures - either from the sun or warm water - the surface relevels itself, restoring a smooth, clear finish."
                 },
                 {
                     question: "Will the film become yellow or cloudy over time?",
@@ -111,15 +111,15 @@ export function PpfPage() {
                 },
                 {
                     question: "Will my car's paint fade at different rates under the film?",
-                    answer: "No — our films are UV-stable and allow light to pass through evenly, meaning the paint underneath will age naturally at the same rate as the exposed areas. The film acts as a filter, not a blocker."
+                    answer: "No - our films are UV-stable and allow light to pass through evenly, meaning the paint underneath will age naturally at the same rate as the exposed areas. The film acts as a filter, not a blocker."
                 },
                 {
                     question: "Is Paint Protection Film visible once installed?",
-                    answer: "PPF is designed to be as discreet as possible. Our precise, software-cut patterns and edge-wrapping techniques create a nearly invisible barrier. In most lighting conditions, you'll hardly notice it's there — but you'll definitely notice what it protects against."
+                    answer: "PPF is designed to be as discreet as possible. Our precise, software-cut patterns and edge-wrapping techniques create a nearly invisible barrier. In most lighting conditions, you'll hardly notice it's there - but you'll definitely notice what it protects against."
                 },
                 {
                     question: "How should I wash my car after PPF is installed?",
-                    answer: "You can wash your vehicle as usual — though we recommend the touchless or hand-wash method for best results. Avoid using high-pressure hoses near film edges, and wait around 7 days after installation before the first wash to allow the film to cure fully."
+                    answer: "You can wash your vehicle as usual - though we recommend the touchless or hand-wash method for best results. Avoid using high-pressure hoses near film edges, and wait around 7 days after installation before the first wash to allow the film to cure fully."
                 }
             ]
         },
@@ -167,7 +167,7 @@ export function PpfPage() {
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
                         <p className="block text-white font-michroma mb-[5%]">Paint Protection Film (PPF) in Sydney</p>
-                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, our technicians hold extensive experience in the industry. We bring expert-level knowledge and care to every installation, ensuring each film is applied with absolute precision. Our workshop is fitted with top-tier, industrial-grade equipment, allowing us to cut and apply film without the use of blades on the vehicle itself — eliminating the risk of damage to your paintwork.</p>
+                        <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, our technicians hold extensive experience in the industry. We bring expert-level knowledge and care to every installation, ensuring each film is applied with absolute precision. Our workshop is fitted with top-tier, industrial-grade equipment, allowing us to cut and apply film without the use of blades on the vehicle itself - eliminating the risk of damage to your paintwork.</p>
                         <a
                             className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
@@ -178,7 +178,7 @@ export function PpfPage() {
 
             <section className="w-full px-[10%] text-center py-[5%] flex flex-col items-center justify-center gap-8">
                 <PaintBucket className="text-white" style={{ width: '7%', height: '7%', objectFit: 'contain'}} />
-                <p className="text-neutral-300 font-light tracking-normal text-base">Paint Protection Film (PPF) is an invisible polyurethane film applied to the surface of your vehicle to shield it from the hazards of everyday driving — including stone chips, scratches, yellowing, swirl marks, and harsh weather conditions. PPF preserves the appearance and integrity of your paintwork without altering your vehicle's design or colour. Whether you're navigating busy streets or open highways, PPF acts as a durable, self-healing barrier between your car and the elements.</p>
+                <p className="text-neutral-300 font-light tracking-normal text-base">Paint Protection Film (PPF) is an invisible polyurethane film applied to the surface of your vehicle to shield it from the hazards of everyday driving - including stone chips, scratches, yellowing, swirl marks, and harsh weather conditions. PPF preserves the appearance and integrity of your paintwork without altering your vehicle's design or colour. Whether you're navigating busy streets or open highways, PPF acts as a durable, self-healing barrier between your car and the elements.</p>
             </section>
 
             <div className="relative w-full h-screen mb-[5%]">
@@ -221,7 +221,7 @@ export function PpfPage() {
                                 </div>
                                 <div className="mb-4">
                                     <p className="text-gray-400 mb-2">Entry-level protection for everyday driving.</p>
-                                    <p className="text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF — perfect for those who want peace of mind on the road.</p>
+                                    <p className="text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF - perfect for those who want peace of mind on the road.</p>
                                 </div>
                                 <ul className="space-y-3 mb-8">
                                     <li className="flex items-center gap-3">
@@ -255,7 +255,7 @@ export function PpfPage() {
                                     <h3 className="text-2xl font-bold mb-2 text-white text-center font-michroma">Full Front Package</h3>
                                 </div>
                                 <div className="mb-4">
-                                    <p className="text-gray-400 mb-2">Our most popular package — complete front-end coverage.</p>
+                                    <p className="text-gray-400 mb-2">Our most popular package - complete front-end coverage.</p>
                                     <p className="text-gray-400">Full Front Protection offers extensive PPF coverage to shield the entire front end of your vehicle. Ideal for performance vehicles, daily drivers, and long-distance travellers who want to maintain a flawless finish.</p>
                                 </div>
                             <ul className="space-y-3 mb-8">
@@ -313,7 +313,7 @@ export function PpfPage() {
                         Paint Protection Film is the ultimate combination of performance, style, and peace of mind.
                     </p>
                     <p className="text-gray-300 mb-8 text-center max-w-2xl mx-auto text-base">
-                        Paint Protection Film offers more than just surface-level shine — it's a smart,
+                        Paint Protection Film offers more than just surface-level shine - it's a smart,
                         long-term investment in your vehicle's condition and value. Here's why more
                         drivers are turning to PPF:
                     </p>
