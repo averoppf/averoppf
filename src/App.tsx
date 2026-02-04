@@ -11,6 +11,7 @@ import { AreaServed } from './pages/AreaServed'
 import { ColourWrapsPage } from './pages/services/colourWraps'
 import { WindowTintingPage } from './pages/services/windowTinting'
 import ProjectsPage from './pages/projects'
+import TeslaPPFPage from './pages/tesla/tesla-ppf'
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/services/ppf" element={<PageLayout><PpfPage /></PageLayout>} />
         <Route path="/services/colour-wraps" element={<PageLayout><ColourWrapsPage /></PageLayout>} />
         <Route path="/services/window-tinting" element={<PageLayout><WindowTintingPage /></PageLayout>} />
+        <Route path="/tesla-ppf" element={<PageLayout><TeslaPPFPage /></PageLayout>} />
         <Route path="/privacy-policy" element={<PageLayout><PrivacyPolicyPage /></PageLayout>} />
         <Route path="*" element={<PageLayout><HomePage /></PageLayout>} />
         <Route path="/services/:area" element={<PageLayout><AreaServed /></PageLayout>} />
