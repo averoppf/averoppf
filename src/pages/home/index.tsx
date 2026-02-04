@@ -204,8 +204,9 @@ const HomePage: React.FC = () => {
     }, [equippedInView, equippedAnimationControls]);
 
     useEffect(() => {
-        window.scrollTo(0, 0)
-    }, [])
+    document.title = "Avero PPF | Paint Protection Film South Sydney";
+    window.scrollTo(0, 0)
+}, [])
 
     return (
         <div>
