@@ -438,7 +438,7 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
                     <div className='flex items-center justify-center my-10'>
-                        
+                        <a
                             className=" text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
                             href="/contact"
                         >GET A QUOTE</a>
