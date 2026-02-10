@@ -181,7 +181,7 @@ export function PpfPage() {
                 <p className="text-neutral-300 font-light tracking-normal text-base">Paint Protection Film (PPF) is an invisible polyurethane film applied to the surface of your vehicle to shield it from the hazards of everyday driving - including stone chips, scratches, yellowing, swirl marks, and harsh weather conditions. PPF preserves the appearance and integrity of your paintwork without altering your vehicle's design or colour. Whether you're navigating busy streets or open highways, PPF acts as a durable, self-healing barrier between your car and the elements.</p>
             </section>
 
-            <div className="relative w-full h-screen mb-[5%]">
+            <div className="relative w-full h-screen">
                 <img 
                     src="/cody-ppf.avif" 
                     className="absolute inset-0 w-full h-full object-cover"
@@ -373,6 +373,43 @@ export function PpfPage() {
                         </motion.div>
                         ))}
                     </motion.div>
+                    </div>
+                </section>
+
+                <section className="bg-black text-white py-12 px-4 w-full">
+                    <div className="max-w-6xl mx-auto">
+                        <h2 className="text-4xl font-bold text-center mb-4 font-michroma tracking-wider">
+                            Brands We Work With
+                        </h2>
+                        <p className="text-center text-gray-300 mb-12 max-w-2xl mx-auto">
+                            As seasoned professionals in the industry, we only work with PPF brands that we know work best and hold up well over the long-run.
+                        </p>
+
+                        <div className="space-y-8">
+                            {/* AveroPRO PPF */}
+                            <div className="bg-neutral-800 rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
+                                <h3 className="text-2xl font-semibold mb-3 font-michroma tracking-wider">AveroPRO PPF</h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    <a href="https://averoproppf.com.au/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 underline transition-colors">AveroPRO</a> is our very own installer engineered paint protection film, purpose built for the harsh realities of Australian roads. Developed in Australia using advanced thermoplastic polyurethane enhanced with polycarbonate and polycaprolactone technology, it delivers exceptional impact resistance, high elasticity and reliable self healing to absorb stone chips, resist scratches and maintain a deep, glass like finish. Formulated to withstand intense UV, heat, salt and debris without yellowing or cracking, AveroPRO installs cleaner, conforms better and lasts longer than conventional films. Designed and tested daily by professional installers and backed by a comprehensive ten year warranty, it's protection without compromise for owners who demand the highest standard of finish and durability.
+                                </p>
+                            </div>
+
+                            {/* Avery Dennison Supreme */}
+                            <div className="bg-neutral-800 rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
+                                <h3 className="text-2xl font-semibold mb-3 font-michroma tracking-wider">Avery Dennison Supreme</h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    <a href="https://graphics.averydennison.com/en/home/graphics-products/paint-protection-film/supreme-defense-gloss-film.html" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 underline transition-colors">Avery Dennison Supreme PPF</a> is a globally renown premium paint protection film known for its ultra-clear finish, smooth installation characteristics and consistent long term performance. Engineered with advanced top coat technology, it provides excellent resistance against stains, environmental damage and everyday road debris while enhancing gloss and depth for a factory fresh look. Supreme is a dependable choice for owners seeking refined protection backed by one of the most respected names in the film industry.
+                                </p>
+                            </div>
+
+                            {/* Inozetek PPF */}
+                            <div className="bg-neutral-800 rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
+                                <h3 className="text-2xl font-semibold mb-3 font-michroma tracking-wider">Inozetek PPF</h3>
+                                <p className="text-gray-300 leading-relaxed">
+                                    <a href="https://inozetekaustralia.com.au/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 underline transition-colors">Inozetek PPF</a> is a high performance protection film recognised for its bold gloss finish and standout visual clarity, making it a popular choice for enthusiasts who want both protection and strong aesthetics. Its durable construction defends against stone chips, scratches and daily wear while maintaining a smooth, high shine surface that enhances colour depth and overall presence. Easy to handle and trusted by installers worldwide, Inozetek delivers reliable protection with a premium finish.
+                                </p>
+                            </div>
+                        </div>
                     </div>
                 </section>
 
