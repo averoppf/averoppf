@@ -9,76 +9,6 @@ import ContactComponent from '../../components/misc/ContactComponent';
 import { ContactButton } from '../services/ceramic';
 import { VisitMapComponent } from '../../components/misc/VisitMapComponent';
 // import { Helmet } from 'react-helmet';
-const CARS = [
-    {
-        label: "Land Rover",
-        img: "/logos/landrover.png"
-    },
-    {
-        label: "BMW",
-        img: "/logos/bmw.png"
-    },
-    {
-        label: "Audi",
-        img: "/logos/au.png"
-    },
-    {
-        label: "Lexus",
-        img: "/logos/lexus.png"
-    },
-    {
-        label: "Volvo",
-        img: "/logos/volvo.png"
-    },
-    {
-        label: "Mercedes-Benz",
-        img: "/logos/mercedes.png"
-    },
-    {
-        label: "Porsche",
-        img: "/logos/porsche.png"
-    },
-    {
-        label: "Ferrari",
-        img: "/logos/ferrari.png"
-    },
-    {
-        label: "Lamborghini",
-        img: "/logos/lambo.png"
-    },
-    {
-        label: "Jaguar",
-        img: "/logos/jaguar.png"
-    },
-    {
-        label: "Tesla",
-        img: "/logos/tesla.png"
-    },
-    {
-        label: "Ford",
-        img: "/logos/ford.png"
-    },
-    {
-        label: "Holden",
-        img: "/logos/holden.png"
-    },
-    {
-        label: "Toyota",
-        img: "/logos/toyota.png"
-    },
-    {
-        label: "Kia",
-        img: "/logos/kia.png"
-    },
-    {
-        label: "Hyundai",
-        img: "/logos/hyundai.png"
-    },
-    {
-        label: "Volkswagen",
-        img: "/logos/volks.png"
-    }
-];
 
 const faqData = [
     {
@@ -179,28 +109,6 @@ const HomePage: React.FC = () => {
             benefitsAnimationControls.start("visible");
         }
     }, [benefitsInView, benefitsAnimationControls]);
-
-
-    const equippedVariants = {
-        hidden: {
-            opacity: 0,
-            y: -150,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-        },
-    };
-
-    const equippedRef = useRef(null);
-    const equippedInView = useInView(equippedRef, { once: true });
-    const equippedAnimationControls = useAnimation();
-
-    useEffect(() => {
-        if (equippedInView) {
-            equippedAnimationControls.start("visible");
-        }
-    }, [equippedInView, equippedAnimationControls]);
 
     useEffect(() => {
     document.title = "Avero PPF | Paint Protection Film South Sydney";
@@ -450,28 +358,7 @@ const HomePage: React.FC = () => {
                 <VideoHero source={"/carVid.mp4"} isCeramic={false} />
             </section>
 
-            <section id="packages" className="py-20 bg-black border-gray-900 border-t-1">
-                <motion.div
-                    ref={equippedRef}
-                    animate={equippedAnimationControls}
-                    variants={equippedVariants}
-                    initial="hidden"
-                    transition={{ delay: 0.7, duration: 0.6 }}
-                    className="container mx-auto px-6">
-                    <h2 className="text-4xl font-bold text-center text-white mb-10 font-michroma tracking-wider">Prestige Protection for Every Make and Model</h2>
-
-                    <div className='grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-5 text-white'>
-                        {[...CARS.sort((a, b) => a.label.localeCompare(b.label))].map((car) => (
-                            <div key={car.label} className='border-1 border-gray-900 flex flex-col items-center gap-5 p-4 rounded-xl'>
-                                <img className='h-14' src={car.img} />
-                                <p>{car.label}</p>
-                            </div>
-                        ))}
-                    </div>
-                </motion.div>
-            </section>
-
-            <section className='flex flex-col items-center justify-center'>
+            <section className='flex flex-col items-center justify-center bg-black py-20'>
                 <div className="w-10/12 space-y-2">
                     <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero FAQs</h1>
 
