@@ -54,7 +54,7 @@ const TeslaPPFPage: React.FC = () => {
                                 Your Tesla deserves more than basic protection. From the moment you drive it home, keeping that clean, factory finish looking flawless should be a priority. Our premium Paint Protection Film (PPF) provides an almost invisible barrier that defends against everyday damage such as scratches, stone chips, road debris and harsh weather, so your paint stays looking new for longer.
                             </p>
                             <p className="text-base text-neutral-300">
-                                Whether you've just taken delivery of a Model 3, Model Y, Model S or Model X, our experienced installers use precision cut film and careful application techniques to achieve seamless coverage that blends perfectly with your Tesla's design. The result is long lasting protection without changing the look of the car, helping maintain its value and that fresh showroom shine for years to come.
+                                Whether you've just taken delivery of a Model 3, Model Y or Model YL, our experienced installers use precision cut film and careful application techniques to achieve seamless coverage that blends perfectly with your Tesla's design. The result is long lasting protection without changing the look of the car, helping maintain its value and that fresh showroom shine for years to come.
                             </p>
                         </div>
 
