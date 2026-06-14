@@ -2,5 +2,15 @@
 @import "tailwindcss";
 
 @theme {
-  --font-michroma: "Michroma", sans-serif; 
+  --font-michroma: "Michroma", sans-serif;
+  --animate-marquee: marquee 18s linear infinite;
+}
+
+@keyframes marquee {
+  from {
+    transform: translateX(-50%);
+  }
+  to {
+    transform: translateX(0%);
+  }
 }
