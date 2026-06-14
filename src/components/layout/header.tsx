@@ -1,6 +1,7 @@
 import { ChevronDown, ChevronUp, Mail, Menu, Phone, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import { Banner } from "./Banner";
 
 export function Header() {
   const navigate = useNavigate();
@@ -40,114 +41,116 @@ export function Header() {
   }, [showDropdown]);
 
   return (
-    <nav
-      className={`
-        fixed top-0 left-0 right-0 z-50
-        transition-colors duration-300 ease-in-out
-        ${isScrolled ? "bg-black" : "bg-transparent"}
-         text-white p-2
-      `}
-    >
-      <div className="px-4 py-4 gap-4">
-        <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div
-            className="cursor-pointer"
-            onClick={() => navigate("/")}
-          >
-            <img src="/avero.png" className="min-h-10 min-w-30 object-contain max-h-10 max-w-30" />
-          </div>
-
-          {/* Mobile menu toggle */}
-          <div className="flex sm:hidden">
-            <Menu
-              size={24}
+    <div className="fixed top-0 left-0 right-0 z-50">
+      <nav
+        className={`
+          transition-colors duration-300 ease-in-out
+          ${isScrolled ? "bg-black" : "bg-transparent"}
+           text-white p-2
+        `}
+      >
+        <div className="px-4 py-4 gap-4">
+          <div className="flex items-center justify-between">
+            {/* Logo */}
+            <div
               className="cursor-pointer"
-              onClick={() => setShowMenu(true)}
-            />
-          </div>
+              onClick={() => navigate("/")}
+            >
+              <img src="/avero.png" className="min-h-10 min-w-30 object-contain max-h-10 max-w-30" />
+            </div>
 
-          {/* Sliding mobile panel */}
-          {showMenu && (
-            <div className="fixed inset-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
-              <div className="flex justify-end p-6">
-                <X
-                  size={30}
-                  className="cursor-pointer text-white"
-                  onClick={() => setShowMenu(false)}
-                />
+            {/* Mobile menu toggle */}
+            <div className="flex sm:hidden">
+              <Menu
+                size={24}
+                className="cursor-pointer"
+                onClick={() => setShowMenu(true)}
+              />
+            </div>
+
+            {/* Sliding mobile panel */}
+            {showMenu && (
+              <div className="fixed inset-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
+                <div className="flex justify-end p-6">
+                  <X
+                    size={30}
+                    className="cursor-pointer text-white"
+                    onClick={() => setShowMenu(false)}
+                  />
+                </div>
+                <div className="flex flex-col gap-5 px-6">
+                  <a href="/" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Home</a>
+                  <a href="/about" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">About Us</a>
+                  <a href="/projects" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Projects</a>
+                  <a href="/services/ppf" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">PPF</a>
+                  <a href="/services/ceramic" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Ceramic Coating</a>
+                  <a href="/contact" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Contact</a>
+                </div>
+
+                <div className="gap-2 flex items-center mt-10 p-6">
+                  
+                      href="tel:+61415081546"
+                  >
+                      <Phone style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                  </a>
+                  <a href="mailto:info@averoppf.com">
+                      <Mail style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                  </a>                
+                </div>
               </div>
-              <div className="flex flex-col gap-5 px-6">
-                <a href="/" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Home</a>
-                <a href="/about" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">About Us</a>
-                <a href="/projects" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Projects</a>
-                <a href="/services/ppf" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">PPF</a>
-                <a href="/services/ceramic" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Ceramic Coating</a>
-                <a href="/contact" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Contact</a>
+            )}
+
+            {/* Desktop menu */}
+            <div className="hidden sm:flex gap-6 items-center justify-between">
+              <a href="/" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Home</a>
+              <a href="/about" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">About Us</a>
+              <a href="/projects" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Projects</a>
+
+              <div className="relative" ref={dropdownRef}>
+                <button
+                  onClick={() => setShowDropdown((v) => !v)}
+                  className="flex items-center gap-1 hover:text-slate-400 transition-colors"
+                >
+                  <span className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Services</span>
+                  {showDropdown ? <ChevronUp /> : <ChevronDown />}
+                </button>
+                {showDropdown && (
+                  <div className="absolute right-0 mt-2 w-60 rounded border border-gray-700 bg-black p-3 flex flex-col gap-2">
+                    <a href="/services/ppf" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
+                      Paint Protection Film (PPF)
+                    </a>
+                    <a href="/services/ceramic" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
+                      Ceramic Coating
+                    </a>
+                    <a href="/services/colour-wraps" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
+                      Colour Wraps
+                    </a>
+                    <a href="/services/window-tinting" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
+                      Window Tinting
+                    </a>
+                  </div>
+                )}
               </div>
 
-              <div className="gap-2 flex items-center mt-10 p-6">
-                <a
+              <a href="/contact" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold border-2 p-3">
+                Contact
+              </a>
+
+              <div className="ml-3 gap-2 flex items-center">
+                
                     href="tel:+61415081546"
                 >
-                    <Phone style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                    <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
                 </a>
-                <a href="mailto:info@averoppf.com">
-                    <Mail style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
-                </a>                
+                <a href="mailto:info@averoppf.com.au">
+                    <Mail style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                </a>
               </div>
-            </div>
-          )}
-
-          {/* Desktop menu */}
-          <div className="hidden sm:flex gap-6 items-center justify-between">
-            <a href="/" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Home</a>
-            <a href="/about" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">About Us</a>
-            <a href="/projects" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Projects</a>
-
-            <div className="relative" ref={dropdownRef}>
-              <button
-                onClick={() => setShowDropdown((v) => !v)}
-                className="flex items-center gap-1 hover:text-slate-400 transition-colors"
-              >
-                <span className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Services</span>
-                {showDropdown ? <ChevronUp /> : <ChevronDown />}
-              </button>
-              {showDropdown && (
-                <div className="absolute right-0 mt-2 w-60 rounded border border-gray-700 bg-black p-3 flex flex-col gap-2">
-                  <a href="/services/ppf" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
-                    Paint Protection Film (PPF)
-                  </a>
-                  <a href="/services/ceramic" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
-                    Ceramic Coating
-                  </a>
-                  <a href="/services/colour-wraps" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
-                    Colour Wraps
-                  </a>
-                  <a href="/services/window-tinting" className="hover:text-slate-400 transition-colors tracking-[0.12rem] text-slate-300">
-                    Window Tinting
-                  </a>
-                </div>
-              )}
-            </div>
-
-            <a href="/contact" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold border-2 p-3">
-              Contact
-            </a>
-
-            <div className="ml-3 gap-2 flex items-center">
-              <a
-                  href="tel:+61415081546"
-              >
-                  <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
-              </a>
-              <a href="mailto:info@averoppf.com.au">
-                  <Mail style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
-              </a>
             </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
+      <Banner />
+    </div>
   );
 }
