@@ -81,6 +81,140 @@ const TeslaPPFPage: React.FC = () => {
                 </div>
             </section>
 
+            {/* Gloss PPF Section */}
+            <section className="py-20 bg-black border-t-1 border-gray-900">
+                <div className="container mx-auto px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <img
+                            src="/teslan1.png"
+                            className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                            alt="Tesla Gloss PPF"
+                        />
+                        <div>
+                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                                Gloss PPF
+                            </h2>
+                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                                <p className="text-base text-neutral-300">
+                                    Preserve your Tesla's factory finish with our premium Gloss Paint Protection Film. Designed to provide near-invisible protection, Gloss PPF helps defend your paint against stone chips, swirl marks, road debris, bug splatter and daily wear while enhancing depth and shine.
+                                </p>
+                                <p className="text-base text-neutral-300">
+                                    At <span className="font-semibold text-white">Avero PPF</span>, we use AveroPRO 10-Year HyperGloss PPF, engineered for exceptional clarity, self-healing performance and long-term durability. The ultra-gloss finish gives your Tesla a deep, wet-look appearance while maintaining the original colour and design of the vehicle. Perfect for owners wanting maximum protection without changing the look of their Tesla.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Matte PPF Section */}
+            <section className="py-20 bg-black border-t-1 border-gray-900">
+                <div className="container mx-auto px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="lg:order-2">
+                            <img
+                                src="/teslan2.png"
+                                className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                                alt="Tesla Matte PPF"
+                            />
+                        </div>
+                        <div className="lg:order-1">
+                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                                Matte PPF
+                            </h2>
+                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                                <p className="text-base text-neutral-300">
+                                    Transform your Tesla with a sleek satin finish while protecting it from everyday damage. Matte PPF converts gloss paint into a smooth satin appearance that stands out while still offering premium protection against chips, scratches and environmental contaminants.
+                                </p>
+                                <p className="text-base text-neutral-300">
+                                    We install AveroPRO 10-Year Matte PPF, developed to deliver a consistent satin finish with excellent self-healing and stain-resistant properties. Whether you want a subtle stealth aesthetic or already own a factory matte Tesla, our Matte PPF provides long-lasting protection without compromising the finish.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Colour PPF Section */}
+            <section className="py-20 bg-black border-t-1 border-gray-900">
+                <div className="container mx-auto px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <img
+                            src="/teslan3.png"
+                            className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                            alt="Tesla Colour PPF"
+                        />
+                        <div>
+                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                                Colour PPF
+                            </h2>
+                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                                <p className="text-base text-neutral-300">
+                                    Give your Tesla a completely new look while adding the benefits of Paint Protection Film. Colour PPF combines colour transformation and surface protection into one solution, offering the styling flexibility of a wrap with the durability and self-healing properties of premium PPF.
+                                </p>
+                                <p className="text-base text-neutral-300">
+                                    We use AveroPRO 10-Year Spectral PPF, available in a range of finishes and colours designed to elevate the appearance of your Tesla while protecting it from chips, scratches and UV exposure. Ideal for owners wanting a unique finish without permanently altering the factory paint.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Interior PPF Section */}
+            <section className="py-20 bg-black border-t-1 border-gray-900">
+                <div className="container mx-auto px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <div className="lg:order-2">
+                            <img
+                                src="/teslan4.png"
+                                className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                                alt="Tesla Interior PPF"
+                            />
+                        </div>
+                        <div className="lg:order-1">
+                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                                Interior PPF
+                            </h2>
+                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                                <p className="text-base text-neutral-300">
+                                    Tesla interiors are modern and minimal, but high-contact surfaces can quickly pick up scratches, fingerprints and wear. Our Interior PPF solutions are designed to protect delicate interior trims including gloss black panels, centre consoles, touchscreens and infotainment displays.
+                                </p>
+                                <p className="text-base text-neutral-300">
+                                    Using precision-cut templates tailored specifically for Tesla models, our Interior PPF maintains the clean OEM appearance of your interior while reducing the risk of scratches and swirl marks caused by daily use. It's the perfect way to keep your Tesla cabin looking brand new.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* Ceramic Tint Section */}
+            <section className="py-20 bg-black border-t-1 border-gray-900">
+                <div className="container mx-auto px-6">
+                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                        <img
+                            src="/teslan5.png"
+                            className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                            alt="Tesla Ceramic Tint"
+                        />
+                        <div>
+                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                                Ceramic Tint
+                            </h2>
+                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                                <p className="text-base text-neutral-300">
+                                    Enhance comfort, privacy and heat rejection with our premium Nano Ceramic Tint solutions for Tesla vehicles. Our ceramic tint helps reduce interior heat build-up while blocking 98% of harmful UV rays, protecting both passengers and interior surfaces from sun damage.
+                                </p>
+                                <p className="text-base text-neutral-300">
+                                    We install our lifetime warranty Nano Ceramic Tint, engineered for superior clarity, heat rejection and long-term durability without interfering with signals or visibility. Multiple darkness options are available, allowing you to customise the appearance and privacy level of your Tesla to suit your preference.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
             {/* Section 2 */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
