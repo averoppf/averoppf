@@ -24,51 +24,59 @@ const TeslaPPFPage: React.FC = () => {
 
     return (
         <div className="bg-black min-h-screen border-gray-900 border-t-1">
+            {/* Video Banner Section */}
+            <section className="relative w-full h-[70vh] overflow-hidden">
+                <video
+                    className="absolute inset-0 w-full h-full object-cover"
+                    src="/tesla-banner-video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                />
+                <div className="absolute inset-0 bg-black/50" />
+                <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
+                    <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-michroma">
+                        Sydney's Tesla PPF Specialists
+                    </h1>
+                </div>
+            </section>
+
             {/* Section 1 */}
-            <section className="pt-40 pb-20 bg-black">
+            <section className="pt-20 pb-20 bg-black">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
-                        {/* Large Image on Left */}
-                        <img 
-                            src="/tesla_main.jpg" 
-                            className="shadow-2xl rounded-4xl w-full h-full object-cover"
-                            alt="Tesla PPF Protection"
-                        />
-
-                        {/* Text Content on Right */}
-                        <div>
-                            <h1 className="text-4xl font-bold mb-8 text-white font-michroma">
-                                Protect Your New Tesla with Premium Paint Protection Film (PPF)
-                            </h1>
-                            <div className="space-y-6 text-lg text-gray-300 leading-relaxed mb-8">
-                                <p className="text-base text-neutral-300">
-                                    Your Tesla deserves more than basic protection. From the moment you drive it home, keeping that clean, factory finish looking flawless should be a priority. Our premium Paint Protection Film (PPF) provides an almost invisible barrier that defends against everyday damage such as scratches, stone chips, road debris and harsh weather, so your paint stays looking new for longer.
-                                </p>
-                                <p className="text-base text-neutral-300">
-                                    Whether you've just taken delivery of a Model 3, Model Y, Model S or Model X, our experienced installers use precision cut film and careful application techniques to achieve seamless coverage that blends perfectly with your Tesla's design. The result is long lasting protection without changing the look of the car, helping maintain its value and that fresh showroom shine for years to come.
-                                </p>
-                            </div>
-
-                            {/* Checkmarks */}
-                            <ul className="space-y-4 text-white">
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                                    <span className="text-base text-neutral-300">Advanced self-healing technology</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                                    <span className="text-base text-neutral-300">UV-resistant and stain-repellent film</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                                    <span className="text-base text-neutral-300">Custom coverage options for full or partial wraps</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
-                                    <span className="text-base text-neutral-300">Trusted by Tesla owners across Sydney</span>
-                                </li>
-                            </ul>
+                    <div className="max-w-3xl mx-auto">
+                        <h2 className="text-4xl font-bold mb-8 text-white font-michroma text-center">
+                            Protect Your New Tesla with Premium Paint Protection Film (PPF)
+                        </h2>
+                        <div className="space-y-6 text-lg text-gray-300 leading-relaxed mb-8">
+                            <p className="text-base text-neutral-300">
+                                Your Tesla deserves more than basic protection. From the moment you drive it home, keeping that clean, factory finish looking flawless should be a priority. Our premium Paint Protection Film (PPF) provides an almost invisible barrier that defends against everyday damage such as scratches, stone chips, road debris and harsh weather, so your paint stays looking new for longer.
+                            </p>
+                            <p className="text-base text-neutral-300">
+                                Whether you've just taken delivery of a Model 3, Model Y, Model S or Model X, our experienced installers use precision cut film and careful application techniques to achieve seamless coverage that blends perfectly with your Tesla's design. The result is long lasting protection without changing the look of the car, helping maintain its value and that fresh showroom shine for years to come.
+                            </p>
                         </div>
+
+                        {/* Checkmarks */}
+                        <ul className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-white">
+                            <li className="flex items-start gap-3">
+                                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                                <span className="text-base text-neutral-300">Advanced self-healing technology</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                                <span className="text-base text-neutral-300">UV-resistant and stain-repellent film</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                                <span className="text-base text-neutral-300">Custom coverage options for full or partial wraps</span>
+                            </li>
+                            <li className="flex items-start gap-3">
+                                <CheckCircle className="w-6 h-6 text-white flex-shrink-0 mt-1" />
+                                <span className="text-base text-neutral-300">Trusted by Tesla owners across Sydney</span>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </section>
