@@ -84,10 +84,10 @@ const TeslaPPFPage: React.FC = () => {
             {/* Gloss PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16">
                         <img
                             src="/teslan1.png"
-                            className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                            className="w-full h-full object-cover"
                             alt="Tesla Gloss PPF"
                         />
                         <div>
@@ -110,11 +110,11 @@ const TeslaPPFPage: React.FC = () => {
             {/* Matte PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16">
                         <div className="lg:order-2">
                             <img
                                 src="/teslan2.png"
-                                className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                                className="w-full h-full object-cover"
                                 alt="Tesla Matte PPF"
                             />
                         </div>
@@ -138,10 +138,10 @@ const TeslaPPFPage: React.FC = () => {
             {/* Colour PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16">
                         <img
                             src="/teslan3.png"
-                            className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                            className="w-full h-full object-cover"
                             alt="Tesla Colour PPF"
                         />
                         <div>
@@ -164,11 +164,11 @@ const TeslaPPFPage: React.FC = () => {
             {/* Interior PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16">
                         <div className="lg:order-2">
                             <img
                                 src="/teslan4.png"
-                                className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                                className="w-full h-full object-cover"
                                 alt="Tesla Interior PPF"
                             />
                         </div>
@@ -192,10 +192,10 @@ const TeslaPPFPage: React.FC = () => {
             {/* Ceramic Tint Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16 items-center">
+                    <div className="grid lg:grid-cols-2 gap-16">
                         <img
                             src="/teslan5.png"
-                            className="shadow-2xl rounded-4xl w-full h-full object-cover"
+                            className="w-full h-full object-cover"
                             alt="Tesla Ceramic Tint"
                         />
                         <div>
@@ -215,69 +215,67 @@ const TeslaPPFPage: React.FC = () => {
                 </div>
             </section>
 
-            {/* Section 2 */}
+            {/* Past Work Gallery */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-12 text-white font-michroma">
-                        Tesla Paint Protection Film Options
+                        Check out our past work
                     </h2>
 
-                    {/* 4 Boxes Side by Side */}
-                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-                        {/* Box 1 */}
-                        <div className="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img 
-                                src="/tesla1_box.jpg" 
-                                className="w-full h-64 object-cover"
-                                alt="Tesla Colour PPF"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-white text-center font-michroma">
-                                    Tesla: Colour PPF
-                                </h3>
-                            </div>
+                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/tesla1_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 1" />
                         </div>
-
-                        {/* Box 2 */}
-                        <div className="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img 
-                                src="/tesla2_box.jpg" 
-                                className="w-full h-64 object-cover"
-                                alt="Tesla Matte PPF"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-white text-center font-michroma">
-                                    Tesla: Matte PPF
-                                </h3>
-                            </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/tesla2_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 2" />
                         </div>
-
-                        {/* Box 3 */}
-                        <div className="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img 
-                                src="/tesla3_box.jpg" 
-                                className="w-full h-64 object-cover"
-                                alt="Tesla Clear PPF"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-white text-center font-michroma">
-                                    Tesla: Clear PPF
-                                </h3>
-                            </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/tesla3_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 3" />
                         </div>
-
-                        {/* Box 4 */}
-                        <div className="bg-neutral-900 rounded-2xl overflow-hidden border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img 
-                                src="/tesla4_box.jpg" 
-                                className="w-full h-64 object-cover"
-                                alt="Tesla Front End Clear PPF"
-                            />
-                            <div className="p-6">
-                                <h3 className="text-xl font-bold text-white text-center font-michroma">
-                                    Tesla: Front End Clear PPF
-                                </h3>
-                            </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/tesla4_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 4" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid1.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 5" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid2.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 6" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid3.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 7" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid4.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 8" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid5.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 9" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid6.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 10" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid7.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 11" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid8.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 12" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid9.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 13" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid10.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 14" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid11.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 15" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid12.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 16" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid13.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 17" />
+                        </div>
+                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                            <img src="/teslagrid14.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 18" />
                         </div>
                     </div>
                 </div>
