@@ -1,9 +1,35 @@
-import React, { useEffect } from 'react';
-import { CheckCircle } from 'lucide-react';
+import React, { useEffect, useState } from 'react';
+import { CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
 import '../../App.css'
 import ContactComponent from '../../components/misc/ContactComponent';
 
+const galleryImages = [
+    "/tesla1_box.jpg",
+    "/tesla2_box.jpg",
+    "/tesla3_box.jpg",
+    "/tesla4_box.jpg",
+    "/teslagrid1.jpg",
+    "/teslagrid2.jpg",
+    "/teslagrid3.jpg",
+    "/teslagrid4.jpg",
+    "/teslagrid5.jpg",
+    "/teslagrid6.jpg",
+    "/teslagrid7.JPG",
+    "/teslagrid8.JPG",
+    "/teslagrid9.jpg",
+    "/teslagrid10.jpg",
+    "/teslagrid11.jpg",
+    "/teslagrid12.jpg",
+    "/teslagrid13.jpg",
+    "/teslagrid14.jpg",
+];
+
 const TeslaPPFPage: React.FC = () => {
+    const [currentSlide, setCurrentSlide] = useState(0);
+
+    const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % galleryImages.length);
+    const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
+
     useEffect(() => {
         // Set page title
         document.title = "Tesla PPF Specialist | Caringbah | South Sydney | Avero PPF";
@@ -83,25 +109,23 @@ const TeslaPPFPage: React.FC = () => {
 
             {/* Gloss PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        <img
-                            src="/teslan1.png"
-                            className="w-full h-full object-cover"
-                            alt="Tesla Gloss PPF"
-                        />
-                        <div>
-                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
-                                Gloss PPF
-                            </h2>
-                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
-                                <p className="text-base text-neutral-300">
-                                    Preserve your Tesla's factory finish with our premium Gloss Paint Protection Film. Designed to provide near-invisible protection, Gloss PPF helps defend your paint against stone chips, swirl marks, road debris, bug splatter and daily wear while enhancing depth and shine.
-                                </p>
-                                <p className="text-base text-neutral-300">
-                                    At <span className="font-semibold text-white">Avero PPF</span>, we use AveroPRO 10-Year HyperGloss PPF, engineered for exceptional clarity, self-healing performance and long-term durability. The ultra-gloss finish gives your Tesla a deep, wet-look appearance while maintaining the original colour and design of the vehicle. Perfect for owners wanting maximum protection without changing the look of their Tesla.
-                                </p>
-                            </div>
+                <div className="grid lg:grid-cols-2 items-center">
+                    <img
+                        src="/teslan1.png"
+                        className="w-full h-[300px] lg:h-[400px] object-cover"
+                        alt="Tesla Gloss PPF"
+                    />
+                    <div className="px-6 py-10 lg:px-16">
+                        <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                            Gloss PPF
+                        </h2>
+                        <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                            <p className="text-base text-neutral-300">
+                                Preserve your Tesla's factory finish with our premium Gloss Paint Protection Film. Designed to provide near-invisible protection, Gloss PPF helps defend your paint against stone chips, swirl marks, road debris, bug splatter and daily wear while enhancing depth and shine.
+                            </p>
+                            <p className="text-base text-neutral-300">
+                                At <span className="font-semibold text-white">Avero PPF</span>, we use AveroPRO 10-Year HyperGloss PPF, engineered for exceptional clarity, self-healing performance and long-term durability. The ultra-gloss finish gives your Tesla a deep, wet-look appearance while maintaining the original colour and design of the vehicle. Perfect for owners wanting maximum protection without changing the look of their Tesla.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -109,27 +133,25 @@ const TeslaPPFPage: React.FC = () => {
 
             {/* Matte PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        <div className="lg:order-2">
-                            <img
-                                src="/teslan2.png"
-                                className="w-full h-full object-cover"
-                                alt="Tesla Matte PPF"
-                            />
-                        </div>
-                        <div className="lg:order-1">
-                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
-                                Matte PPF
-                            </h2>
-                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
-                                <p className="text-base text-neutral-300">
-                                    Transform your Tesla with a sleek satin finish while protecting it from everyday damage. Matte PPF converts gloss paint into a smooth satin appearance that stands out while still offering premium protection against chips, scratches and environmental contaminants.
-                                </p>
-                                <p className="text-base text-neutral-300">
-                                    We install AveroPRO 10-Year Matte PPF, developed to deliver a consistent satin finish with excellent self-healing and stain-resistant properties. Whether you want a subtle stealth aesthetic or already own a factory matte Tesla, our Matte PPF provides long-lasting protection without compromising the finish.
-                                </p>
-                            </div>
+                <div className="grid lg:grid-cols-2 items-center">
+                    <div className="lg:order-2">
+                        <img
+                            src="/teslan2.png"
+                            className="w-full h-[300px] lg:h-[400px] object-cover"
+                            alt="Tesla Matte PPF"
+                        />
+                    </div>
+                    <div className="lg:order-1 px-6 py-10 lg:px-16">
+                        <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                            Matte PPF
+                        </h2>
+                        <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                            <p className="text-base text-neutral-300">
+                                Transform your Tesla with a sleek satin finish while protecting it from everyday damage. Matte PPF converts gloss paint into a smooth satin appearance that stands out while still offering premium protection against chips, scratches and environmental contaminants.
+                            </p>
+                            <p className="text-base text-neutral-300">
+                                We install AveroPRO 10-Year Matte PPF, developed to deliver a consistent satin finish with excellent self-healing and stain-resistant properties. Whether you want a subtle stealth aesthetic or already own a factory matte Tesla, our Matte PPF provides long-lasting protection without compromising the finish.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -137,25 +159,23 @@ const TeslaPPFPage: React.FC = () => {
 
             {/* Colour PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        <img
-                            src="/teslan3.png"
-                            className="w-full h-full object-cover"
-                            alt="Tesla Colour PPF"
-                        />
-                        <div>
-                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
-                                Colour PPF
-                            </h2>
-                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
-                                <p className="text-base text-neutral-300">
-                                    Give your Tesla a completely new look while adding the benefits of Paint Protection Film. Colour PPF combines colour transformation and surface protection into one solution, offering the styling flexibility of a wrap with the durability and self-healing properties of premium PPF.
-                                </p>
-                                <p className="text-base text-neutral-300">
-                                    We use AveroPRO 10-Year Spectral PPF, available in a range of finishes and colours designed to elevate the appearance of your Tesla while protecting it from chips, scratches and UV exposure. Ideal for owners wanting a unique finish without permanently altering the factory paint.
-                                </p>
-                            </div>
+                <div className="grid lg:grid-cols-2 items-center">
+                    <img
+                        src="/teslan3.png"
+                        className="w-full h-[300px] lg:h-[400px] object-cover"
+                        alt="Tesla Colour PPF"
+                    />
+                    <div className="px-6 py-10 lg:px-16">
+                        <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                            Colour PPF
+                        </h2>
+                        <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                            <p className="text-base text-neutral-300">
+                                Give your Tesla a completely new look while adding the benefits of Paint Protection Film. Colour PPF combines colour transformation and surface protection into one solution, offering the styling flexibility of a wrap with the durability and self-healing properties of premium PPF.
+                            </p>
+                            <p className="text-base text-neutral-300">
+                                We use AveroPRO 10-Year Spectral PPF, available in a range of finishes and colours designed to elevate the appearance of your Tesla while protecting it from chips, scratches and UV exposure. Ideal for owners wanting a unique finish without permanently altering the factory paint.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -163,27 +183,25 @@ const TeslaPPFPage: React.FC = () => {
 
             {/* Interior PPF Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        <div className="lg:order-2">
-                            <img
-                                src="/teslan4.png"
-                                className="w-full h-full object-cover"
-                                alt="Tesla Interior PPF"
-                            />
-                        </div>
-                        <div className="lg:order-1">
-                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
-                                Interior PPF
-                            </h2>
-                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
-                                <p className="text-base text-neutral-300">
-                                    Tesla interiors are modern and minimal, but high-contact surfaces can quickly pick up scratches, fingerprints and wear. Our Interior PPF solutions are designed to protect delicate interior trims including gloss black panels, centre consoles, touchscreens and infotainment displays.
-                                </p>
-                                <p className="text-base text-neutral-300">
-                                    Using precision-cut templates tailored specifically for Tesla models, our Interior PPF maintains the clean OEM appearance of your interior while reducing the risk of scratches and swirl marks caused by daily use. It's the perfect way to keep your Tesla cabin looking brand new.
-                                </p>
-                            </div>
+                <div className="grid lg:grid-cols-2 items-center">
+                    <div className="lg:order-2">
+                        <img
+                            src="/teslan4.png"
+                            className="w-full h-[300px] lg:h-[400px] object-cover"
+                            alt="Tesla Interior PPF"
+                        />
+                    </div>
+                    <div className="lg:order-1 px-6 py-10 lg:px-16">
+                        <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                            Interior PPF
+                        </h2>
+                        <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                            <p className="text-base text-neutral-300">
+                                Tesla interiors are modern and minimal, but high-contact surfaces can quickly pick up scratches, fingerprints and wear. Our Interior PPF solutions are designed to protect delicate interior trims including gloss black panels, centre consoles, touchscreens and infotainment displays.
+                            </p>
+                            <p className="text-base text-neutral-300">
+                                Using precision-cut templates tailored specifically for Tesla models, our Interior PPF maintains the clean OEM appearance of your interior while reducing the risk of scratches and swirl marks caused by daily use. It's the perfect way to keep your Tesla cabin looking brand new.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -191,25 +209,23 @@ const TeslaPPFPage: React.FC = () => {
 
             {/* Ceramic Tint Section */}
             <section className="py-20 bg-black border-t-1 border-gray-900">
-                <div className="container mx-auto px-6">
-                    <div className="grid lg:grid-cols-2 gap-16">
-                        <img
-                            src="/teslan5.png"
-                            className="w-full h-full object-cover"
-                            alt="Tesla Ceramic Tint"
-                        />
-                        <div>
-                            <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
-                                Ceramic Tint
-                            </h2>
-                            <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
-                                <p className="text-base text-neutral-300">
-                                    Enhance comfort, privacy and heat rejection with our premium Nano Ceramic Tint solutions for Tesla vehicles. Our ceramic tint helps reduce interior heat build-up while blocking 98% of harmful UV rays, protecting both passengers and interior surfaces from sun damage.
-                                </p>
-                                <p className="text-base text-neutral-300">
-                                    We install our lifetime warranty Nano Ceramic Tint, engineered for superior clarity, heat rejection and long-term durability without interfering with signals or visibility. Multiple darkness options are available, allowing you to customise the appearance and privacy level of your Tesla to suit your preference.
-                                </p>
-                            </div>
+                <div className="grid lg:grid-cols-2 items-center">
+                    <img
+                        src="/teslan5.png"
+                        className="w-full h-[300px] lg:h-[400px] object-cover"
+                        alt="Tesla Ceramic Tint"
+                    />
+                    <div className="px-6 py-10 lg:px-16">
+                        <h2 className="text-4xl font-bold mb-6 text-white font-michroma">
+                            Ceramic Tint
+                        </h2>
+                        <div className="space-y-4 text-lg text-gray-300 leading-relaxed">
+                            <p className="text-base text-neutral-300">
+                                Enhance comfort, privacy and heat rejection with our premium Nano Ceramic Tint solutions for Tesla vehicles. Our ceramic tint helps reduce interior heat build-up while blocking 98% of harmful UV rays, protecting both passengers and interior surfaces from sun damage.
+                            </p>
+                            <p className="text-base text-neutral-300">
+                                We install our lifetime warranty Nano Ceramic Tint, engineered for superior clarity, heat rejection and long-term durability without interfering with signals or visibility. Multiple darkness options are available, allowing you to customise the appearance and privacy level of your Tesla to suit your preference.
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -222,61 +238,41 @@ const TeslaPPFPage: React.FC = () => {
                         Check out our past work
                     </h2>
 
-                    <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/tesla1_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 1" />
+                    {/* Mobile Carousel */}
+                    <div className="sm:hidden">
+                        <div className="relative overflow-hidden rounded-2xl border border-gray-800">
+                            <img
+                                src={galleryImages[currentSlide]}
+                                className="w-full h-64 object-cover"
+                                alt={`Past Tesla PPF work ${currentSlide + 1}`}
+                            />
+                            <button
+                                onClick={prevSlide}
+                                className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hover:bg-black/80 transition"
+                                aria-label="Previous photo"
+                            >
+                                <ChevronLeft className="w-6 h-6" />
+                            </button>
+                            <button
+                                onClick={nextSlide}
+                                className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/60 text-white rounded-full p-2 hover:bg-black/80 transition"
+                                aria-label="Next photo"
+                            >
+                                <ChevronRight className="w-6 h-6" />
+                            </button>
                         </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/tesla2_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 2" />
+                        <div className="text-center text-neutral-400 mt-4 text-sm">
+                            {currentSlide + 1} / {galleryImages.length}
                         </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/tesla3_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 3" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/tesla4_box.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 4" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid1.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 5" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid2.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 6" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid3.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 7" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid4.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 8" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid5.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 9" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid6.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 10" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid7.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 11" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid8.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 12" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid9.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 13" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid10.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 14" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid11.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 15" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid12.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 16" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid13.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 17" />
-                        </div>
-                        <div className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
-                            <img src="/teslagrid14.jpg" className="w-full h-64 object-cover" alt="Past Tesla PPF work 18" />
-                        </div>
+                    </div>
+
+                    {/* Desktop Grid */}
+                    <div className="hidden sm:grid sm:grid-cols-3 gap-4">
+                        {galleryImages.map((src, idx) => (
+                            <div key={idx} className="overflow-hidden rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300">
+                                <img src={src} className="w-full h-64 object-cover" alt={`Past Tesla PPF work ${idx + 1}`} />
+                            </div>
+                        ))}
                     </div>
                 </div>
             </section>
