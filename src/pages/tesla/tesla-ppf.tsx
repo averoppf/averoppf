@@ -112,7 +112,7 @@ const TeslaPPFPage: React.FC = () => {
                 <div className="grid lg:grid-cols-2 items-center">
                     <img
                         src="/teslan1.png"
-                        className="w-full h-[300px] lg:h-[400px] object-cover"
+                        className="w-full h-[300px] lg:h-[400px] object-contain"
                         alt="Tesla Gloss PPF"
                     />
                     <div className="px-6 py-10 lg:px-16">
@@ -137,7 +137,7 @@ const TeslaPPFPage: React.FC = () => {
                     <div className="lg:order-2">
                         <img
                             src="/teslan2.png"
-                            className="w-full h-[300px] lg:h-[400px] object-cover"
+                            className="w-full h-[300px] lg:h-[400px] object-contain"
                             alt="Tesla Matte PPF"
                         />
                     </div>
@@ -162,7 +162,7 @@ const TeslaPPFPage: React.FC = () => {
                 <div className="grid lg:grid-cols-2 items-center">
                     <img
                         src="/teslan3.png"
-                        className="w-full h-[300px] lg:h-[400px] object-cover"
+                        className="w-full h-[300px] lg:h-[400px] object-contain"
                         alt="Tesla Colour PPF"
                     />
                     <div className="px-6 py-10 lg:px-16">
@@ -187,7 +187,7 @@ const TeslaPPFPage: React.FC = () => {
                     <div className="lg:order-2">
                         <img
                             src="/teslan4.png"
-                            className="w-full h-[300px] lg:h-[400px] object-cover"
+                            className="w-full h-[300px] lg:h-[400px] object-contain"
                             alt="Tesla Interior PPF"
                         />
                     </div>
@@ -212,7 +212,7 @@ const TeslaPPFPage: React.FC = () => {
                 <div className="grid lg:grid-cols-2 items-center">
                     <img
                         src="/teslan5.png"
-                        className="w-full h-[300px] lg:h-[400px] object-cover"
+                        className="w-full h-[300px] lg:h-[400px] object-contain"
                         alt="Tesla Ceramic Tint"
                     />
                     <div className="px-6 py-10 lg:px-16">
