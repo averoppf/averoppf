@@ -1,4 +1,4 @@
-import { ChevronDown, ChevronUp, Mail, Menu, Phone, X } from "lucide-react";
+mport { ChevronDown, ChevronUp, Mail, Menu, Phone, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
@@ -12,13 +12,11 @@ export function Header() {
   useEffect(() => {
     const onScroll = () => {
       const pageHeight = document.documentElement.scrollHeight;
-      // threshold = 5% of total page height
       const threshold = pageHeight * 0.02;
       setIsScrolled(window.scrollY > threshold);
     };
 
     window.addEventListener("scroll", onScroll, { passive: true });
-    // init:
     onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
@@ -50,60 +48,44 @@ export function Header() {
     >
       <div className="px-4 py-4 gap-4">
         <div className="flex items-center justify-between">
-          {/* Logo */}
-          <div
-            className="cursor-pointer"
-            onClick={() => navigate("/")}
-          >
+          <div className="cursor-pointer" onClick={() => navigate("/")}>
             <img src="/avero.png" className="min-h-10 min-w-30 object-contain max-h-10 max-w-30" />
           </div>
 
-          {/* Mobile menu toggle */}
           <div className="flex sm:hidden">
-            <Menu
-              size={24}
-              className="cursor-pointer"
-              onClick={() => setShowMenu(true)}
-            />
+            <Menu size={24} className="cursor-pointer" onClick={() => setShowMenu(true)} />
           </div>
 
-          {/* Sliding mobile panel */}
           {showMenu && (
             <div className="fixed inset-0 z-50 bg-black bg-opacity-90 backdrop-blur-sm">
               <div className="flex justify-end p-6">
-                <X
-                  size={30}
-                  className="cursor-pointer text-white"
-                  onClick={() => setShowMenu(false)}
-                />
+                <X size={30} className="cursor-pointer text-white" onClick={() => setShowMenu(false)} />
               </div>
               <div className="flex flex-col gap-5 px-6">
                 <a href="/" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Home</a>
                 <a href="/about" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">About Us</a>
                 <a href="/projects" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Projects</a>
+                <a href="/articles" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Articles</a>
                 <a href="/services/ppf" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">PPF</a>
                 <a href="/services/ceramic" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Ceramic Coating</a>
                 <a href="/contact" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Contact</a>
               </div>
-
               <div className="gap-2 flex items-center mt-10 p-6">
-                <a
-                    href="tel:+61415081546"
-                >
-                    <Phone style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                <a href="tel:+61415081546">
+                  <Phone style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
                 </a>
                 <a href="mailto:info@averoppf.com">
-                    <Mail style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
-                </a>                
+                  <Mail style={{width:'24px', height: '24px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                </a>
               </div>
             </div>
           )}
 
-          {/* Desktop menu */}
           <div className="hidden sm:flex gap-6 items-center justify-between">
             <a href="/" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Home</a>
             <a href="/about" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">About Us</a>
             <a href="/projects" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Projects</a>
+            <a href="/articles" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Articles</a>
 
             <div className="relative" ref={dropdownRef}>
               <button
@@ -136,13 +118,11 @@ export function Header() {
             </a>
 
             <div className="ml-3 gap-2 flex items-center">
-              <a
-                  href="tel:+61415081546"
-              >
-                  <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+              <a href="tel:+61415081546">
+                <Phone style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
               </a>
               <a href="mailto:info@averoppf.com.au">
-                  <Mail style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
+                <Mail style={{width:'18px', height: '18px', objectFit: 'contain'}} color="white" className="cursor-pointer" />
               </a>
             </div>
           </div>
