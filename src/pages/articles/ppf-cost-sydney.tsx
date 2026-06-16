@@ -5,7 +5,7 @@ export default function PPFCostSydneyArticle() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'How Much Does PPF Cost in Sydney? (2025 Pricing Guide) | Avero';
+    document.title = 'How Much Does PPF Cost in Sydney? (2026 Pricing Guide) | Avero';
     window.scrollTo(0, 0);
   }, []);
 
@@ -33,7 +33,7 @@ export default function PPFCostSydneyArticle() {
         <div className="max-w-3xl mx-auto">
           <p className="text-sm uppercase tracking-[0.2rem] text-gray-400 mb-4 font-michroma">Pricing Guide</p>
           <h1 className="text-3xl sm:text-5xl font-bold font-michroma leading-tight mb-6">
-            How Much Does PPF Cost in Sydney? (2025 Pricing Guide)
+            How Much Does PPF Cost in Sydney? (2026 Pricing Guide)
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed">
             What to expect from PPF pricing in Sydney, what drives the cost, and how to make sure you are getting real value - not just the lowest quote.
