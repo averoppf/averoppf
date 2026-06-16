@@ -46,7 +46,7 @@ export default function ArticlesPage() {
                 <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
                   <span className="text-xs text-gray-400">{article.readTime}</span>
                   <span className="text-xs uppercase tracking-[0.15rem] font-semibold text-black group-hover:underline">
-                    Read
+                    Read &gt;
                   </span>
                 </div>
               </div>
