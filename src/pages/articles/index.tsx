@@ -19,7 +19,7 @@ export default function ArticlesPage() {
             PPF Articles and Guides
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
-            Practical, no-nonsense guides on Paint Protection Film, ceramic coating, and vehicle protection - written by Avero, South Sydney's PPF specialists.
+            Practical, no-nonsense guides on Paint Protection Film, ceramic coating, and vehicle protection - written by Avero, South Sydney PPF specialists.
           </p>
         </div>
       </div>
@@ -46,7 +46,7 @@ export default function ArticlesPage() {
                 <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-100">
                   <span className="text-xs text-gray-400">{article.readTime}</span>
                   <span className="text-xs uppercase tracking-[0.15rem] font-semibold text-black group-hover:underline">
-                    Read &gt;
+                    Read
                   </span>
                 </div>
               </div>
@@ -59,7 +59,7 @@ export default function ArticlesPage() {
         <div className="max-w-3xl mx-auto text-center text-white">
           <h2 className="text-3xl font-bold font-michroma mb-4">Ready to protect your vehicle?</h2>
           <p className="text-gray-300 mb-8 text-lg">
-            South Sydney's PPF specialists. Premium self-healing film. 10-year warranty. Dust-free workshop.
+            South Sydney PPF specialists. Premium self-healing film. 10-year warranty. Dust-free workshop.
           </p>
           
             href="/contact"
