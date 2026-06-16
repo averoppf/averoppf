@@ -1,6 +1,6 @@
 export function BenefitsSection(): React.ReactElement {
   const cardImages = [
-    "bg-[url('/DSC09378.jpg')]",
+    "bg-[url('/home-PPf.avif')]",
     "bg-[url('/ceramicHome.avif')]",
     "bg-[url('/home-wraps.avif')]",
     "bg-[url('/home-tint.avif')]",
