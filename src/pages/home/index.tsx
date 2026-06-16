@@ -8,7 +8,6 @@ import { VideoHero } from '../../components/misc/VideoOverlay';
 import ContactComponent from '../../components/misc/ContactComponent';
 import { ContactButton } from '../services/ceramic';
 import { VisitMapComponent } from '../../components/misc/VisitMapComponent';
-// import { Helmet } from 'react-helmet';
 
 const faqData = [
     {
@@ -34,6 +33,29 @@ const faqData = [
     }
 ];
 
+const articlePreviews = [
+    {
+        slug: 'what-is-ppf',
+        category: 'Paint Protection Film',
+        title: 'What Is Paint Protection Film? The Complete Guide for Australian Car Owners',
+        excerpt: 'Everything you need to know about PPF - what it is, how it works, how long it lasts, and whether it is right for your vehicle.',
+        readTime: '8 min read',
+    },
+    {
+        slug: 'ppf-vs-ceramic-coating',
+        category: 'Paint Protection',
+        title: 'PPF vs Ceramic Coating: Which Does Your Car Actually Need?',
+        excerpt: 'Two of the most effective forms of vehicle protection - but they do very different jobs. Here is how to decide what is right for your car.',
+        readTime: '7 min read',
+    },
+    {
+        slug: 'is-ppf-worth-it',
+        category: 'Worth It?',
+        title: 'Is PPF Worth It? What Sydney Car Owners Need to Know',
+        excerpt: 'The honest answer to the most common question we hear - including who it makes the most sense for, and when you might be better off without it.',
+        readTime: '7 min read',
+    },
+];
 
 const HomePage: React.FC = () => {
     const navigate = useNavigate()
@@ -45,17 +67,10 @@ const HomePage: React.FC = () => {
             [index]: !prev[index]
         }));
     };
-    
 
     const textVariants = {
-        hidden: {
-            opacity: 0,
-            x: -150,
-        },
-        visible: {
-            opacity: 1,
-            x: 0,
-        },
+        hidden: { opacity: 0, x: -150 },
+        visible: { opacity: 1, x: 0 },
     };
 
     const titleRef = useRef(null);
@@ -63,21 +78,12 @@ const HomePage: React.FC = () => {
     const titleAnimationControls = useAnimation();
 
     useEffect(() => {
-        if (titleInView) {
-            titleAnimationControls.start("visible");
-        }
+        if (titleInView) titleAnimationControls.start("visible");
     }, [titleInView, titleAnimationControls]);
 
-
     const servicesVariants = {
-        hidden: {
-            opacity: 0,
-            y: 150,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-        },
+        hidden: { opacity: 0, y: 150 },
+        visible: { opacity: 1, y: 0 },
     };
 
     const servicesRef = useRef(null);
@@ -85,43 +91,28 @@ const HomePage: React.FC = () => {
     const servicesAnimationControls = useAnimation();
 
     useEffect(() => {
-        if (servicesInView) {
-            servicesAnimationControls.start("visible");
-        }
+        if (servicesInView) servicesAnimationControls.start("visible");
     }, [servicesInView, servicesAnimationControls]);
 
     const benefitsVariants = {
-        hidden: {
-            opacity: 0,
-            y: 150,
-        },
-        visible: {
-            opacity: 1,
-            y: 0,
-        },
+        hidden: { opacity: 0, y: 150 },
+        visible: { opacity: 1, y: 0 },
     };
     const benefitsRef = useRef(null);
     const benefitsInView = useInView(benefitsRef, { once: true });
     const benefitsAnimationControls = useAnimation();
 
     useEffect(() => {
-        if (benefitsInView) {
-            benefitsAnimationControls.start("visible");
-        }
+        if (benefitsInView) benefitsAnimationControls.start("visible");
     }, [benefitsInView, benefitsAnimationControls]);
 
     useEffect(() => {
-    document.title = "Avero PPF | Paint Protection Film South Sydney";
-    window.scrollTo(0, 0)
-}, [])
+        document.title = "Avero PPF | Paint Protection Film South Sydney";
+        window.scrollTo(0, 0)
+    }, [])
 
     return (
         <div>
-            {/* <Helmet>
-                <title>Avero | Quality PPF & Ceramic Coating in Sydney</title>
-                <link rel='canonical' href={ "https://www.averoppf.com.au" } />
-                <meta name="description" content={"Protect your car with Sydney's car care experts in PPF & ceramic coating. Get unbeatable shine, increased vehicle value & long-lasting protection. Trusted by locals across NSW."} />
-            </Helmet> */}
             <section className="relative h-[calc(100vh)] flex items-center justify-center bg-cover bg-center py-[5%]">
                 <video
                     className="absolute inset-0 w-full h-full object-cover"
@@ -142,58 +133,50 @@ const HomePage: React.FC = () => {
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <span className="block mb-2 text-white font-michroma">Powerful Protection.</span>
                         <span className="block text-white font-michroma mb-24">Expert Execution.</span>
-                        <a
+                        
                             className="block text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/contact"
                         >GET A QUOTE</a>
                     </motion.h1>
-
                 </div>
                 <div onClick={() => navigate("/#about")} className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
                     <ChevronRight className="w-10 h-10 rotate-90 text-white" />
                 </div>
             </section>
 
-            <section
-                className="py-20 bg-neutral-100"
-                id="benefits"
-            >
+            <section className="py-20 bg-neutral-100" id="benefits">
                 <motion.div
                     ref={benefitsRef}
                     animate={benefitsAnimationControls}
                     initial="hidden"
                     variants={benefitsVariants}
                     transition={{ delay: 0.6, duration: 0.6 }}
-                    className="container mx-auto px-[5%] "
+                    className="container mx-auto px-[5%]"
                 >
                     <BenefitsSection />
                 </motion.div>
             </section>
 
-            <section
-                className="py-20 bg-neutral-100">
-                <div
-                    className="container mx-auto px-6 ">
+            <section className="py-20 bg-neutral-100">
+                <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-black font-michroma">Paint Protection Film (PPF)</h2>
-                            <p className='text-2xl font-medium mb-6 text-gray-500 italic'>Keep your car looking brand new — no matter where the road takes you.</p>
+                            <p className='text-2xl font-medium mb-6 text-gray-500 italic'>Keep your car looking brand new - no matter where the road takes you.</p>
                             <p className="text-lg text-gray-500 leading-relaxed mb-6">
                                 At Avero, our Paint Protection Film service provides long-lasting defence against stone chips, scratches, and the wear and tear of everyday driving. We use premium, self-healing TPU film designed to preserve your vehicle's original finish without altering its appearance.
                             </p>
                             <p className="text-lg text-gray-500 leading-relaxed">
-                                Our expert technicians and innovative application methods ensure the film is applied with exacting precision — conforming seamlessly to every curve and panel with no bubbles, stretch marks, or lifted edges. The result is a clean-finish that accentuates the car's colours and is built to last in Australian climate.
+                                Our expert technicians and innovative application methods ensure the film is applied with exacting precision - conforming seamlessly to every curve and panel with no bubbles, stretch marks, or lifted edges. The result is a clean-finish that accentuates the car's colours and is built to last in Australian climate.
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/frontShot.jpg" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full ' />
+                        <img src="/frontShot.jpg" className='shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full' />
                     </div>
                 </div>
             </section>
 
-
-            <section
-                className="py-30 bg-black border-black text-white border-t-1">
+            <section className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <img src="/frontShot1.jpg" className='shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover' />
@@ -201,9 +184,9 @@ const HomePage: React.FC = () => {
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className='text-2xl font-medium mb-6 text-gray-300 italic'>Long-term shine. Effortless maintenance. Serious protection.</p>
                             <p className="text-2xl font-medium mb-6 text-gray-300 italic leading-normal">
-                                Our ceramic coating service locks in your vehicle's finish with a durable, high-gloss layer that resists dirt, UV rays, water spots, and environmental contaminants. Applied over paintwork or Paint Protection Film, it enhances depth, clarity, and surface slickness — making your car easier to clean and harder to damage.
+                                Our ceramic coating service locks in your vehicle's finish with a durable, high-gloss layer that resists dirt, UV rays, water spots, and environmental contaminants. Applied over paintwork or Paint Protection Film, it enhances depth, clarity, and surface slickness - making your car easier to clean and harder to damage.
                             </p>
-                            <p className="text-lg  leading-relaxed mt-[8%]">
+                            <p className="text-lg leading-relaxed mt-[8%]">
                                 At Avero, we use professional-grade ceramic coatings formulated to bond at the molecular level, providing long term protection. The coating creates a hydrophobic surface that repels water and grime, reducing the need for constant washing and detailing. Perfect for enthusiasts and everyday drivers alike, ceramic coating is the ultimate low-maintenance solution for keeping your vehicle looking pristine, day after day.
                             </p>
                             <div className='text-white border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/ceramic")}>LEARN MORE</div>
@@ -212,10 +195,8 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
-            <section
-                className="py-20 bg-neutral-100">
-                <div
-                    className="container mx-auto px-6 ">
+            <section className="py-20 bg-neutral-100">
+                <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-black font-michroma">Colour Wraps</h2>
@@ -228,17 +209,15 @@ const HomePage: React.FC = () => {
                             </p>
                             <div className='text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity' onClick={() => navigate("/services/colour-wraps")}>LEARN MORE</div>
                         </div>
-                        <img src="/DSC04018.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' />
+                        <img src="/DSC04018.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]' />
                     </div>
                 </div>
             </section>
 
-            <section
-                className="py-20 bg-black border-black text-white border-t-1">
-                <div
-                    className="container mx-auto px-6 ">
+            <section className="py-20 bg-black border-black text-white border-t-1">
+                <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/DSC04104.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px] ' />
+                        <img src="/DSC04104.avif" className='shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]' />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Window Tinting</h2>
                             <p className='text-2xl font-medium mb-6 italic'>At Avero, we use only high-performance tint films that meet Australian standards, ensuring durability, clarity, and long-lasting results.</p>
@@ -261,16 +240,16 @@ const HomePage: React.FC = () => {
                     variants={servicesVariants}
                     initial="hidden"
                     transition={{ delay: 0.6, duration: 0.6 }}
-                    className="container mx-auto px-6 ">
+                    className="container mx-auto px-6">
                     <h2 className="text-4xl font-bold text-center mb-4 text-white font-michroma tracking-[0.2rem]">Paint Protection Film (PPF) Packages</h2>
                     <p className="text-center text-gray-300 mb-12 text-lg">Choose the perfect package for your vehicle</p>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300  flex flex-col justify-between">
+                        <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 flex flex-col justify-between">
                             <div>
                                 <div className="text-center mb-6">
                                     <h3 className="text-xl font-bold mb-2 text-white font-michroma">High Impact Package</h3>
                                     <p className="text-start text-gray-400 mb-2">Entry-level protection for everyday driving.</p>
-                                    <p className="text-start text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF — perfect for those who want peace of mind on the road.</p>
+                                    <p className="text-start text-gray-400">Our High Impact Coverage is designed for drivers looking to protect the most vulnerable impact zones without overextending their budget. It's a smart, effective introduction to PPF - perfect for those who want peace of mind on the road.</p>
                                 </div>
                                 <ul className="space-y-3 mb-8">
                                     <li className="flex items-center gap-3">
@@ -335,7 +314,8 @@ const HomePage: React.FC = () => {
                                     All-over protection for your entire vehicle.
                                 </p>
                                 <p className="text-start text-gray-400">
-                                    For those who want nothing but the best, this full-body PPF package protects every painted surface on your vehicle. From road debris to parking mishaps, the complete vehicle package ensures your paint remains untouched and showroom-fresh.                                </p>
+                                    For those who want nothing but the best, this full-body PPF package protects every painted surface on your vehicle. From road debris to parking mishaps, the complete vehicle package ensures your paint remains untouched and showroom-fresh.
+                                </p>
                             </div>
                             <ul className="space-y-3 mb-8">
                                 <li className="flex items-center gap-3">
@@ -346,8 +326,8 @@ const HomePage: React.FC = () => {
                         </div>
                     </div>
                     <div className='flex items-center justify-center my-10'>
-                        <a
-                            className=" text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
+                        
+                            className="text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
                             href="/contact"
                         >GET A QUOTE</a>
                     </div>
@@ -358,18 +338,63 @@ const HomePage: React.FC = () => {
                 <VideoHero source={"/carVid.mp4"} isCeramic={false} />
             </section>
 
-            <section className='flex flex-col items-center justify-center bg-black py-20'>
+            <section className="py-20 bg-black border-gray-900 border-t-1">
+                <div className="container mx-auto px-6">
+                    <h2 className="text-4xl font-bold text-center mb-4 text-white font-michroma tracking-[0.2rem]">Articles</h2>
+                    <p className="text-center text-gray-300 mb-12 text-lg">Guides and insights from the Avero team</p>
+                    <div className="grid md:grid-cols-3 gap-6">
+                        {articlePreviews.map((article) => (
+                            <div
+                                key={article.slug}
+                                onClick={() => navigate(`/articles/${article.slug}`)}
+                                className="group border border-gray-800 cursor-pointer hover:border-white transition-all duration-300 flex flex-col bg-black p-6"
+                            >
+                                <span className="text-xs uppercase tracking-[0.2rem] text-gray-500 font-semibold mb-4 font-michroma">
+                                    {article.category}
+                                </span>
+                                <h3 className="text-base font-bold text-white font-michroma leading-snug mb-4 group-hover:opacity-70 transition-opacity">
+                                    {article.title}
+                                </h3>
+                                <p className="text-gray-400 text-sm leading-relaxed flex-1">
+                                    {article.excerpt}
+                                </p>
+                                <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
+                                    <span className="text-xs text-gray-600">{article.readTime}</span>
+                                    <span className="text-xs uppercase tracking-[0.2rem] font-semibold text-white font-michroma group-hover:opacity-60">
+                                        Read
+                                    </span>
+                                </div>
+                            </div>
+                        ))}
+                    </div>
+                    <div className="flex items-center justify-center mt-10">
+                        
+                            className="text-white border-2 border-white font-michroma text-[0.9rem] tracking-[0.15rem] px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
+                            href="/articles"
+                        >VIEW ALL ARTICLES</a>
+                    </div>
+                </div>
+            </section>
+
+            <section id="location" className="py-20 bg-black border-gray-900 border-t-1">
+                <VisitMapComponent />
+            </section>
+
+            <section id="contact" className="py-20 bg-black border-gray-900 border-t-1">
+                <div className="container mx-auto px-6">
+                    <ContactComponent />
+                </div>
+            </section>
+
+            <section className='flex flex-col items-center justify-center bg-black py-20 border-gray-900 border-t-1'>
                 <div className="w-10/12 space-y-2">
                     <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero FAQs</h1>
-
                     {faqData.map((section, sectionIndex) => (
                         <div key={sectionIndex} className="mb-8">
-                           
                             <div className="space-y-4">
                                 {section.questions.map((item, itemIndex) => {
                                     const currentIndex = questionIndex++;
                                     const isOpen: any = openItems[currentIndex];
-
                                     return (
                                         <div
                                             key={itemIndex}
@@ -392,10 +417,8 @@ const HomePage: React.FC = () => {
                                                     </div>
                                                 </div>
                                             </button>
-
                                             <div
-                                                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-                                                    }`}
+                                                className={`overflow-hidden transition-all duration-300 ease-in-out ${isOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'}`}
                                             >
                                                 <div className="px-6 py-4 bg-white border-t border-gray-100">
                                                     <div className="text-gray-700 leading-relaxed">
@@ -408,7 +431,6 @@ const HomePage: React.FC = () => {
                                                         ) : (
                                                             <p>{item.answer}</p>
                                                         )}
-
                                                         {item.hasContactButton && (
                                                             <div className="mt-4">
                                                                 <ContactButton text={item.buttonText} />
@@ -423,16 +445,6 @@ const HomePage: React.FC = () => {
                             </div>
                         </div>
                     ))}
-                </div>
-            </section>
-
-            <section id="location" className="py-20 bg-black border-gray-900 border-t-1">
-                <VisitMapComponent />
-            </section>
-
-            <section id="location" className="py-20 bg-black border-gray-900 border-t-1">
-                <div className="container mx-auto px-6">
-                    <ContactComponent />
                 </div>
             </section>
         </div>
