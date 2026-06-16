@@ -61,10 +61,7 @@ export default function ArticlesPage() {
           <p className="text-gray-300 mb-8 text-lg">
             South Sydney PPF specialists. Premium self-healing film. 10-year warranty. Dust-free workshop.
           </p>
-          
-            href="/contact"
-            className="inline-block bg-white text-black font-michroma text-sm tracking-[0.15rem] px-8 py-4 hover:opacity-80 transition-opacity font-bold"
-          >
+          <a href="/contact" className="inline-block bg-white text-black font-michroma text-sm tracking-[0.15rem] px-8 py-4 hover:opacity-80 transition-opacity font-bold">
             GET A QUOTE
           </a>
         </div>
