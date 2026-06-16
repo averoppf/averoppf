@@ -1,4 +1,4 @@
-mport { ChevronDown, ChevronUp, Mail, Menu, Phone, X } from "lucide-react";
+import { ChevronDown, ChevronUp, Mail, Menu, Phone, X } from "lucide-react";
 import { useState, useEffect, useRef } from "react";
 import { useNavigate } from "react-router-dom";
 
