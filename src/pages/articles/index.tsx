@@ -6,7 +6,7 @@ export default function ArticlesPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    document.title = 'PPF Articles & Guides | Avero - South Sydney Paint Protection Film Specialists';
+    document.title = 'PPF Articles and Guides | Avero - South Sydney Paint Protection Film Specialists';
     window.scrollTo(0, 0);
   }, []);
 
@@ -16,7 +16,7 @@ export default function ArticlesPage() {
         <div className="max-w-5xl mx-auto">
           <p className="text-sm uppercase tracking-[0.2rem] text-gray-400 mb-4 font-michroma">Knowledge Base</p>
           <h1 className="text-4xl sm:text-6xl font-bold font-michroma leading-tight mb-6">
-            PPF Articles & Guides
+            PPF Articles and Guides
           </h1>
           <p className="text-gray-300 text-lg leading-relaxed max-w-2xl">
             Practical, no-nonsense guides on Paint Protection Film, ceramic coating, and vehicle protection - written by Avero, South Sydney's PPF specialists.
