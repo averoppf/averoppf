@@ -29,6 +29,7 @@ export function Footer() {
                         <h4 className="text-lg font-semibold mb-4 text-white">Services</h4>
                         <ul className="space-y-2 text-gray-300 flex flex-col">
                             <a href="/services/ppf" className="hover:text-white transition-colors">Paint Protection Film</a>
+                            <a href="/tesla-ppf" className="hover:text-white transition-colors">Tesla PPF</a>
                             <a href="/services/ceramic" className="hover:text-white transition-colors">Ceramic Coating</a>
                             <a href="/services/colour-wraps" className="hover:text-white transition-colors">Colour Wraps</a>
                             <a href="/services/window-tinting" className="hover:text-white transition-colors">Window Tinting</a>
