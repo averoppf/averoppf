@@ -11,6 +11,7 @@ const urls = [
   { url: '/projects', changefreq: 'weekly', priority: 0.8 },
   { url: '/articles', changefreq: 'weekly', priority: 0.8 },
   { url: '/faqs', changefreq: 'monthly', priority: 0.7 },
+  { url: '/averopro', changefreq: 'weekly', priority: 0.8 },
   { url: '/services/ceramic', changefreq: 'weekly', priority: 0.8 },
   { url: '/services/ppf', changefreq: 'weekly', priority: 0.8 },
   { url: '/tesla-ppf', changefreq: 'weekly', priority: 0.9 },
