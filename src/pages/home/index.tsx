@@ -85,6 +85,27 @@ const HomePage: React.FC = () => {
 
     useEffect(() => {
         document.title = "Avero PPF | Paint Protection Film South Sydney";
+
+        const existing = document.getElementById('home-faq-jsonld');
+        if (!existing) {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.id = 'home-faq-jsonld';
+            script.text = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "FAQPage",
+                "mainEntity": faqData[0].questions.map((q) => ({
+                    "@type": "Question",
+                    "name": q.question,
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": Array.isArray(q.answer) ? (q.answer as string[]).join(' ') : q.answer
+                    }
+                }))
+            });
+            document.head.appendChild(script);
+        }
+
         window.scrollTo(0, 0)
     }, [])
 
@@ -290,6 +311,9 @@ const HomePage: React.FC = () => {
                             </div>
                         </div>
                     ))}
+                    <div className="flex items-center justify-center mt-10">
+                        <a className="text-white border-2 border-white font-michroma text-[0.9rem] tracking-[0.15rem] px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold" href="/faqs">VIEW ALL FAQS</a>
+                    </div>
                 </div>
             </section>
         </div>
