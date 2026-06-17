@@ -123,23 +123,24 @@ export default function AveroProPage() {
             </section>
 
             {/* Product Range */}
-            <section className="py-20 bg-black border-t-1 border-gray-900">
+            <section className="pt-20 bg-black border-t-1 border-gray-900">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl sm:text-4xl font-bold text-white font-michroma text-center mb-4">The AveroPRO Range</h2>
                     <p className="text-center text-gray-300 mb-16 text-lg">Three premium films for every requirement</p>
-                    <div className="space-y-16">
-                        {products.map((product, i) => (
-                            <div key={i} className="grid lg:grid-cols-2 gap-12 items-center">
-                                <div className={i % 2 === 1 ? "lg:order-2" : ""}>
-                                    <img src={product.image} alt={product.name} className="shadow-2xl w-full object-cover h-[400px]" />
-                                </div>
-                                <div className={i % 2 === 1 ? "lg:order-1" : ""}>
-                                    <h3 className="text-3xl font-bold text-white font-michroma mb-4">{product.name}</h3>
-                                    <p className="text-gray-300 leading-relaxed text-lg">{product.description}</p>
+                </div>
+                <div>
+                    {products.map((product, i) => (
+                        <div key={i} className="relative w-full h-[80vh] min-h-[500px] overflow-hidden">
+                            <img src={product.image} alt={product.name} className="absolute inset-0 w-full h-full object-cover" />
+                            <div className="absolute inset-0 bg-gradient-to-l from-black/90 via-black/50 to-black/10" />
+                            <div className="relative z-10 h-full flex items-center justify-end px-6 sm:px-12 lg:px-24">
+                                <div className="max-w-xl text-right">
+                                    <h3 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-white font-michroma mb-6">{product.name}</h3>
+                                    <p className="text-gray-200 leading-relaxed text-base sm:text-lg">{product.description}</p>
                                 </div>
                             </div>
-                        ))}
-                    </div>
+                        </div>
+                    ))}
                 </div>
             </section>
 
@@ -180,8 +181,8 @@ export default function AveroProPage() {
                         <p className="text-gray-300 leading-relaxed text-lg mb-8">
                             Are you a workshop, detailer, or installer looking to stock premium paint protection film? Join the growing network of AveroPRO authorised dealers and offer your customers a film engineered for Australian conditions and backed by a 10-year warranty. Get in touch to discuss dealer pricing and becoming an authorised AveroPRO installer.
                         </p>
-                        <a href="mailto:info@averoppf.com.au?subject=AveroPRO%20Authorised%20Dealer%20Enquiry" className="inline-block bg-white text-black font-michroma text-sm tracking-[0.15rem] px-8 py-4 hover:opacity-80 transition-opacity font-bold">
-                            BECOME A DEALER
+                        <a href="/contact" className="inline-block bg-white text-black font-michroma text-sm tracking-[0.15rem] px-8 py-4 hover:opacity-80 transition-opacity font-bold">
+                            CONTACT US
                         </a>
                         <p className="text-gray-400 mt-6 text-sm">
                             Or email us directly at <a href="mailto:info@averoppf.com.au" className="text-white underline hover:opacity-70">info@averoppf.com.au</a>
