@@ -22,6 +22,7 @@ import SelfHealingPPFArticle from './pages/articles/self-healing-ppf'
 import NewCarPPFArticle from './pages/articles/new-car-ppf'
 import PPFMythsArticle from './pages/articles/ppf-myths-debunked'
 import FAQsPage from './pages/faqs'
+import AveroProPage from './pages/averopro'
 
 function App() {
   return (
@@ -47,6 +48,7 @@ function App() {
         <Route path="/articles/new-car-ppf" element={<PageLayout><NewCarPPFArticle /></PageLayout>} />
         <Route path="/articles/ppf-myths-debunked" element={<PageLayout><PPFMythsArticle /></PageLayout>} />
         <Route path="/faqs" element={<PageLayout><FAQsPage /></PageLayout>} />
+        <Route path="/averopro" element={<PageLayout><AveroProPage /></PageLayout>} />
         <Route path="*" element={<PageLayout><HomePage /></PageLayout>} />
         <Route path="/services/:area" element={<PageLayout><AreaServed /></PageLayout>} />
       </Routes>
