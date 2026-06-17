@@ -59,6 +59,69 @@ const AboutPage: React.FC = () => {
     };
 
     useEffect(() => {
+        document.title = "About Avero PPF | Paint Protection Film Specialists in Caringbah, Sydney";
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        const descText = "Avero PPF is a paint protection film and ceramic coating specialist based in Caringbah, South Sydney. Precision installation, premium film, and a 10-year warranty. Learn about our team.";
+        if (metaDescription) {
+            metaDescription.setAttribute('content', descText);
+        } else {
+            const meta = document.createElement('meta');
+            meta.name = 'description';
+            meta.content = descText;
+            document.head.appendChild(meta);
+        }
+
+        if (!document.getElementById('about-localbusiness-jsonld')) {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.id = 'about-localbusiness-jsonld';
+            script.text = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "AutoBodyShop",
+                "name": "Avero PPF",
+                "image": "https://www.averoppf.com.au/backgroundShot.jpg",
+                "url": "https://www.averoppf.com.au/about",
+                "telephone": "+61415081546",
+                "email": "info@averoppf.com.au",
+                "priceRange": "$$",
+                "address": {
+                    "@type": "PostalAddress",
+                    "streetAddress": "F1/32-36 Box Road",
+                    "addressLocality": "Caringbah",
+                    "addressRegion": "NSW",
+                    "postalCode": "2229",
+                    "addressCountry": "AU"
+                },
+                "geo": {
+                    "@type": "GeoCoordinates",
+                    "latitude": -34.02491239230067,
+                    "longitude": 151.12411012879127
+                },
+                "areaServed": "Sydney, New South Wales",
+                "openingHoursSpecification": [
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                        "opens": "08:30",
+                        "closes": "17:00"
+                    },
+                    {
+                        "@type": "OpeningHoursSpecification",
+                        "dayOfWeek": "Saturday",
+                        "opens": "12:00",
+                        "closes": "16:00"
+                    }
+                ],
+                "aggregateRating": {
+                    "@type": "AggregateRating",
+                    "ratingValue": "5.0",
+                    "reviewCount": "40"
+                }
+            });
+            document.head.appendChild(script);
+        }
+
         window.scrollTo(0, 0)
     }, [])
 
@@ -92,27 +155,50 @@ const AboutPage: React.FC = () => {
                         About Us
                     </h1>
                     <p className='text-neutral-200 max-w-[80%] mb-[8%] text-base'>
-                        At Avero PPF, our passion for cars goes beyond shine and gloss—we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
+                        At Avero PPF, our passion for cars goes beyond shine and gloss - we believe every vehicle tells a story and deserves protection that honors its unique spirit. We know the thrill of a freshly detailed ride and craft our paint protection to keep your car looking and feeling its absolute best.
                     </p>
                     <div className='flex flex-col sm:flex-row gap-4 sm:gap-10 max-w-[40%] items-center justify-center w-full'>
-                        <a
+                        
                             className="text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer flex items-center justify-center"
                             href="/services/ppf"
                         >PPF</a>
-                        <a
+                        
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/ceramic"
                         >CERAMIC COATING</a>
-                        <a
+                        
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/colour-wraps"
                         >COLOURED WRAPS</a>
-                        <a
+                        
                             className="block text-black rounded-lg bg-white font-michroma text-[0.7rem] tracking-[0.15rem] px-6 py-3 transition-opacity hover:opacity-60 hover:cursor-pointer"
                             href="/services/window-tinting"
                         >WINDOW TINTING</a>
                     </div>
                     
+                </div>
+            </section>
+
+            <section className="py-12 bg-black border-b-1 border-gray-900">
+                <div className="container mx-auto px-6">
+                    <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+                        <div>
+                            <p className="text-3xl font-bold text-white font-michroma mb-1">5.0</p>
+                            <p className="text-sm text-gray-400">Star Rated on Google</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl font-bold text-white font-michroma mb-1">10 Yr</p>
+                            <p className="text-sm text-gray-400">Film Warranty</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl font-bold text-white font-michroma mb-1">Dust-Free</p>
+                            <p className="text-sm text-gray-400">Controlled Workshop</p>
+                        </div>
+                        <div>
+                            <p className="text-3xl font-bold text-white font-michroma mb-1">Blade-Free</p>
+                            <p className="text-sm text-gray-400">Installation</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -126,7 +212,7 @@ const AboutPage: React.FC = () => {
                                     Located in Caringbah, Sydney, Avero is dedicated to raising the standard of paint protection and car care.
                                 </p>
                                 <p className='text-base text-neutral-300'>
-                                    As passionate car enthusiasts, our team has extension experience in the industry, bringing a detail-focused, precision-first approach to every vehicle we work on.
+                                    As passionate car enthusiasts, our team has extensive experience in the industry, bringing a detail-focused, precision-first approach to every vehicle we work on.
 
                                 </p>
                                 <p className='text-base text-neutral-300'>
@@ -137,7 +223,7 @@ const AboutPage: React.FC = () => {
                             </div>
                         </div>
 
-                        <div className="relative shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full overflow-hidden">
+                        <div className="relative shadow-2xl w-full min-w-full h-full min-h-full overflow-hidden">
                             {images.map((image, index) => (
                                 <img
                                     key={index}
