@@ -10,6 +10,7 @@ const urls = [
   { url: '/contact', changefreq: 'weekly', priority: 0.9 },
   { url: '/projects', changefreq: 'weekly', priority: 0.8 },
   { url: '/articles', changefreq: 'weekly', priority: 0.8 },
+  { url: '/faqs', changefreq: 'monthly', priority: 0.7 },
   { url: '/services/ceramic', changefreq: 'weekly', priority: 0.8 },
   { url: '/services/ppf', changefreq: 'weekly', priority: 0.8 },
   { url: '/tesla-ppf', changefreq: 'weekly', priority: 0.9 },
