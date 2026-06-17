@@ -66,6 +66,7 @@ export function Header() {
                 <a href="/about" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">About Us</a>
                 <a href="/projects" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Projects</a>
                 <a href="/articles" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Articles</a>
+                <a href="/averopro" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">AveroPRO</a>
                 <a href="/services/ppf" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">PPF</a>
                 <a href="/services/ceramic" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Ceramic Coating</a>
                 <a href="/contact" className="text-white text-2xl uppercase tracking-[0.2rem] font-semibold">Contact</a>
@@ -86,6 +87,7 @@ export function Header() {
             <a href="/about" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">About Us</a>
             <a href="/projects" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Projects</a>
             <a href="/articles" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">Articles</a>
+            <a href="/averopro" className="hover:text-slate-400 transition-colors uppercase tracking-[0.12rem] font-semibold">AveroPRO</a>
 
             <div className="relative" ref={dropdownRef}>
               <button
