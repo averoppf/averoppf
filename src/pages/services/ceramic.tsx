@@ -89,6 +89,46 @@ const cardVariants: Variants = {
 
 export function CeramicPage() {
     useEffect(() => {
+        document.title = "Ceramic Coating Sydney | Car Ceramic Coating Specialists | Avero PPF";
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        const descText = "Sydney's ceramic coating specialists. Professional-grade ceramic coating for a durable, hydrophobic, high-gloss finish - applied in our controlled South Sydney workshop. Get a quote.";
+        if (metaDescription) {
+            metaDescription.setAttribute('content', descText);
+        } else {
+            const meta = document.createElement('meta');
+            meta.name = 'description';
+            meta.content = descText;
+            document.head.appendChild(meta);
+        }
+
+        if (!document.getElementById('ceramic-service-jsonld')) {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.id = 'ceramic-service-jsonld';
+            script.text = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "Ceramic Coating",
+                "serviceType": "Car Ceramic Coating",
+                "provider": {
+                    "@type": "AutoBodyShop",
+                    "name": "Avero PPF",
+                    "telephone": "+61415081546",
+                    "email": "info@averoppf.com.au",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Caringbah",
+                        "addressRegion": "NSW",
+                        "addressCountry": "AU"
+                    }
+                },
+                "areaServed": "Sydney, New South Wales",
+                "description": "Professional-grade ceramic coating for cars - a durable, hydrophobic, high-gloss protective layer, applied in South Sydney."
+            });
+            document.head.appendChild(script);
+        }
+
         window.scrollTo(0, 0)
     }, [])
 
@@ -172,7 +212,7 @@ export function CeramicPage() {
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
-                        <p className="block text-white font-michroma mb-[5%] text-4xl sm:text-5xl">Ceramic Coating in Sydney</p>
+                        <h1 className="block text-white font-michroma mb-[5%] text-4xl sm:text-5xl">Ceramic Coating in Sydney</h1>
                         <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, your vehicle is in expert hands. Our ceramic coating technicians are trained by leaders in automotive surface protection, ensuring consistent, high-standard application on every job. Using high-grade ceramic products and professional techniques, we apply the coating in a clean, controlled environment - allowing the formula to bond correctly with your paintwork or PPF. The result: a durable, ultra-slick finish that resists the elements and enhances visual depth.</p>
                         <a
                             className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
@@ -385,7 +425,7 @@ export function CeramicPage() {
                 </section>
 
                 <div className="w-10/12 space-y-2">
-                    <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero Ceramic Coating FAQs</h1>
+                    <h2 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero Ceramic Coating FAQs</h2>
 
                     {faqData.map((section, sectionIndex) => (
                         <div key={sectionIndex} className="mb-8">
