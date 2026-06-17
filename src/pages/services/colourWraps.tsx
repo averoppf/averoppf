@@ -83,10 +83,7 @@ export function ColourWrapsPage() {
               className="relative z-10 h-full flex flex-col items-center justify-center text-center px-6">
               <p className="text-lg text-neutral-300 font-michroma mb-3">Services</p>
               <h1 className="text-white font-michroma text-4xl sm:text-5xl md:text-6xl font-bold mb-8">Colour Wraps in Sydney</h1>
-              
-                  className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
-                  href="/contact"
-              >ENQUIRE NOW</a>
+              <a className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold" href="/contact">ENQUIRE NOW</a>
           </motion.div>
       </section>
 
