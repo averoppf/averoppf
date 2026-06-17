@@ -21,6 +21,7 @@ import IsPPFWorthItArticle from './pages/articles/is-ppf-worth-it'
 import SelfHealingPPFArticle from './pages/articles/self-healing-ppf'
 import NewCarPPFArticle from './pages/articles/new-car-ppf'
 import PPFMythsArticle from './pages/articles/ppf-myths-debunked'
+import FAQsPage from './pages/faqs'
 
 function App() {
   return (
@@ -45,6 +46,7 @@ function App() {
         <Route path="/articles/self-healing-ppf" element={<PageLayout><SelfHealingPPFArticle /></PageLayout>} />
         <Route path="/articles/new-car-ppf" element={<PageLayout><NewCarPPFArticle /></PageLayout>} />
         <Route path="/articles/ppf-myths-debunked" element={<PageLayout><PPFMythsArticle /></PageLayout>} />
+        <Route path="/faqs" element={<PageLayout><FAQsPage /></PageLayout>} />
         <Route path="*" element={<PageLayout><HomePage /></PageLayout>} />
         <Route path="/services/:area" element={<PageLayout><AreaServed /></PageLayout>} />
       </Routes>
