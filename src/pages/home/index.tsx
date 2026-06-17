@@ -127,7 +127,7 @@ const HomePage: React.FC = () => {
                             <p className="text-lg text-gray-500 leading-relaxed">Our expert technicians and innovative application methods ensure the film is applied with exacting precision - conforming seamlessly to every curve and panel with no bubbles, stretch marks, or lifted edges. The result is a clean-finish that accentuates the car colours and is built to last in Australian climate.</p>
                             <div className="text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/frontShot.jpg" className="shadow-2xl rounded-4xl w-full object-cover min-w-full h-full min-h-full" />
+                        <img src="/frontShot.jpg" className="shadow-2xl w-full object-cover min-w-full h-full min-h-full" />
                     </div>
                 </div>
             </section>
@@ -135,7 +135,7 @@ const HomePage: React.FC = () => {
             <section className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/frontShot1.jpg" className="shadow-2xl rounded-4xl w-full min-w-full h-full min-h-full object-cover" />
+                        <img src="/frontShot1.jpg" className="shadow-2xl w-full min-w-full h-full min-h-full object-cover" />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className="text-2xl font-medium mb-6 text-gray-300 italic">Long-term shine. Effortless maintenance. Serious protection.</p>
@@ -157,7 +157,7 @@ const HomePage: React.FC = () => {
                             <p className="text-lg text-gray-500 leading-relaxed mb-6">Our colour wrap options integrate style, protection, and personalisation all in one.</p>
                             <div className="text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/services/colour-wraps")}>LEARN MORE</div>
                         </div>
-                        <img src="/DSC04018.avif" className="shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
+                        <img src="/DSC04018.avif" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
                     </div>
                 </div>
             </section>
@@ -165,7 +165,7 @@ const HomePage: React.FC = () => {
             <section className="py-20 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/DSC04104.avif" className="shadow-2xl rounded-4xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
+                        <img src="/DSC04104.avif" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Window Tinting</h2>
                             <p className="text-2xl font-medium mb-6 italic">At Avero, we use only high-performance tint films that meet Australian standards, ensuring durability, clarity, and long-lasting results.</p>
@@ -182,7 +182,7 @@ const HomePage: React.FC = () => {
                     <h2 className="text-4xl font-bold text-center mb-4 text-white font-michroma tracking-[0.2rem]">Paint Protection Film (PPF) Packages</h2>
                     <p className="text-center text-gray-300 mb-12 text-lg">Choose the perfect package for your vehicle</p>
                     <div className="grid md:grid-cols-3 gap-8">
-                        <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 flex flex-col justify-between">
+                        <div className="bg-black p-8 border border-gray-800 hover:border-white/50 transition-all duration-300 flex flex-col justify-between">
                             <div>
                                 <div className="text-center mb-6">
                                     <h3 className="text-xl font-bold mb-2 text-white font-michroma">High Impact Package</h3>
@@ -198,7 +198,7 @@ const HomePage: React.FC = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="bg-gradient-to-br items-center from-white/10 to-transparent p-8 rounded-2xl border-2 border-white relative group">
+                        <div className="bg-gradient-to-br items-center from-white/10 to-transparent p-8 border-2 border-white relative group">
                             <div className="absolute -top-4 left-1/2 transform -translate-x-1/2 bg-white text-black px-4 py-1 rounded-full text-sm font-semibold">POPULAR</div>
                             <div className="text-center mb-6">
                                 <h3 className="text-xl font-bold mb-2 text-white font-michroma">Full Front Package</h3>
@@ -213,7 +213,7 @@ const HomePage: React.FC = () => {
                                 <li className="flex items-center gap-3"><div className="w-2 h-2 bg-white rounded-full"></div><span className="text-gray-300">Headlights</span></li>
                             </ul>
                         </div>
-                        <div className="bg-black p-8 rounded-2xl border border-gray-800 hover:border-white/50 transition-all duration-300 group">
+                        <div className="bg-black p-8 border border-gray-800 hover:border-white/50 transition-all duration-300 group">
                             <div className="text-center mb-6">
                                 <h3 className="text-xl font-bold mb-2 text-white font-michroma">Complete Vehicle Package</h3>
                                 <p className="text-start text-gray-400 mb-2">All-over protection for your entire vehicle.</p>
@@ -256,7 +256,7 @@ const HomePage: React.FC = () => {
                                     const currentIndex = questionIndex++;
                                     const isOpen: any = openItems[currentIndex];
                                     return (
-                                        <div key={itemIndex} className="border border-gray-200 rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
+                                        <div key={itemIndex} className="border border-gray-200 shadow-sm overflow-hidden hover:shadow-md transition-shadow duration-200">
                                             <button onClick={() => toggleItem(currentIndex)} className="w-full px-6 py-4 text-left bg-gray-50 hover:bg-gray-100 transition-colors duration-200 focus:outline-none focus:bg-gray-100">
                                                 <div className="flex items-center justify-between">
                                                     <h3 className="text-lg font-semibold text-gray-900 pr-4">{item.question}</h3>
