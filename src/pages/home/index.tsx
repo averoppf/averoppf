@@ -101,8 +101,9 @@ const HomePage: React.FC = () => {
                         initial="hidden"
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
-                        <span className="block mb-2 text-white font-michroma">Powerful Protection.</span>
-                        <span className="block text-white font-michroma mb-24">Expert Execution.</span>
+                        <span className="block mb-2 text-white font-michroma">Paint Protection Film</span>
+                        <span className="block text-white font-michroma mb-6 text-3xl sm:text-5xl md:text-6xl">South Sydney</span>
+                        <span className="block text-gray-200 font-sans text-base sm:text-lg md:text-xl font-normal tracking-normal max-w-2xl mb-24 normal-case">Premium self-healing PPF and ceramic coating, applied in our dust-free workshop and backed by a 10-year warranty.</span>
                         <a className="block text-black bg-white font-michroma text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer" href="/contact">GET A QUOTE</a>
                     </motion.h1>
                 </div>
@@ -127,7 +128,7 @@ const HomePage: React.FC = () => {
                             <p className="text-lg text-gray-500 leading-relaxed">Our expert technicians and innovative application methods ensure the film is applied with exacting precision - conforming seamlessly to every curve and panel with no bubbles, stretch marks, or lifted edges. The result is a clean-finish that accentuates the car colours and is built to last in Australian climate.</p>
                             <div className="text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/services/ppf")}>LEARN MORE</div>
                         </div>
-                        <img src="/frontShot.jpg" className="shadow-2xl w-full object-cover min-w-full h-full min-h-full" />
+                        <img src="/frontShot.jpg" alt="Paint protection film applied to the front end of a car in Sydney" className="shadow-2xl w-full object-cover min-w-full h-full min-h-full" />
                     </div>
                 </div>
             </section>
@@ -135,7 +136,7 @@ const HomePage: React.FC = () => {
             <section className="py-30 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/frontShot1.jpg" className="shadow-2xl w-full min-w-full h-full min-h-full object-cover" />
+                        <img src="/frontShot1.jpg" alt="Ceramic coating finish on a vehicle protected by Avero" className="shadow-2xl w-full min-w-full h-full min-h-full object-cover" />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Ceramic Coating</h2>
                             <p className="text-2xl font-medium mb-6 text-gray-300 italic">Long-term shine. Effortless maintenance. Serious protection.</p>
@@ -157,7 +158,7 @@ const HomePage: React.FC = () => {
                             <p className="text-lg text-gray-500 leading-relaxed mb-6">Our colour wrap options integrate style, protection, and personalisation all in one.</p>
                             <div className="text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/services/colour-wraps")}>LEARN MORE</div>
                         </div>
-                        <img src="/DSC04018.avif" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
+                        <img src="/DSC04018.avif" alt="Custom colour wrap applied to a car by Avero in South Sydney" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
                     </div>
                 </div>
             </section>
@@ -165,7 +166,7 @@ const HomePage: React.FC = () => {
             <section className="py-20 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/DSC04104.avif" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
+                        <img src="/DSC04104.avif" alt="Professional window tinting on a vehicle in Sydney" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Window Tinting</h2>
                             <p className="text-2xl font-medium mb-6 italic">At Avero, we use only high-performance tint films that meet Australian standards, ensuring durability, clarity, and long-lasting results.</p>
@@ -248,7 +249,7 @@ const HomePage: React.FC = () => {
 
             <section className="flex flex-col items-center justify-center bg-black py-20 border-gray-900 border-t-1">
                 <div className="w-10/12 space-y-2">
-                    <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero FAQs</h1>
+                    <h2 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero FAQs</h2>
                     {faqData.map((section, sectionIndex) => (
                         <div key={sectionIndex} className="mb-8">
                             <div className="space-y-4">
