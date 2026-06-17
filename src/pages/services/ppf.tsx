@@ -85,6 +85,46 @@ const cardVariants: Variants = {
 
 export function PpfPage() {
     useEffect(() => {
+        document.title = "Paint Protection Film Sydney | PPF Specialists | Avero PPF";
+
+        const metaDescription = document.querySelector('meta[name="description"]');
+        const descText = "Sydney's Paint Protection Film specialists. Premium self-healing PPF with a 10-year warranty, applied blade-free in our dust-free South Sydney workshop. Get a quote today.";
+        if (metaDescription) {
+            metaDescription.setAttribute('content', descText);
+        } else {
+            const meta = document.createElement('meta');
+            meta.name = 'description';
+            meta.content = descText;
+            document.head.appendChild(meta);
+        }
+
+        if (!document.getElementById('ppf-service-jsonld')) {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.id = 'ppf-service-jsonld';
+            script.text = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "Paint Protection Film (PPF)",
+                "serviceType": "Paint Protection Film Installation",
+                "provider": {
+                    "@type": "AutoBodyShop",
+                    "name": "Avero PPF",
+                    "telephone": "+61415081546",
+                    "email": "info@averoppf.com.au",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Caringbah",
+                        "addressRegion": "NSW",
+                        "addressCountry": "AU"
+                    }
+                },
+                "areaServed": "Sydney, New South Wales",
+                "description": "Premium self-healing Paint Protection Film with a 10-year warranty, professionally installed in South Sydney."
+            });
+            document.head.appendChild(script);
+        }
+
         window.scrollTo(0, 0)
     }, [])
 
@@ -107,7 +147,7 @@ export function PpfPage() {
                 },
                 {
                     question: "Will the film become yellow or cloudy over time?",
-                    answer: "We use high-quality, non-yellowing PPF from trusted brands like Avery Dennison and Inozetek, which are designed to remain optically clear for years. When installed and maintained properly, your film will retain its transparency and gloss throughout the life of its warranty."
+                    answer: "We use high-quality, non-yellowing PPF from trusted brands like AveroPRO and Avery Dennison, which are designed to remain optically clear for years. When installed and maintained properly, your film will retain its transparency and gloss throughout the life of its warranty."
                 },
                 {
                     question: "Will my car's paint fade at different rates under the film?",
@@ -166,7 +206,7 @@ export function PpfPage() {
                         transition={{ delay: 0.4, duration: 0.4 }}
                         className="text-4xl sm:text-6xl md:text-7xl font-bold mb-6 tracking-wider flex flex-col items-center mt-15">
                         <p className="text-lg w-full text-neutral-400 font-michroma">Services</p>
-                        <p className="block text-white font-michroma mb-[5%]">Paint Protection Film (PPF) in Sydney</p>
+                        <h1 className="block text-white font-michroma mb-[5%]">Paint Protection Film (PPF) in Sydney</h1>
                         <p className="mb-[3%] text-neutral-300 font-light tracking-normal text-base sm:text-lg">At Avero, our technicians hold extensive experience in the industry. We bring expert-level knowledge and care to every installation, ensuring each film is applied with absolute precision. Our workshop is fitted with top-tier, industrial-grade equipment, allowing us to cut and apply film without the use of blades on the vehicle itself - eliminating the risk of damage to your paintwork.</p>
                         <a
                             className="block text-black bg-white font-michroma text-[0.7rem] sm:text-[0.9rem] tracking-[0.15rem] border-2 px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer"
@@ -181,16 +221,16 @@ export function PpfPage() {
                 <p className="text-neutral-300 font-light tracking-normal text-base">Paint Protection Film (PPF) is an invisible polyurethane film applied to the surface of your vehicle to shield it from the hazards of everyday driving - including stone chips, scratches, yellowing, swirl marks, and harsh weather conditions. PPF preserves the appearance and integrity of your paintwork without altering your vehicle's design or colour. Whether you're navigating busy streets or open highways, PPF acts as a durable, self-healing barrier between your car and the elements.</p>
             </section>
 
-            <div className="relative w-full h-screen">
+            <div className="relative w-full min-h-[70vh] flex items-center">
                 <img 
                     src="/cody-ppf.avif" 
                     className="absolute inset-0 w-full h-full object-cover"
                 />
                 <div className="absolute inset-x-0 top-0 h-full bg-gradient-to-b from-black via-black/75 to-black" />
 
-                <div className="relative z-10 w-full px-4 pt-16 sm:pt-24 md:pt-32 flex flex-col items-center">
+                <div className="relative z-10 w-full px-4 py-20 flex flex-col items-center">
 
-                    <div className="w-8/12 mt-[5%]">
+                    <div className="w-full max-w-4xl">
                         <p className="font-bold text-white text-2xl mb-4 font-michroma italic">We offer a range of high-performance PPF finishes to suit your vehicle's aesthetic.</p>
                         <p className=" text-xl mb-4 w-full items-center justify-center text-center font-michroma text-neutral-300">Choose From:</p>
                         <div className="w-full flex items-center justify-center mb-[3%]">
@@ -401,20 +441,12 @@ export function PpfPage() {
                                     <a href="https://graphics.averydennison.com/en/home/graphics-products/paint-protection-film/supreme-defense-gloss-film.html" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 underline transition-colors">Avery Dennison Supreme PPF</a> is a globally renown premium paint protection film known for its ultra-clear finish, smooth installation characteristics and consistent long term performance. Engineered with advanced top coat technology, it provides excellent resistance against stains, environmental damage and everyday road debris while enhancing gloss and depth for a factory fresh look. Supreme is a dependable choice for owners seeking refined protection backed by one of the most respected names in the film industry.
                                 </p>
                             </div>
-
-                            {/* Inozetek PPF */}
-                            <div className="bg-neutral-800 rounded-2xl p-6 hover:shadow-2xl transition-shadow duration-300">
-                                <h3 className="text-2xl font-semibold mb-3 font-michroma tracking-wider">Inozetek PPF</h3>
-                                <p className="text-gray-300 leading-relaxed">
-                                    <a href="https://inozetekaustralia.com.au/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-400 underline transition-colors">Inozetek PPF</a> is a high performance protection film recognised for its bold gloss finish and standout visual clarity, making it a popular choice for enthusiasts who want both protection and strong aesthetics. Its durable construction defends against stone chips, scratches and daily wear while maintaining a smooth, high shine surface that enhances colour depth and overall presence. Easy to handle and trusted by installers worldwide, Inozetek delivers reliable protection with a premium finish.
-                                </p>
-                            </div>
                         </div>
                     </div>
                 </section>
 
                 <div className="w-10/12 space-y-2">
-                    <h1 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero Paint Protection Film FAQs</h1>
+                    <h2 className="text-3xl font-bold mb-8 text-white font-michroma tracking-wider">Avero Paint Protection Film FAQs</h2>
 
                     {faqData.map((section, sectionIndex) => (
                         <div key={sectionIndex} className="mb-8">
