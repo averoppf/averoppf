@@ -33,34 +33,19 @@ export function ArticlesPreview() {
                 <p className="text-center text-gray-300 mb-12 text-lg">Guides and insights from the Avero team</p>
                 <div className="grid md:grid-cols-3 gap-6">
                     {articlePreviews.map((article) => (
-                        <div
-                            key={article.slug}
-                            onClick={() => navigate(`/articles/${article.slug}`)}
-                            className="group border border-gray-800 cursor-pointer hover:border-white transition-all duration-300 flex flex-col bg-black p-6"
-                        >
-                            <span className="text-xs uppercase tracking-[0.2rem] text-gray-500 font-semibold mb-4 font-michroma">
-                                {article.category}
-                            </span>
-                            <h3 className="text-base font-bold text-white font-michroma leading-snug mb-4 group-hover:opacity-70 transition-opacity">
-                                {article.title}
-                            </h3>
-                            <p className="text-gray-400 text-sm leading-relaxed flex-1">
-                                {article.excerpt}
-                            </p>
+                        <div key={article.slug} onClick={() => navigate(`/articles/${article.slug}`)} className="group border border-gray-800 cursor-pointer hover:border-white transition-all duration-300 flex flex-col bg-black p-6">
+                            <span className="text-xs uppercase tracking-[0.2rem] text-gray-500 font-semibold mb-4 font-michroma">{article.category}</span>
+                            <h3 className="text-base font-bold text-white font-michroma leading-snug mb-4 group-hover:opacity-70 transition-opacity">{article.title}</h3>
+                            <p className="text-gray-400 text-sm leading-relaxed flex-1">{article.excerpt}</p>
                             <div className="flex items-center justify-between mt-6 pt-4 border-t border-gray-800">
                                 <span className="text-xs text-gray-600">{article.readTime}</span>
-                                <span className="text-xs uppercase tracking-[0.2rem] font-semibold text-white font-michroma group-hover:opacity-60">
-                                    Read
-                                </span>
+                                <span className="text-xs uppercase tracking-[0.2rem] font-semibold text-white font-michroma group-hover:opacity-60">Read</span>
                             </div>
                         </div>
                     ))}
                 </div>
                 <div className="flex items-center justify-center mt-10">
-                    
-                        className="text-white border-2 border-white font-michroma text-[0.9rem] tracking-[0.15rem] px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold"
-                        href="/articles"
-                    >VIEW ALL ARTICLES</a>
+                    <a className="text-white border-2 border-white font-michroma text-[0.9rem] tracking-[0.15rem] px-6 py-4 transition-opacity hover:opacity-60 hover:cursor-pointer font-bold" href="/articles">VIEW ALL ARTICLES</a>
                 </div>
             </div>
         </section>
