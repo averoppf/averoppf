@@ -31,20 +31,47 @@ const TeslaPPFPage: React.FC = () => {
     const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + galleryImages.length) % galleryImages.length);
 
     useEffect(() => {
-        // Set page title
-        document.title = "Tesla PPF Specialist | Caringbah | South Sydney | Avero PPF";
-        
-        // Set meta description
+        document.title = "Tesla PPF Sydney | Model 3, Y, S, X Paint Protection | Avero PPF";
+
         const metaDescription = document.querySelector('meta[name="description"]');
+        const descText = 'Tesla PPF in Sydney. Premium paint protection film for Model 3, Model Y, Model S and Model X, fitted in our Caringbah workshop with a 10-year warranty. Get a quote.';
         if (metaDescription) {
-            metaDescription.setAttribute('content', 'Premium Tesla Paint Protection Film (PPF) in Caringbah, South Sydney. Protect your Model 3, Model Y, Model S, Model X with expert PPF installation. Advanced self-healing technology.');
+            metaDescription.setAttribute('content', descText);
         } else {
             const meta = document.createElement('meta');
             meta.name = 'description';
-            meta.content = 'Premium Tesla Paint Protection Film (PPF) in Caringbah, South Sydney. Protect your Model 3, Model Y, Model S, Model X with expert PPF installation. Advanced self-healing technology.';
+            meta.content = descText;
             document.head.appendChild(meta);
         }
-        
+
+        const existing = document.getElementById('tesla-ppf-jsonld');
+        if (!existing) {
+            const script = document.createElement('script');
+            script.type = 'application/ld+json';
+            script.id = 'tesla-ppf-jsonld';
+            script.text = JSON.stringify({
+                "@context": "https://schema.org",
+                "@type": "Service",
+                "name": "Tesla Paint Protection Film (PPF)",
+                "serviceType": "Tesla PPF Installation",
+                "provider": {
+                    "@type": "AutoBodyShop",
+                    "name": "Avero PPF",
+                    "telephone": "+61415081546",
+                    "email": "info@averoppf.com.au",
+                    "address": {
+                        "@type": "PostalAddress",
+                        "addressLocality": "Caringbah",
+                        "addressRegion": "NSW",
+                        "addressCountry": "AU"
+                    }
+                },
+                "areaServed": "Sydney, New South Wales",
+                "description": "Premium Tesla Paint Protection Film for Model 3, Model Y, Model S and Model X in South Sydney. Self-healing PPF with a 10-year warranty."
+            });
+            document.head.appendChild(script);
+        }
+
         window.scrollTo(0, 0);
     }, [])
 
@@ -63,7 +90,7 @@ const TeslaPPFPage: React.FC = () => {
                 <div className="absolute inset-0 bg-black/50" />
                 <div className="relative z-10 h-full flex items-center justify-center text-center px-6">
                     <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white font-michroma">
-                        Sydney's Tesla PPF Specialists
+                        Tesla PPF Sydney
                     </h1>
                 </div>
             </section>
@@ -80,7 +107,7 @@ const TeslaPPFPage: React.FC = () => {
                                 Your Tesla deserves more than basic protection. From the moment you drive it home, keeping that clean, factory finish looking flawless should be a priority. Our premium Paint Protection Film (PPF) provides an almost invisible barrier that defends against everyday damage such as scratches, stone chips, road debris and harsh weather, so your paint stays looking new for longer.
                             </p>
                             <p className="text-base text-neutral-300">
-                                Whether you've just taken delivery of a Model 3, Model Y or Model YL, our experienced installers use precision cut film and careful application techniques to achieve seamless coverage that blends perfectly with your Tesla's design. The result is long lasting protection without changing the look of the car, helping maintain its value and that fresh showroom shine for years to come.
+                                Whether you have just taken delivery of a Model 3, Model Y, Model S or Model X, our experienced installers use precision cut film and careful application techniques to achieve seamless coverage that blends perfectly with your Tesla's design. The result is long lasting protection without changing the look of the car, helping maintain its value and that fresh showroom shine for years to come.
                             </p>
                         </div>
 
@@ -103,6 +130,10 @@ const TeslaPPFPage: React.FC = () => {
                                 <span className="text-base text-neutral-300">Trusted by Tesla owners across Sydney</span>
                             </li>
                         </ul>
+
+                        <p className="text-base text-neutral-300 mt-8 leading-relaxed">
+                            Avero is a dedicated Tesla PPF installer based in Caringbah, serving Tesla owners across South Sydney and greater NSW. We work on every Tesla model, including the Model 3, Model Y, Model S and Model X. To learn more about paint protection film generally, read our <a href="/articles/what-is-ppf" className="text-white underline hover:opacity-70">complete guide to PPF</a>, compare it against ceramic coating in our <a href="/articles/ppf-vs-ceramic-coating" className="text-white underline hover:opacity-70">PPF vs ceramic coating guide</a>, or explore our full <a href="/services/ppf" className="text-white underline hover:opacity-70">Paint Protection Film service</a>.
+                        </p>
                     </div>
                 </div>
             </section>
@@ -113,7 +144,7 @@ const TeslaPPFPage: React.FC = () => {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <img
                             src="/teslan1.png"
-                            className="shadow-2xl rounded-4xl w-full h-full object-contain"
+                            className="shadow-2xl w-full h-full object-contain"
                             alt="Tesla Gloss PPF"
                         />
                         <div>
@@ -140,7 +171,7 @@ const TeslaPPFPage: React.FC = () => {
                         <div className="lg:order-2">
                             <img
                                 src="/teslan2.png"
-                                className="shadow-2xl rounded-4xl w-full h-full object-contain"
+                                className="shadow-2xl w-full h-full object-contain"
                                 alt="Tesla Matte PPF"
                             />
                         </div>
@@ -167,7 +198,7 @@ const TeslaPPFPage: React.FC = () => {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <img
                             src="/teslan3.png"
-                            className="shadow-2xl rounded-4xl w-full h-full object-contain"
+                            className="shadow-2xl w-full h-full object-contain"
                             alt="Tesla Colour PPF"
                         />
                         <div>
@@ -194,7 +225,7 @@ const TeslaPPFPage: React.FC = () => {
                         <div className="lg:order-2">
                             <img
                                 src="/teslan4.png"
-                                className="shadow-2xl rounded-4xl w-full h-full object-contain"
+                                className="shadow-2xl w-full h-full object-contain"
                                 alt="Tesla Interior PPF"
                             />
                         </div>
@@ -207,7 +238,7 @@ const TeslaPPFPage: React.FC = () => {
                                     Tesla interiors are modern and minimal, but high-contact surfaces can quickly pick up scratches, fingerprints and wear. Our Interior PPF solutions are designed to protect delicate interior trims including gloss black panels, centre consoles, touchscreens and infotainment displays.
                                 </p>
                                 <p className="text-base text-neutral-300">
-                                    Using precision-cut templates tailored specifically for Tesla models, our Interior PPF maintains the clean OEM appearance of your interior while reducing the risk of scratches and swirl marks caused by daily use. It's the perfect way to keep your Tesla cabin looking brand new.
+                                    Using precision-cut templates tailored specifically for Tesla models, our Interior PPF maintains the clean OEM appearance of your interior while reducing the risk of scratches and swirl marks caused by daily use. It is the perfect way to keep your Tesla cabin looking brand new.
                                 </p>
                             </div>
                         </div>
@@ -221,7 +252,7 @@ const TeslaPPFPage: React.FC = () => {
                     <div className="grid lg:grid-cols-2 gap-16 items-center">
                         <img
                             src="/teslan5.png"
-                            className="shadow-2xl rounded-4xl w-full h-full object-contain"
+                            className="shadow-2xl w-full h-full object-contain"
                             alt="Tesla Ceramic Tint"
                         />
                         <div>
