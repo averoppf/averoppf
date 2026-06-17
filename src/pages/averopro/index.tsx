@@ -180,10 +180,7 @@ export default function AveroProPage() {
                         <p className="text-gray-300 leading-relaxed text-lg mb-8">
                             Are you a workshop, detailer, or installer looking to stock premium paint protection film? Join the growing network of AveroPRO authorised dealers and offer your customers a film engineered for Australian conditions and backed by a 10-year warranty. Get in touch to discuss dealer pricing and becoming an authorised AveroPRO installer.
                         </p>
-                        
-                            href="mailto:info@averoppf.com.au?subject=AveroPRO%20Authorised%20Dealer%20Enquiry"
-                            className="inline-block bg-white text-black font-michroma text-sm tracking-[0.15rem] px-8 py-4 hover:opacity-80 transition-opacity font-bold"
-                        >
+                        <a href="mailto:info@averoppf.com.au?subject=AveroPRO%20Authorised%20Dealer%20Enquiry" className="inline-block bg-white text-black font-michroma text-sm tracking-[0.15rem] px-8 py-4 hover:opacity-80 transition-opacity font-bold">
                             BECOME A DEALER
                         </a>
                         <p className="text-gray-400 mt-6 text-sm">
