@@ -32,17 +32,16 @@ export function BenefitsSection(): React.ReactElement {
         <p className="mt-4 text-lg text-gray-500 text-center mb-[7%]">
           At Avero, we specialise in premium automotive care services including Paint Protection Film (PPF), Colour Wraps, Ceramic Coating, and Window Tinting. Every service is delivered with precision, using industry-leading materials and techniques. Our goal is to protect, enhance, and personalise your vehicle while providing the highest standard of craftsmanship and attention to detail.
         </p>
-        
+
         <div className="mt-10 flex flex-wrap justify-center gap-8">
           {cards.map(({ title, link }, i) => (
             <a href={link} key={i}>
               <div
                 className={`
-                  basis-full        /* 1 per row on xs */
-                  sm:basis-1/2      /* 2 per row on sm+ */
-                  lg:basis-1/4      /* 3 per row on lg+ */
+                  basis-full
+                  sm:basis-1/2
+                  lg:basis-1/4
                   backdrop-blur-lg
-                  rounded-2xl
                   p-10
                   text-center
                   hover:scale-105
@@ -61,7 +60,7 @@ export function BenefitsSection(): React.ReactElement {
                   bg-center
                 `}
               >
-                <h3 className="mt-4 text-xl font-semibold text-black bg-white/70 p-2 rounded-2xl font-michroma">
+                <h3 className="mt-4 text-xl font-semibold text-black bg-white/70 p-2 font-michroma">
                   {title}
                 </h3>
               </div>
