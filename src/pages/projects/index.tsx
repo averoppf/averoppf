@@ -144,10 +144,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
                         <p className="text-gray-400 text-sm mb-2">{project.type}</p>
                         <h3 className="text-white text-2xl font-bold font-michroma mb-4 pr-8">{project.title}</h3>
                         <p className="text-gray-300 leading-relaxed">{project.description}</p>
-                        
-                            href="/contact"
-                            className="inline-block mt-6 bg-white text-black font-michroma text-sm tracking-[0.15rem] px-6 py-3 hover:opacity-80 transition-opacity font-bold"
-                        >
+                        <a href="/contact" className="inline-block mt-6 bg-white text-black font-michroma text-sm tracking-[0.15rem] px-6 py-3 hover:opacity-80 transition-opacity font-bold">
                             GET A QUOTE
                         </a>
                     </div>
