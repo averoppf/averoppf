@@ -8,7 +8,7 @@ export function VideoHero({
   isCeramic: boolean;
 }): React.ReactElement {
   return (
-    <div className="relative w-full min-h-[70vh] overflow-hidden bg-black">
+    <div className="relative w-full min-h-[70vh] overflow-hidden bg-black flex items-center">
       {/* Video background with inline style brightness boost.
         We use z-[1] and a style filter to bypass potential CSS conflicts.
       */}
@@ -31,7 +31,7 @@ export function VideoHero({
       {/* Heading + features: Set to z-[10] to stay on top */}
       {
         !isCeramic ? (
-          <div className="relative z-[10] w-full px-4 py-16 flex flex-col items-center">
+          <div className="relative z-[10] w-full px-4 py-20 flex flex-col items-center justify-center">
             <h1
               className="
                 max-w-3xl text-center text-white font-bold
