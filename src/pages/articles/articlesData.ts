@@ -27,7 +27,7 @@ export const articles: Article[] = [
   },
   {
     slug: 'ppf-cost-sydney',
-    title: 'How Much Does PPF Cost in Sydney? (2025 Pricing Guide)',
+    title: 'How Much Does PPF Cost in Sydney? (2026 Pricing Guide)',
     excerpt: 'What to expect from PPF pricing in Sydney, what drives the cost, and how to make sure you are getting real value - not just the lowest quote.',
     category: 'Pricing Guide',
     readTime: '6 min read',
