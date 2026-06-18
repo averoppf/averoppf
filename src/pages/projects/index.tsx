@@ -119,7 +119,7 @@ const ProjectCard: React.FC<{ project: Project }> = ({ project }) => {
             {project.description && (
                 <button
                     onClick={() => setShowModal(true)}
-                    className="mt-3 self-start text-white text-sm font-michroma tracking-[0.1rem] underline hover:opacity-70 transition-opacity"
+                    className="mt-4 self-start border-2 border-white text-white text-xs font-michroma tracking-[0.15rem] px-5 py-2.5 hover:bg-white hover:text-black transition-all duration-300 font-bold"
                 >
                     READ MORE
                 </button>
