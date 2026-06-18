@@ -179,7 +179,7 @@ const HomePage: React.FC = () => {
                             <p className="text-lg text-gray-500 leading-relaxed mb-6">Our colour wrap options integrate style, protection, and personalisation all in one.</p>
                             <div className="text-black border-2 text-xl p-3 mt-4 w-fit cursor-pointer hover:opacity-80 transition-opacity" onClick={() => navigate("/services/colour-wraps")}>LEARN MORE</div>
                         </div>
-                        <img src="/DSC04018.avif" alt="Custom colour wrap applied to a car by Avero in South Sydney" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
+                        <img src="/DSC04018.avif" alt="Custom colour wrap applied to a car by Avero in South Sydney" className="shadow-2xl w-full object-cover mx-auto md:max-w-[35vw] md:min-w-[400px] h-[400px] md:min-h-[600px] md:max-h-[800px]" />
                     </div>
                 </div>
             </section>
@@ -187,7 +187,7 @@ const HomePage: React.FC = () => {
             <section className="py-20 bg-black border-black text-white border-t-1">
                 <div className="container mx-auto px-6">
                     <div className="grid md:grid-cols-2 gap-12 items-center">
-                        <img src="/DSC04104.avif" alt="Professional window tinting on a vehicle in Sydney" className="shadow-2xl w-full object-cover max-w-[35vw] min-w-[400px] min-h-[600px] max-h-[800px]" />
+                        <img src="/DSC04104.avif" alt="Professional window tinting on a vehicle in Sydney" className="shadow-2xl w-full object-cover mx-auto md:max-w-[35vw] md:min-w-[400px] h-[400px] md:min-h-[600px] md:max-h-[800px]" />
                         <div>
                             <h2 className="text-4xl font-bold mb-6 text-white font-michroma">Window Tinting</h2>
                             <p className="text-2xl font-medium mb-6 italic">At Avero, we use only high-performance tint films that meet Australian standards, ensuring durability, clarity, and long-lasting results.</p>
