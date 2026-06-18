@@ -133,7 +133,7 @@ const HomePage: React.FC = () => {
                 </div>
             </section>
 
-            <section className="py-20 bg-neutral-100" id="benefits">
+            <section className="pt-8 pb-20 bg-neutral-100">
                 <motion.div ref={benefitsRef} animate={benefitsAnimationControls} initial="hidden" variants={benefitsVariants} transition={{ delay: 0.6, duration: 0.6 }} className="container mx-auto px-[5%]">
                     <BenefitsSection />
                 </motion.div>
